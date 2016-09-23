@@ -1,0 +1,18 @@
+#N canvas 142 552 450 300 10;
+#X obj 29 25 loadbang;
+#X obj 29 68 s i;
+#X obj 57 69 s o;
+#X msg 29 49 1;
+#X msg 57 49 0;
+#X obj 86 70 s wii_channel;
+#X msg 86 48 2;
+#X obj 30 98 loadbang;
+#X msg 30 119 \; init_banks 17 \; grid_rows 3 \; grid_cols 5 \; init_clipdir
+1 \; video_dir /home/ub/visuals/loops \;;
+#X connect 0 0 3 0;
+#X connect 0 0 4 0;
+#X connect 0 0 6 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
