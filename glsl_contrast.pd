@@ -1,11 +1,11 @@
-#N canvas 208 199 613 430 10;
+#N canvas 200 167 613 430 10;
 #X obj 30 20 inlet;
 #X obj 160 360 outlet;
 #X obj 160 330 glsl_program;
 #X obj 160 167 glsl_fragment;
 #X obj 160 21 loadbang;
 #X obj 477 17 inlet;
-#X msg 93 92 texture1 \$1;
+#X msg 93 212 texture1 \$1;
 #X obj 390 17 inlet;
 #X msg 390 135 contrast \$1;
 #X msg 477 135 saturation \$1;
