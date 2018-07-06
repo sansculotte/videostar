@@ -1,0 +1,53 @@
+#N canvas 67 322 951 752 10;
+#X obj 53 31 inlet on/off;
+#X obj 268 32 inlet filename;
+#X obj 487 32 inlet speed(fps);
+#X obj 97 692 outlet position;
+#X obj 50 630 outlet gemlist;
+#X obj 286 155 t f f;
+#X obj 50 286 gemhead 1;
+#X msg 50 259 1;
+#X msg 80 259 0;
+#X obj 101 526 pix_set 1 1;
+#X msg 184 526 0 0 0 0;
+#X obj 305 474 == 0;
+#X obj 50 492 shunt 2 1;
+#X obj 286 243 t f f b;
+#X obj 101 547 t a b;
+#X obj 247 243 sel 1;
+#X obj 50 379 movieplayer_core;
+#X obj 268 103 symbol;
+#X obj 53 73 cnv 15 144 44 empty empty empty 20 12 0 14 -86277 -66577
+0;
+#X obj 56 107 hsl 139 10 0 1 0 0 empty empty empty -2 -8 0 10 -228856
+-86277 -1 3331 1;
+#X obj 53 73 tgl 15 1 xlonoff1 lonoff1 empty 0 -6 0 8 -260353 -1 -1
+1 1;
+#X obj 71 73 hsl 124 15 1 127 0 0 empty empty empty -2 -6 0 8 -258113
+-1 -260097 6000 1;
+#X connect 0 0 20 0;
+#X connect 1 0 17 0;
+#X connect 2 0 21 0;
+#X connect 5 0 13 0;
+#X connect 5 1 16 1;
+#X connect 6 0 16 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 14 0;
+#X connect 10 0 9 1;
+#X connect 11 0 12 1;
+#X connect 12 0 4 0;
+#X connect 12 1 9 0;
+#X connect 13 0 15 0;
+#X connect 13 1 11 0;
+#X connect 13 2 10 0;
+#X connect 14 0 4 0;
+#X connect 14 1 8 0;
+#X connect 15 0 7 0;
+#X connect 16 0 12 0;
+#X connect 16 2 3 0;
+#X connect 16 2 19 0;
+#X connect 17 0 16 2;
+#X connect 20 0 5 0;
+#X connect 21 0 16 3;
+#X coords 0 -1 1 1 150 50 2 50 70;
