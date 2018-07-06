@@ -13,12 +13,12 @@
 #X obj 241 360 t b;
 #X obj 93 20 inlet;
 #X obj 424 54 purepd/once;
-#X obj 202 53 cnv 15 146 48 empty empty contrast 4 6 0 10 -86277 -262144
-0;
+#X obj 202 53 cnv 15 146 48 empty empty contrast/color 4 6 0 10 -86277
+-262144 0;
 #X obj 208 82 hsl 128 12 0 2 0 1 empty contrast_02 empty -2 -8 0 9
--258113 -1 -260097 6488 0;
+-258113 -1 -260097 6700 0;
 #X obj 208 67 hsl 128 12 0 2 0 1 empty saturation_02 empty -2 -8 0
-9 -258113 -1 -260097 6100 0;
+9 -258113 -1 -260097 6600 0;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 2 1 11 0;
