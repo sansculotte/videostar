@@ -1,4 +1,4 @@
-#N canvas 59 457 1383 547 10;
+#N canvas 67 457 1383 547 10;
 #X obj 138 264 env~ 32;
 #X floatatom 466 434 5 0 0 0 - - -, f 5;
 #X obj 466 460 s takt;
@@ -173,12 +173,12 @@
 #X text 69 45 middle;
 #X text 69 30 high;
 #X obj 52 16 vradio 15 1 0 5 empty empty empty 0 -8 0 10 -4034 -1 -1
-4;
+0;
 #X text 70 14 off;
 #X obj 16 18 vsl 15 130 0 127 0 0 empty volume empty 0 -8 0 8 -4034
--13381 -1 4492 1;
+-13381 -1 9507 1;
 #X obj 33 18 vsl 15 130 0 128 0 1 empty empty empty 0 -8 0 8 -99865
--4034 -1 6000 1;
+-4034 -1 5900 1;
 #X obj 70 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
 #X obj 55 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
@@ -186,8 +186,8 @@
 #X obj 84 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
 #X obj 224 257 fiddle~ 1024 1 20 3;
-#X obj 55 101 cyclone/scope~ 44 30 256 3 128 -1 1 0 0 0 0 0 255 4 0
-0 0 32 32 32 0;
+#X obj 55 101 cyclone/scope~ 44 30 2 3 128 -1 1 0 0 0 0 0 255 4 0 0
+0 32 32 32 0;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 3 0 5 0;
