@@ -1,4 +1,4 @@
-#N canvas 432 278 836 558 10;
+#N canvas 244 278 836 558 10;
 #X obj 25 18 inlet;
 #X obj 76 175 translateXYZ 0 0 -2;
 #X obj 76 147 gemframebuffer;
@@ -259,9 +259,9 @@
 \$1;
 #X obj 403 23 cnv 15 80 54 empty empty projection_\$1 4 8 0 10 -86277
 -228856 0;
-#X obj 405 39 hradio 15 1 1 5 empty output_model_2 empty 0 -8 0 8 -4034
--1 -4034 1;
-#X obj 405 57 hradio 15 1 1 5 empty empty empty 0 -8 0 10 -4034 -1
+#X obj 405 39 hradio 15 1 1 5 empty output_model_\$1 empty 0 -8 0 8
+-258113 -1 -228856 1;
+#X obj 405 57 hradio 15 1 1 5 empty empty empty 0 -8 0 10 -147717 -1
 -1 2;
 #X obj 76 19 t f f f f;
 #X connect 0 0 27 0;
