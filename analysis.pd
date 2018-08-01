@@ -176,11 +176,11 @@
 0;
 #X text 70 14 off;
 #X obj 16 18 vsl 15 130 0 127 0 0 empty volume empty 0 -8 0 8 -4034
--13381 -1 0 1;
+-13381 -1 1725 1;
 #X obj 33 18 vsl 15 130 0 128 0 1 empty empty empty 0 -8 0 8 -99865
 -4034 -1 5900 1;
-#X obj 70 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
--1;
+#X obj 70 136 bng 15 250 50 0 fiddle_bonk empty empty 17 7 0 10 -4034
+-1 -1;
 #X obj 55 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
 #X obj 84 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
