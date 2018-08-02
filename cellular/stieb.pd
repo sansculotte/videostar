@@ -28,7 +28,7 @@
 #X msg 427 120 0;
 #X obj 400 204 pack f f;
 #X obj 400 98 t f b;
-#X obj 29 149 gemhead 50;
+#X obj 111 154 gemhead 50;
 #X obj 111 378 translateXYZ;
 #X msg 191 140 1;
 #X msg 222 227 0;
