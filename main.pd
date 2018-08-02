@@ -1,4 +1,4 @@
-#N canvas 91 199 1407 809 10;
+#N canvas 135 193 1407 809 10;
 #X obj 3 5 cnv 15 1400 800 empty empty empty 20 12 0 14 -33289 -66577
 0;
 #N canvas 473 278 383 288 fps 0;
@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 5295 1;
+-1 -262144 8411 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 29 256;
+-262144 -1 47 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -158,7 +158,7 @@
 #X obj 17 44 tgl 15 0 empty empty fullscreen 16 11 0 8 -258113 -1 -262144
 0 1;
 #X obj 17 21 tgl 15 0 empty empty render 16 11 0 8 -258113 -1 -262144
-1 1;
+0 1;
 #X obj 17 80 t f f;
 #X obj 415 211 t b b;
 #X obj 171 157 gemwin 50;
@@ -689,8 +689,6 @@
 #X obj 223 270 videoin 0;
 #X obj 705 488 qprojection 2;
 #X obj 634 271 videoin 1;
-#X obj 1249 579 cellular/epic;
-#X obj 1249 631 cellular/sprites;
 #N canvas 401 192 450 300 config 0;
 #X obj 39 10 loadbang;
 #X obj 102 12 cnv 15 80 16 empty empty config 20 8 0 10 -83269 -262144
@@ -702,11 +700,13 @@
 #X connect 2 0 3 0;
 #X coords 0 -1 1 1 85 20 1 100 10;
 #X restore 1239 83 pd config;
-#X obj 1250 699 cellular/chemoflock;
-#X obj 1233 544 cnv 15 150 200 empty empty empty 20 12 0 14 -66577
+#X obj 1233 554 cnv 15 150 200 empty empty empty 20 12 0 14 -66577
 -66577 0;
-#X obj 1239 550 cnv 15 138 190 empty empty empty 20 12 0 14 -33289
+#X obj 1239 560 cnv 15 138 190 empty empty empty 20 12 0 14 -33289
 -66577 0;
+#X obj 1249 599 cellular/epic;
+#X obj 1249 651 cellular/sprites;
+#X obj 1250 719 cellular/chemoflock;
 #X connect 6 0 5 0;
 #X connect 7 0 12 0;
 #X connect 8 0 13 0;

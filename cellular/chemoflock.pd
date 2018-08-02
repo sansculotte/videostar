@@ -113,7 +113,42 @@
 #X obj 58 43 cnv 15 80 16 empty empty empty 20 12 0 14 -86277 -66577
 0;
 #X obj 59 44 tgl 15 0 empty empty chemoflock 20 8 1 10 -258113 -1 -228856
-0 1;
+1 1;
+#N canvas 754 144 178 480 init 0;
+#X obj 34 21 loadbang;
+#X obj 94 21 r reset;
+#X msg 15 78 \; neighbors 4;
+#X msg 15 168 \; center 1;
+#X msg 15 228 \; match 1;
+#X msg 15 318 \; edgedist 1;
+#X msg 15 348 \; speed 3;
+#X obj 16 49 b;
+#X obj 17 21 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 15 258 \; avoid 2;
+#X msg 15 288 \; repel 2;
+#X msg 15 378 \; inertia 8;
+#X msg 15 138 \; minspeed 1;
+#X msg 15 108 \; maxspeed 3;
+#X msg 15 198 \; attract 3;
+#X msg 15 408 \; accel 2;
+#X msg 15 438 \; prefdist 1.5;
+#X connect 0 0 7 0;
+#X connect 1 0 7 0;
+#X connect 7 0 2 0;
+#X connect 7 0 13 0;
+#X connect 7 0 12 0;
+#X connect 7 0 3 0;
+#X connect 7 0 14 0;
+#X connect 7 0 4 0;
+#X connect 7 0 9 0;
+#X connect 7 0 10 0;
+#X connect 7 0 6 0;
+#X connect 7 0 11 0;
+#X connect 7 0 15 0;
+#X connect 7 0 16 0;
+#X connect 8 0 7 0;
+#X restore 481 -5 pd init;
 #X connect 0 0 41 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;

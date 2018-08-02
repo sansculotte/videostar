@@ -41,8 +41,6 @@
 #X obj 84 219 pix_buffer_read \$3;
 #X obj 84 436 translateXYZ 0 0 1;
 #X obj 111 36 unpack f f f f f f f f;
-#X obj 84 187 polygon_smooth;
-#X obj 84 165 alpha;
 #X connect 0 0 13 0;
 #X connect 1 0 30 1;
 #X connect 2 0 30 0;
@@ -73,7 +71,7 @@
 #X connect 29 0 32 1;
 #X connect 29 1 27 0;
 #X connect 30 0 40 0;
-#X connect 31 0 43 0;
+#X connect 31 0 39 0;
 #X connect 32 0 28 0;
 #X connect 33 0 24 0;
 #X connect 34 0 11 0;
@@ -98,5 +96,3 @@
 #X connect 41 5 29 0;
 #X connect 41 6 40 1;
 #X connect 41 7 40 2;
-#X connect 42 0 39 0;
-#X connect 43 0 42 0;
