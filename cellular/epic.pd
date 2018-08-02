@@ -19,16 +19,16 @@
 #X msg 347 258 open \$1/sym/003.png 0;
 #X msg 44 220 0 250 \$1 0 0 \$2;
 #X obj 44 249 prepend next;
-#X obj 42 23 cnv 15 81 38 empty empty empty 4 8 0 10 -86277 -228856
+#X obj 42 23 cnv 15 116 38 empty empty empty 4 8 0 10 -86277 -228856
 0;
 #X obj 47 28 tgl 15 0 empty empty epic 17 7 0 10 -258113 -1 -228856
-1 1;
+0 1;
 #X obj 47 44 tgl 15 0 empty empty autoscale 17 7 0 10 -200769 -1 -228856
 0 1;
-#X obj 105 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -147717 -258113
+#X obj 139 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -147717 -258113
 -1;
 #X obj 44 282 clone -x rotator 10 _ _ c;
-#X obj 136 22 r fiddlebonk;
+#X obj 190 22 r fiddlebonk;
 #X connect 0 0 1 0;
 #X connect 2 0 13 0;
 #X connect 3 0 7 1;
@@ -53,4 +53,4 @@
 #X connect 22 0 10 0;
 #X connect 23 0 5 0;
 #X connect 25 0 23 0;
-#X coords 0 -1 1 1 85 44 1 40 20;
+#X coords 0 -1 1 1 120 44 1 40 20;
