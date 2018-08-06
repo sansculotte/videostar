@@ -88,11 +88,11 @@
 0 1;
 #X obj 17 60 tgl 15 0 empty empty diagrams 17 7 0 10 -258113 -1 -228856
 0 1;
-#X obj 110 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -151617 -1
+#X obj 110 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -151617 -258113
 -1;
-#X obj 110 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -139329 -1
+#X obj 110 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -139329 -258113
 -1;
-#X obj 110 60 bng 15 250 50 0 empty empty empty 17 7 0 10 -139329 -1
+#X obj 110 60 bng 15 250 50 0 empty empty empty 17 7 0 10 -139329 -258113
 -1;
 #X obj 109 116 ../countfilter;
 #X obj 507 116 ../countfilter;

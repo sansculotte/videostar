@@ -36,7 +36,7 @@
 #X obj 428 172 - 128;
 #X obj 389 196 / 64;
 #X obj 428 196 / 64;
-#X obj 222 261 r volumes;
+#X obj 222 261 r volume;
 #X connect 0 0 9 0;
 #X connect 1 0 20 1;
 #X connect 2 0 22 0;

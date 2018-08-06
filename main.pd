@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 0 1;
+-1 -262144 5527 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 0 256;
+-262144 -1 31 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -158,7 +158,7 @@
 #X obj 17 44 tgl 15 0 empty empty fullscreen 16 11 0 8 -258113 -1 -262144
 0 1;
 #X obj 17 21 tgl 15 0 empty empty render 16 11 0 8 -258113 -1 -262144
-0 1;
+1 1;
 #X obj 17 80 t f f;
 #X obj 415 211 t b b;
 #X obj 171 157 gemwin 50;
