@@ -1,4 +1,4 @@
-#N canvas 382 227 1407 809 10;
+#N canvas 381 227 1407 809 10;
 #X obj 3 5 cnv 15 1400 800 empty empty empty 20 12 0 14 -33289 -66577
 0;
 #N canvas 473 278 383 288 fps 0;
@@ -18,7 +18,7 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 5527 1;
+-1 -262144 5537 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
 -262144 -1 31 256;
 #X connect 0 0 3 0;
@@ -462,148 +462,6 @@
 #X connect 7 0 3 1;
 #X coords 0 -1 1 1 100 80 2 10 10;
 #X restore 460 654 pd output;
-#N canvas 451 337 1079 703 blending 0;
-#X text 281 38 0 = off;
-#X text 282 51 1 = alpha;
-#X text 281 64 2 = add;
-#X text 282 77 3 = multiply;
-#X text 282 90 4 = hard light;
-#X text 282 103 5 = overlay;
-#X text 282 117 6 = substract;
-#X obj 545 359 change;
-#X floatatom 545 382 5 0 0 0 - - -, f 5;
-#X msg 285 135 blendMode \$1;
-#X msg 330 507 print;
-#X obj 387 508 glsl_program;
-#X obj 500 357 change;
-#X floatatom 500 380 5 0 0 0 - - -, f 5;
-#X obj 500 407 pack;
-#X obj 545 407 t b f;
-#X msg 450 424 link;
-#X msg 345 345 print;
-#X msg 347 312 print;
-#X obj 387 195 gemhead 55;
-#X obj 387 312 glsl_vertex;
-#X obj 387 345 glsl_fragment;
-#X msg 435 479 link \$1 \$2;
-#X obj 474 223 loadbang;
-#N canvas 239 251 450 300 onebang 0;
-#X obj 120 71 inlet;
-#X obj 120 151 outlet;
-#X obj 120 120 t b;
-#X obj 120 100 change;
-#X msg 161 71 set -1;
-#X obj 161 11 gemhead;
-#X obj 161 51 route 0;
-#X obj 161 31 route gem_state;
-#X connect 0 0 3 0;
-#X connect 2 0 1 0;
-#X connect 3 0 2 0;
-#X connect 4 0 3 0;
-#X connect 5 0 7 0;
-#X connect 6 0 4 0;
-#X connect 7 0 6 0;
-#X restore 540 547 pd onebang;
-#X msg 540 492 tex0 0;
-#X msg 671 113 effect \$1;
-#X msg 249 467 push \$1;
-#X floatatom 249 434 5 0 0 0 - - -, f 5;
-#X obj 302 353 tgl 15 0 empty coord_effect empty 17 7 0 10 -258113
--1 -1 1 1;
-#X obj 249 354 spigot;
-#X obj 249 393 / 100;
-#X floatatom 281 293 5 0 0 0 - - -, f 5;
-#X floatatom 219 291 5 0 0 0 - - -, f 5;
-#X text 759 57 effect;
-#X text 782 74 0 = off;
-#X text 782 88 1 = blip_vert;
-#X obj 302 328 > 0;
-#X text 782 103 2 = blip_horz;
-#X msg 474 249 open shaders/QmultiBlend.vert;
-#X msg 474 276 open shaders/QmultiBlendEffects.frag;
-#X obj 387 586 outlet;
-#X msg 25 295 alpha \$1;
-#X msg 89 295 fade \$1;
-#X obj 13 13 cnv 15 194 194 empty empty mixer 4 8 0 10 -86277 -262144
-0;
-#X obj 46 152 hradio 15 1 1 7 empty shader-effect effects 110 8 0 10
--258113 -1 -262144 4;
-#X obj 26 152 tgl 15 1 empty __blending_onoff empty 17 7 0 10 -258113
--1 -1 1 1;
-#X obj 27 25 cnv 15 10 10 empty empty channel_one 20 12 0 10 -86277
--262144 0;
-#X obj 27 41 cnv 15 10 10 empty empty alpha_blend 20 12 0 10 -86277
--262144 0;
-#X obj 27 56 cnv 15 10 10 empty empty add 20 12 0 10 -86277 -262144
-0;
-#X obj 27 71 cnv 15 10 10 empty empty multiply 20 12 0 10 -86277 -262144
-0;
-#X obj 27 87 cnv 15 10 10 empty empty hard_light 20 12 0 10 -86277
--262144 0;
-#X obj 27 102 cnv 15 10 10 empty empty overlay 20 12 0 10 -86277 -262144
-0;
-#X obj 27 117 cnv 15 10 10 empty empty difference 20 12 0 10 -86277
--262144 0;
-#X obj 26 30 vradio 15 1 0 7 empty blend_mode empty 0 -8 0 10 -258113
--1 -1 0;
-#X obj 28 173 hsl 140 12 0 1 0 0 empty fade_second_layer alpha 144
-6 0 10 -258113 -1 -262144 0 1;
-#X obj 28 188 hsl 140 12 0 1 0 0 empty fade_second_layer fade 144 8
-0 10 -258113 -1 -262144 0 1;
-#X obj 671 78 i;
-#X obj 249 328 r volume;
-#X msg 587 492 texture1 1;
-#X msg 658 492 texture2 2;
-#X connect 7 0 8 0;
-#X connect 8 0 15 0;
-#X connect 9 0 11 0;
-#X connect 10 0 11 0;
-#X connect 11 0 41 0;
-#X connect 11 1 24 0;
-#X connect 12 0 13 0;
-#X connect 13 0 14 0;
-#X connect 14 0 22 0;
-#X connect 15 0 14 0;
-#X connect 15 1 14 1;
-#X connect 16 0 11 0;
-#X connect 17 0 21 0;
-#X connect 18 0 20 0;
-#X connect 19 0 20 0;
-#X connect 20 0 21 0;
-#X connect 20 1 12 0;
-#X connect 21 0 11 0;
-#X connect 21 1 7 0;
-#X connect 22 0 11 0;
-#X connect 23 0 40 0;
-#X connect 23 0 39 0;
-#X connect 24 0 25 0;
-#X connect 24 0 59 0;
-#X connect 24 0 60 0;
-#X connect 26 0 11 0;
-#X connect 27 0 11 0;
-#X connect 28 0 27 0;
-#X connect 29 0 30 1;
-#X connect 30 0 31 0;
-#X connect 31 0 28 0;
-#X connect 32 0 31 1;
-#X connect 33 0 31 0;
-#X connect 37 0 29 0;
-#X connect 39 0 20 0;
-#X connect 40 0 21 0;
-#X connect 42 0 11 0;
-#X connect 43 0 11 0;
-#X connect 45 0 57 0;
-#X connect 46 0 19 0;
-#X connect 54 0 9 0;
-#X connect 55 0 42 0;
-#X connect 56 0 43 0;
-#X connect 57 0 37 0;
-#X connect 57 0 26 0;
-#X connect 58 0 30 0;
-#X connect 59 0 11 0;
-#X connect 60 0 11 0;
-#X coords 0 -1 1 1 200 200 2 10 10;
-#X restore 460 348 pd blending;
 #N canvas 642 444 789 404 verteiler 0;
 #X obj 28 175 + 1;
 #X obj 28 295 outlet;
@@ -685,9 +543,7 @@
 #X obj 290 269 inline_movieplayer 1;
 #X obj 705 417 glsl_contrast;
 #X obj 290 488 qprojection 1;
-#X obj 705 269 inline_movieplayer 2;
 #X obj 223 270 videoin 0;
-#X obj 705 488 qprojection 2;
 #X obj 634 271 videoin 1;
 #N canvas 344 260 450 300 config 0;
 #X obj 39 10 loadbang;
@@ -707,15 +563,134 @@
 #X obj 1249 599 cellular/epic;
 #X obj 1249 651 cellular/sprites;
 #X obj 1250 719 cellular/chemoflock;
+#N canvas 171 248 587 183 autorotate 0;
+#X obj 90 105 hsl 128 12 0 360 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 230 105 hsl 128 12 0 360 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 370 105 hsl 128 12 0 360 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 367 77 autorotate;
+#X obj 227 77 autorotate;
+#X obj 102 12 cnv 15 81 40 empty empty autorotate 4 8 0 10 -86277 -262144
+0;
+#X obj 106 30 tgl 15 0 empty empty X 17 7 0 10 -258113 -1 -228856 1
+1;
+#X obj 131 30 tgl 15 0 empty empty Y 17 7 0 10 -258113 -1 -228856 1
+1;
+#X obj 157 30 tgl 15 0 empty empty Z 17 7 0 10 -258113 -1 -228856 1
+1;
+#X obj 87 134 s 3Dx_\$1;
+#X obj 227 134 s 3Dy_\$1;
+#X obj 367 133 s 3Dz_\$1;
+#X obj 87 77 autorotate;
+#X connect 0 0 9 0;
+#X connect 1 0 10 0;
+#X connect 2 0 11 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 6 0 12 0;
+#X connect 7 0 4 0;
+#X connect 8 0 3 0;
+#X connect 12 0 0 0;
+#X coords 0 -1 1 1 85 44 2 100 10;
+#X restore 29 387 pd autorotate 1;
+#N canvas 264 399 265 300 autohop 0;
+#X obj 25 40 r bonkbonk;
+#X obj 25 140 random 256;
+#X obj 25 66 spigot;
+#X obj 25 173 / 256;
+#X obj 25 113 countfilter;
+#X obj 102 22 cnv 15 81 40 empty empty empty 20 12 0 14 -86277 -66577
+0;
+#X obj 106 43 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-258113 -1 -1 0 256;
+#X obj 106 24 tgl 15 0 empty empty autohop 17 7 0 10 -258113 -1 -262144
+0 1;
+#X obj 25 252 s hop_\$1;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 6 0 4 1;
+#X connect 7 0 2 1;
+#X coords 0 -1 1 1 85 44 2 100 20;
+#X restore 29 434 pd autohop 1;
+#N canvas 279 367 265 300 autojump 0;
+#X obj 25 33 r bonkbonk;
+#X obj 25 59 spigot;
+#X obj 25 211 line;
+#X obj 25 136 t b b;
+#X msg 25 184 0 \$1;
+#X obj 71 137 r duration;
+#X obj 25 163 f 100;
+#X obj 155 145 r volume;
+#X obj 155 168 / 100;
+#X obj 65 163 f 1;
+#X obj 25 237 *;
+#X obj 25 100 countfilter;
+#X obj 102 42 cnv 15 81 40 empty empty empty 20 12 0 14 -86277 -66577
+0;
+#X obj 106 63 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-258113 -1 -1 0 256;
+#X obj 106 44 tgl 15 0 empty empty autojump 17 7 0 10 -258113 -1 -262144
+0 1;
+#X obj 25 261 s yshift_\$1;
+#X connect 0 0 1 0;
+#X connect 1 0 11 0;
+#X connect 2 0 10 0;
+#X connect 2 0 10 1;
+#X connect 3 0 6 0;
+#X connect 3 1 9 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 1;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 1;
+#X connect 9 0 2 0;
+#X connect 10 0 15 0;
+#X connect 11 0 3 0;
+#X connect 13 0 11 1;
+#X connect 14 0 1 1;
+#X coords 0 -1 1 1 85 44 2 100 40;
+#X restore 29 481 pd autojump 1;
+#N canvas 317 330 450 300 autoscale 0;
+#X obj 51 121 spigot;
+#X obj 276 56 r scale_factor;
+#X obj 276 78 t b f;
+#X obj 51 96 r level;
+#X obj 51 143 * 0.0125;
+#X obj 276 125 /;
+#X msg 276 101 1;
+#X obj 51 187 s scalefactor_\$1;
+#X obj 82 53 cnv 15 80 18 empty empty empty 20 12 0 14 -86277 -66577
+0;
+#X obj 84 55 tgl 15 0 empty empty autoscale 17 7 0 10 -258113 -1 -262144
+0 1;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 2 1 5 1;
+#X connect 3 0 0 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 1;
 #X connect 6 0 5 0;
+#X connect 9 0 0 1;
+#X coords 0 -1 1 1 85 24 2 80 50;
+#X restore 29 360 pd autoscale 1;
+#X obj 705 269 inline_movieplayer 2;
+#X obj 460 348 mixer 1 2;
+#X obj 705 488 qprojection 2;
+#X connect 6 0 11 0;
 #X connect 7 0 12 0;
-#X connect 8 0 13 0;
-#X connect 9 0 14 0;
-#X connect 9 0 14 1;
-#X connect 10 0 11 0;
-#X connect 10 0 11 1;
-#X connect 11 0 8 0;
-#X connect 12 0 16 0;
-#X connect 14 0 7 0;
-#X connect 15 0 8 0;
-#X connect 17 0 7 0;
+#X connect 8 0 25 0;
+#X connect 8 0 25 1;
+#X connect 9 0 10 0;
+#X connect 9 0 10 1;
+#X connect 10 0 7 0;
+#X connect 11 0 27 0;
+#X connect 13 0 7 0;
+#X connect 14 0 6 0;
+#X connect 25 0 6 0;
+#X connect 26 0 5 0;
