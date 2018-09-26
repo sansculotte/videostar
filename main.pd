@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 5537 1;
+-1 -262144 5328 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 31 256;
+-262144 -1 29 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -563,7 +563,7 @@
 #X obj 1249 599 cellular/epic;
 #X obj 1249 651 cellular/sprites;
 #X obj 1250 719 cellular/chemoflock;
-#N canvas 171 248 587 183 autorotate 0;
+#N canvas 172 248 587 183 autorotate 0;
 #X obj 90 105 hsl 128 12 0 360 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 230 105 hsl 128 12 0 360 0 0 empty empty empty -2 -8 0 10 -262144
@@ -574,28 +574,28 @@
 #X obj 227 77 autorotate;
 #X obj 102 12 cnv 15 81 40 empty empty autorotate 4 8 0 10 -86277 -262144
 0;
-#X obj 106 30 tgl 15 0 empty empty X 17 7 0 10 -258113 -1 -228856 1
+#X obj 106 30 tgl 15 0 empty empty X 17 7 0 10 -258113 -1 -228856 0
 1;
-#X obj 131 30 tgl 15 0 empty empty Y 17 7 0 10 -258113 -1 -228856 1
+#X obj 131 30 tgl 15 0 empty empty Y 17 7 0 10 -258113 -1 -228856 0
 1;
-#X obj 157 30 tgl 15 0 empty empty Z 17 7 0 10 -258113 -1 -228856 1
+#X obj 157 30 tgl 15 0 empty empty Z 17 7 0 10 -258113 -1 -228856 0
 1;
-#X obj 87 134 s 3Dx_\$1;
-#X obj 227 134 s 3Dy_\$1;
-#X obj 367 133 s 3Dz_\$1;
 #X obj 87 77 autorotate;
-#X connect 0 0 9 0;
-#X connect 1 0 10 0;
-#X connect 2 0 11 0;
+#X obj 87 134 s 3Dx_1;
+#X obj 227 134 s 3Dy_1;
+#X obj 367 133 s 3Dz_1;
+#X connect 0 0 10 0;
+#X connect 1 0 11 0;
+#X connect 2 0 12 0;
 #X connect 3 0 2 0;
 #X connect 4 0 1 0;
-#X connect 6 0 12 0;
+#X connect 6 0 9 0;
 #X connect 7 0 4 0;
 #X connect 8 0 3 0;
-#X connect 12 0 0 0;
+#X connect 9 0 0 0;
 #X coords 0 -1 1 1 85 44 2 100 10;
 #X restore 29 387 pd autorotate 1;
-#N canvas 264 399 265 300 autohop 0;
+#N canvas 264 429 265 300 autohop 0;
 #X obj 25 40 r bonkbonk;
 #X obj 25 140 random 256;
 #X obj 25 66 spigot;
@@ -607,7 +607,7 @@
 -258113 -1 -1 0 256;
 #X obj 106 24 tgl 15 0 empty empty autohop 17 7 0 10 -258113 -1 -262144
 0 1;
-#X obj 25 252 s hop_\$1;
+#X obj 25 252 s hop_1;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
@@ -617,7 +617,7 @@
 #X connect 7 0 2 1;
 #X coords 0 -1 1 1 85 44 2 100 20;
 #X restore 29 434 pd autohop 1;
-#N canvas 279 367 265 300 autojump 0;
+#N canvas 279 397 265 300 autojump 0;
 #X obj 25 33 r bonkbonk;
 #X obj 25 59 spigot;
 #X obj 25 211 line;
@@ -636,7 +636,7 @@
 -258113 -1 -1 0 256;
 #X obj 106 44 tgl 15 0 empty empty autojump 17 7 0 10 -258113 -1 -262144
 0 1;
-#X obj 25 261 s yshift_\$1;
+#X obj 25 261 s yshift_1;
 #X connect 0 0 1 0;
 #X connect 1 0 11 0;
 #X connect 2 0 10 0;
@@ -655,42 +655,54 @@
 #X connect 14 0 1 1;
 #X coords 0 -1 1 1 85 44 2 100 40;
 #X restore 29 481 pd autojump 1;
-#N canvas 317 330 450 300 autoscale 0;
-#X obj 51 121 spigot;
+#X obj 705 269 inline_movieplayer 2;
+#X obj 460 348 mixer 1 2;
+#X obj 705 488 qprojection 2;
+#N canvas 317 330 523 295 autoscale_1 0;
+#X obj 78 131 spigot;
 #X obj 276 56 r scale_factor;
 #X obj 276 78 t b f;
-#X obj 51 96 r level;
-#X obj 51 143 * 0.0125;
+#X obj 78 153 * 0.0125;
 #X obj 276 125 /;
 #X msg 276 101 1;
-#X obj 51 187 s scalefactor_\$1;
 #X obj 82 53 cnv 15 80 18 empty empty empty 20 12 0 14 -86277 -66577
 0;
 #X obj 84 55 tgl 15 0 empty empty autoscale 17 7 0 10 -258113 -1 -262144
 0 1;
-#X connect 0 0 4 0;
+#X text 275 35 this might not be connected;
+#X obj 78 237 s scalefactor_1;
+#X obj 78 106 r volume;
+#X obj 78 210 line;
+#X msg 78 180 \$1 40;
+#X obj 40 106 sel 0;
+#X msg 40 162 1;
+#X obj 84 76 t f f;
+#X connect 0 0 3 0;
 #X connect 1 0 2 0;
-#X connect 2 0 6 0;
-#X connect 2 1 5 1;
-#X connect 3 0 0 0;
-#X connect 4 0 7 0;
-#X connect 5 0 4 1;
-#X connect 6 0 5 0;
-#X connect 9 0 0 1;
+#X connect 2 0 5 0;
+#X connect 2 1 4 1;
+#X connect 3 0 12 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 7 0 15 0;
+#X connect 10 0 0 0;
+#X connect 11 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 15 0 13 0;
+#X connect 15 1 0 1;
 #X coords 0 -1 1 1 85 24 2 80 50;
-#X restore 29 360 pd autoscale 1;
-#X obj 705 269 inline_movieplayer 2;
-#X obj 460 348 mixer 1 2;
-#X obj 705 488 qprojection 2;
+#X restore 29 360 pd autoscale_1;
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
-#X connect 8 0 25 0;
-#X connect 8 0 25 1;
+#X connect 8 0 24 0;
+#X connect 8 0 24 1;
 #X connect 9 0 10 0;
 #X connect 9 0 10 1;
 #X connect 10 0 7 0;
-#X connect 11 0 27 0;
+#X connect 11 0 26 0;
 #X connect 13 0 7 0;
 #X connect 14 0 6 0;
-#X connect 25 0 6 0;
-#X connect 26 0 5 0;
+#X connect 24 0 6 0;
+#X connect 25 0 5 0;
