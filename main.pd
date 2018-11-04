@@ -1,4 +1,4 @@
-#N canvas 446 97 1407 808 10;
+#N canvas 384 298 1407 808 10;
 #X obj 3 5 cnv 15 1400 800 empty empty empty 20 12 0 14 -33289 -66577
 0;
 #N canvas 473 278 383 288 fps 0;
@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 0 1;
+-1 -262144 8900 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 0 256;
+-262144 -1 52 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -223,7 +223,7 @@
 #X connect 11 0 3 0;
 #X coords 0 -1 1 1 66 30 2 10 10;
 #X restore 21 742 pd record;
-#N canvas 27 91 455 399 output 1;
+#N canvas 0 91 455 399 output 0;
 #N canvas 953 122 794 803 cubes 0;
 #X obj 57 162 rotateXYZ 0 0 0;
 #X obj 57 3 inlet;
@@ -449,12 +449,12 @@
 #X obj 12 13 cnv 15 156 74 empty empty output 4 8 0 10 -86277 -260097
 0;
 #X obj 16 46 hradio 15 1 0 5 empty output_model plane/cubes/sphere/grid
-0 -8 0 9 -260097 -1 -260097 4;
+0 -8 0 9 -260097 -1 -260097 1;
 #X obj 16 68 hradio 15 1 1 5 empty empty empty 0 -8 0 10 -260097 -1
 -1 3;
 #X obj 199 12 inlet gemlist;
 #X obj 16 113 cyclone/gate 4 1, f 31;
-#N canvas 865 237 852 604 grid 0;
+#N canvas 855 229 852 604 grid 0;
 #X text 468 25 rutt-etra like spatial line/grid distortion effect;
 #X obj 95 28 inlet;
 #X obj 253 260 change;
@@ -531,8 +531,8 @@
 #X connect 7 0 1 0;
 #X connect 7 1 0 0;
 #X connect 7 2 2 0;
-#X connect 7 3 8 0;
 #X connect 7 3 9 0;
+#X connect 7 3 8 0;
 #X connect 9 0 10 0;
 #X coords 0 -1 1 1 160 80 2 10 10;
 #X restore 460 654 pd output;
@@ -1740,13 +1740,13 @@ btn_2 btn_1;
 #X obj 92 351 bng 20 250 50 0 right empty empty 0 -6 0 8 -262144 -1
 -1;
 #X obj 127 353 hsl 128 15 0 255 0 0 left_x empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 6375 1;
 #X obj 182 296 vsl 15 128 255 0 0 0 left_y empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 6325 1;
 #X obj 282 353 hsl 128 15 0 255 0 0 right_x empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 6375 1;
 #X obj 337 296 vsl 15 128 255 0 0 0 right_y empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 6325 1;
 #X obj 549 39 spigot;
 #X obj 549 60 spigot;
 #X obj 549 83 spigot;

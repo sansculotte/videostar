@@ -1,0 +1,61 @@
+#N canvas 929 473 649 441 10;
+#X obj 28 19 inlet bank;
+#X obj 28 382 outlet;
+#X obj 390 147 hcs/folder_list;
+#X obj 373 21 r video_dir;
+#X msg 435 70 symbol *;
+#X obj 390 98 pack s s;
+#X obj 390 70 symbol;
+#X msg 390 121 symbol \$1/\$2;
+#X obj 473 193 int;
+#X obj 390 175 t s b;
+#X obj 497 193 + 1;
+#X msg 513 67 0;
+#X obj 373 209 int;
+#X obj 373 44 t b a b b;
+#X floatatom 473 218 5 0 0 0 - - -, f 5;
+#X floatatom 373 236 5 0 0 0 - - -, f 5;
+#X msg 373 313 \; init_banks \$1;
+#X obj 476 389 outlet name;
+#X obj 28 356 prepend putvideodir;
+#X obj 156 44 text define -k \$0-video-dir-list;
+#A set /home/ub/visuals/live/darkmatter/3D \; /home/ub/visuals/live/darkmatter/amit
+\; /home/ub/visuals/live/darkmatter/cinder \; /home/ub/visuals/live/darkmatter/circular
+\; /home/ub/visuals/live/darkmatter/dark \; /home/ub/visuals/live/darkmatter/figures
+\; /home/ub/visuals/live/darkmatter/freaky \; /home/ub/visuals/live/darkmatter/gang
+\; /home/ub/visuals/live/darkmatter/heads \; /home/ub/visuals/live/darkmatter/kao
+\; /home/ub/visuals/live/darkmatter/light \; /home/ub/visuals/live/darkmatter/machine
+\; /home/ub/visuals/live/darkmatter/organic \; /home/ub/visuals/live/darkmatter/schwarzweiss
+\; /home/ub/visuals/live/darkmatter/slow \; /home/ub/visuals/live/darkmatter/space
+\; /home/ub/visuals/live/darkmatter/strct \; /home/ub/visuals/live/darkmatter/strct2
+\; /home/ub/visuals/live/darkmatter/stuff \; /home/ub/visuals/live/darkmatter/teneriffa
+\; /home/ub/visuals/live/darkmatter/tex \; /home/ub/visuals/live/darkmatter/trailer
+\; /home/ub/visuals/live/darkmatter/whrite \; /home/ub/visuals/live/darkmatter/wild
+\; /home/ub/visuals/live/darkmatter/zfe \;;
+#X obj 422 277 text set \$0-video-dir-list;
+#X obj 28 278 text get \$0-video-dir-list;
+#X text 156 20 make this global \, we only need one;
+#X text 420 295 split off last directory as name;
+#X connect 0 0 21 0;
+#X connect 2 0 9 0;
+#X connect 3 0 13 0;
+#X connect 4 0 5 1;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 2 0;
+#X connect 8 0 10 0;
+#X connect 8 0 14 0;
+#X connect 9 0 20 0;
+#X connect 9 1 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 8 0;
+#X connect 12 0 15 0;
+#X connect 13 0 12 0;
+#X connect 13 1 6 0;
+#X connect 13 2 4 0;
+#X connect 13 3 11 0;
+#X connect 14 0 12 1;
+#X connect 14 0 20 1;
+#X connect 15 0 16 0;
+#X connect 18 0 1 0;
+#X connect 21 0 18 0;
