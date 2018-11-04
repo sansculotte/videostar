@@ -12,7 +12,6 @@ out vec4 C;
 
 void main()
 {
-
     texcoord = (gl_TextureMatrix[0] * gl_MultiTexCoord0).st;
     
     vec4 pos = vec4(gl_Vertex);

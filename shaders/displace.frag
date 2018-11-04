@@ -6,7 +6,7 @@ out vec4 pixels;
 
 /* boost brighness */
 uniform bool boost = true;
-/* whether darkness should be treated as transparent */
+/* make darkness transparent */
 uniform bool black = true;
 
 void main (void)
@@ -17,7 +17,7 @@ void main (void)
     }
     if (black) {
         float Y = 0.33 * color.r + 0.5 * color.g + 0.16 * color.b;
-        color.a = Y > 0.25 ? Y : 0.; 
+        color.a = Y > 0.25 ? Y : 0.;
     }
 	pixels = color;
 }
