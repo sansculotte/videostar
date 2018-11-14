@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 0 1;
+-1 -262144 5259 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 0 256;
+-262144 -1 29 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -2292,6 +2292,21 @@ btn_2 btn_1;
 #X obj 953 703 hsl 80 10 0 360 0 0 empty empty rotation 84 6 0 7 -4034
 -1 -4034 0 1;
 #X msg 1000 682 90;
+#N canvas 742 413 450 300 the_end 0;
+#X obj 61 155 pix_draw;
+#X obj 61 25 inlet;
+#X msg 132 72 0;
+#X obj 132 50 loadbang;
+#X obj 61 89 gemhead 99;
+#X obj 61 123 pix_image ende.png;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X restore 1133 732 pd the_end;
+#X obj 1133 709 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
+1;
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
 #X connect 8 0 24 1;
@@ -2310,3 +2325,4 @@ btn_2 btn_1;
 #X connect 43 0 40 3;
 #X connect 44 0 40 2;
 #X connect 45 0 44 0;
+#X connect 47 0 46 0;
