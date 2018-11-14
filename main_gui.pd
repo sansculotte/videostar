@@ -882,7 +882,7 @@ btn_2 btn_1;
 #X obj 289 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -99865 -1
 -1;
 #X msg 289 62 putvideo \$1;
-#N canvas 593 347 450 300 playlist 0;
+#N canvas 593 347 450 300 playlist 1;
 #X msg 153 123 seek \$1;
 #X obj 28 184 outlet;
 #X obj 153 29 r clip_1;
@@ -893,7 +893,7 @@ btn_2 btn_1;
 #X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 -86277 -66577
 0;
 #X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 -258113
--1 -1 7 256;
+-1 -1 5 256;
 #X connect 0 0 1 0;
 #X connect 2 0 8 0;
 #X connect 3 0 5 0;
@@ -914,7 +914,7 @@ btn_2 btn_1;
 #X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 -86277 -66577
 0;
 #X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 -258113
--1 -1 0 256;
+-1 -1 5 256;
 #X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 3 0 8 0;
@@ -1199,8 +1199,9 @@ btn_2 btn_1;
 #X msg 86 48 2;
 #X obj 30 98 loadbang;
 #X obj 30 120 t b b;
-#X msg 57 166 \; video_dir /home/ub/visuals/live/darkmatter \;;
 #X msg 30 257 \; grid_rows 4 \; grid_cols 5 \; init_clipdir 1 \;;
+#X msg 57 166 \; video_dir /home/ub/visuals/live/darkmatter/clips \;
+;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 6 0;
@@ -1208,14 +1209,15 @@ btn_2 btn_1;
 #X connect 4 0 2 0;
 #X connect 6 0 5 0;
 #X connect 7 0 8 0;
-#X connect 8 0 10 0;
-#X connect 8 1 9 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
 #X restore 1149 37 pd init-gui.023;
-#X obj 369 36 videogrid videogrid3 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 /home/ub/visuals/live/darkmatter/dark/propeller_drone_black2.mov|/home/ub/visuals/live/darkmatter/dark/braindance_eye.mov|/home/ub/visuals/live/darkmatter/dark/kettle2.mov|/home/ub/visuals/live/darkmatter/dark/seklet.mov|/home/ub/visuals/live/darkmatter/dark/faden_piano.mov|/home/ub/visuals/live/darkmatter/dark/machine_02.mov|/home/ub/visuals/live/darkmatter/dark/woodhorngeflecht.mov|/home/ub/visuals/live/darkmatter/dark/nothing.mov|/home/ub/visuals/live/darkmatter/dark/struct_arch.mov|/home/ub/visuals/live/darkmatter/dark/wood.mov|/home/ub/visuals/live/darkmatter/dark/waldgeist.mov|/home/ub/visuals/live/darkmatter/circular/diarahmen.mov|/home/ub/visuals/live/darkmatter/dark/insects_metall_short.mov|/home/ub/visuals/live/darkmatter/dark/occult01.mov|/home/ub/visuals/live/darkmatter/dark/occult02.mov|/home/ub/visuals/live/darkmatter/dark/babbage_slow.mov|/home/ub/visuals/live/darkmatter/dark/propeller_drone_black.mov|/home/ub/visuals/live/darkmatter/dark/metamachine.mov|/home/ub/visuals/live/darkmatter/dark/dm_3d.mov|/home/ub/visuals/live/darkmatter/dark/lines01.mov|/home/ub/visuals/live/darkmatter/dark/pommel3.mov|
+#X obj 369 36 videogrid videogrid1 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
+60 40 /home/ub/visuals/live/darkmatter/clips/amit/amit_skull3.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_moth2.mov|/home/ub/visuals/live/darkmatter/clips/amit/01_circuit_paralell.mov|/home/ub/visuals/live/darkmatter/clips/amit/ninenine.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_skull.mov|/home/ub/visuals/live/darkmatter/clips/amit/bug_moths2.mov|/home/ub/visuals/live/darkmatter/clips/amit/bug_moths.mov|/home/ub/visuals/live/darkmatter/clips/amit/nine.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_moth.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_spaceship2.mov|/home/ub/visuals/live/darkmatter/clips/amit/billibug2.mov|/home/ub/visuals/live/darkmatter/clips/amit/schritzy.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_lines.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_skull2.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_fall.mov|/home/ub/visuals/live/darkmatter/clips/amit/blutwurtz.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_clock.mov|/home/ub/visuals/live/darkmatter/clips/amit/billibug.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_spaceship.mov|
 ;
-#X obj 811 35 videogrid videogrid4 4 5 #F0F0F0 #0F0F0F #00fb14 mov:mpg:avi
-60 40 ;
+#X obj 811 35 videogrid videogrid2 4 5 #F0F0F0 #0F0F0F #00fb14 mov:mpg:avi
+60 40 /home/ub/visuals/live/darkmatter/clips/3D/stayhuman06.mov|/home/ub/visuals/live/darkmatter/clips/3D/braindance.mov|/home/ub/visuals/live/darkmatter/clips/3D/roundup.mov|/home/ub/visuals/live/darkmatter/clips/3D/power4.mov|/home/ub/visuals/live/darkmatter/clips/3D/p0wer2.mov|/home/ub/visuals/live/darkmatter/clips/3D/ketchup.mov|/home/ub/visuals/live/darkmatter/clips/3D/power5.mov|/home/ub/visuals/live/darkmatter/clips/3D/lighthouse.mov|/home/ub/visuals/live/darkmatter/clips/3D/billibug.mov|/home/ub/visuals/live/darkmatter/clips/3D/razer380.mov|/home/ub/visuals/live/darkmatter/clips/3D/stayhuman04.mov|/home/ub/visuals/live/darkmatter/clips/3D/braindance_eye.mov|/home/ub/visuals/live/darkmatter/clips/3D/news.mov|/home/ub/visuals/live/darkmatter/clips/3D/p0wer3.mov|/home/ub/visuals/live/darkmatter/clips/3D/rennbahn2.mov|/home/ub/visuals/live/darkmatter/clips/3D/red_robot.mov|/home/ub/visuals/live/darkmatter/clips/3D/subblend.mov|
+;
 #N canvas 0 91 450 300 README 0;
 #X text 23 17 requirements:;
 #X text 23 37 - hcs (folder_list);

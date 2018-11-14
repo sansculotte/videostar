@@ -9,18 +9,18 @@
 #X obj 22 105 /;
 #X obj 22 126 + 0.5;
 #X obj 22 174 i;
-#X floatatom 225 20 5 0 0 0 - - -;
+#X floatatom 225 20 5 0 0 0 - - -, f 5;
 #X msg 225 74 \; fps_recv color \$1 -1 0;
 #X obj 22 152 markex/average 3;
-#X floatatom 137 154 5 0 0 0 - - -;
+#X floatatom 137 154 5 0 0 0 - - -, f 5;
 #X obj 103 23 cnv 15 44 114 empty empty empty 20 12 0 14 -86277 -66577
 0;
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 8900 1;
+-1 -262144 0 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 78 256;
+-262144 -1 0 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -86,9 +86,9 @@
 #X msg 90 389 set perspec \$1 \$2 \$3 \$4 \$5 \$6 \, bang;
 #X msg 172 453 set perspec \, adddollar 1 \, adddollar 2 \, adddollar
 3 \, adddollar 4 \, adddollar 5 \, adddollar 6;
-#X floatatom 104 109 5 0.1 5 1 x_wideness - -;
-#X floatatom 104 126 5 0.1 5 1 y_wideness - -;
-#X floatatom 104 143 5 0 0 1 z_depth - -;
+#X floatatom 104 109 5 0.1 5 1 x_wideness - -, f 5;
+#X floatatom 104 126 5 0.1 5 1 y_wideness - -, f 5;
+#X floatatom 104 143 5 0 0 1 z_depth - -, f 5;
 #X obj 360 196 select 1;
 #X obj 405 219 t b f f;
 #X obj 249 226 t b f f;
@@ -230,7 +230,7 @@
 #X obj 57 162 rotateXYZ 0 0 0;
 #X obj 57 3 inlet;
 #X obj 57 203 scale 1 1 1;
-#X floatatom 16 103 5 0 0 0 - - -;
+#X floatatom 16 103 5 0 0 0 - - -, f 5;
 #X obj 134 41 * -1;
 #X obj 16 24 loadbang;
 #X msg 16 55 1.5;
@@ -278,7 +278,7 @@
 #X obj 483 548 translateXYZ 0 2 0;
 #X obj 346 544 translateXYZ 0 -2 -4;
 #X obj 57 522 rotateXYZ 90 0 0;
-#X floatatom 214 38 5 0 0 0 - - -;
+#X floatatom 214 38 5 0 0 0 - - -, f 5;
 #X obj 57 553 translateXYZ 0 -3 3;
 #X obj 282 4 loadbang;
 #X obj 57 411 translateXYZ 1 0 3;
@@ -392,8 +392,8 @@
 #N canvas 743 457 569 318 plane 0;
 #X obj 31 14 inlet;
 #X obj 31 66 separator;
-#X floatatom 136 200 5 0 0 0 - - -;
-#X floatatom 83 140 5 0 0 0 - - -;
+#X floatatom 136 200 5 0 0 0 - - -, f 5;
+#X floatatom 83 140 5 0 0 0 - - -, f 5;
 #X obj 136 155 * 9, f 5;
 #X obj 136 178 / 16;
 #X obj 31 106 translateXYZ 0 0 -1;
@@ -422,14 +422,14 @@
 #N canvas 801 249 450 300 sphere 0;
 #X obj 21 16 inlet;
 #X obj 21 158 rotateXYZ;
-#X floatatom 111 127 5 0 0 0 - - -;
-#X floatatom 38 229 5 0 0 0 - - -;
+#X floatatom 111 127 5 0 0 0 - - -, f 5;
+#X floatatom 38 229 5 0 0 0 - - -, f 5;
 #X obj 21 125 pix_texture;
-#X floatatom 157 126 5 0 0 0 - - -;
+#X floatatom 157 126 5 0 0 0 - - -, f 5;
 #X obj 21 92 pix_set 512 512;
 #X msg 94 11 rectangle 0;
 #X obj 21 270 sphere 2.5;
-#X floatatom 78 247 5 0 0 0 - - -;
+#X floatatom 78 247 5 0 0 0 - - -, f 5;
 #X msg 78 228 32;
 #X obj 78 210 loadbang;
 #X obj 21 184 translateXYZ 0 0 -0.5;
@@ -460,11 +460,11 @@
 #X text 468 25 rutt-etra like spatial line/grid distortion effect;
 #X obj 95 28 inlet;
 #X obj 253 260 change;
-#X floatatom 253 283 5 0 0 0 - - -;
+#X floatatom 253 283 5 0 0 0 - - -, f 5;
 #X msg 38 405 print;
 #X obj 95 406 glsl_program;
 #X obj 208 260 change;
-#X floatatom 208 283 5 0 0 0 - - -;
+#X floatatom 208 283 5 0 0 0 - - -, f 5;
 #X obj 208 310 pack;
 #X obj 253 310 t b f;
 #X msg 132 330 link;
@@ -486,7 +486,7 @@
 #X obj 95 454 polygon_smooth, f 16;
 #X obj 95 118 gemhead 99;
 #X msg 15 272 push \$1;
-#X floatatom 15 164 5 0 0 0 - - -;
+#X floatatom 15 164 5 0 0 0 - - -, f 5;
 #X msg 141 18 rectangle 0 \, texunit 10;
 #X obj 95 87 rectangle;
 #X obj 95 501 scaleXYZ 6 2 1;
@@ -617,8 +617,8 @@
 #X coords 0 -1 1 1 85 60 1 200 20;
 #X restore 705 348 pd verteiler;
 #X obj 290 348 glsl_contrast;
-#X symbolatom 705 252 50 0 0 0 - movie_2 -;
-#X symbolatom 290 252 50 0 0 0 - movie_1 -;
+#X symbolatom 705 252 50 0 0 0 - movie_2 -, f 50;
+#X symbolatom 290 252 50 0 0 0 - movie_1 -, f 50;
 #X obj 290 269 inline_movieplayer 1;
 #X obj 705 417 glsl_contrast;
 #X obj 290 488 qprojection 1;
@@ -630,7 +630,7 @@
 0;
 #X obj 104 13 bng 14 250 50 0 empty empty empty 17 7 0 10 -86853 -257985
 -1;
-#X msg 104 45 \; texture_dir /srv/visuals/cinder/tex;
+#X msg 104 45 \; texture_dir /home/ub/visuals/live/darkmatter/tex;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X coords 0 -1 1 1 85 20 1 100 10;
@@ -919,7 +919,7 @@
 #X msg 679 19 1;
 #X obj 512 0 r flash;
 #X obj 650 0 delay 20;
-#X floatatom 878 319 5 0 0 0 - - -;
+#X floatatom 878 319 5 0 0 0 - - -, f 5;
 #X msg 878 353 1;
 #X obj 878 335 t b f;
 #X obj 1226 31 r 1_t;
@@ -927,7 +927,7 @@
 #X obj 879 241 - 36;
 #X obj 879 262 spigot;
 #X text 912 245 kettle connection;
-#X floatatom 833 336 3 1 2 2 layer layer -;
+#X floatatom 833 336 3 1 2 2 layer layer -, f 3;
 #X obj 878 301 bng 15 250 50 0 empty empty re-trigger 0 -6 0 8 -262144
 -1 -262144;
 #X obj 833 352 + 1;
@@ -944,9 +944,9 @@
 1;
 #X obj 926 263 tgl 15 0 empty kettle kettle 20 3 0 8 -262144 -1 -262144
 0 1;
-#X floatatom 822 66 3 1 2 2 bank bank_01 -;
+#X floatatom 822 66 3 1 2 2 bank bank_01 -, f 3;
 #X obj 822 89 - 1;
-#X floatatom 905 68 3 1 2 2 bank bank_02 -;
+#X floatatom 905 68 3 1 2 2 bank bank_02 -, f 3;
 #X obj 905 91 - 1;
 #X obj 1294 30 r 1_t_2;
 #X text 1225 8 moviescratch on/off;
@@ -1029,7 +1029,7 @@
 #X obj 41 34 t f f f;
 #X obj 41 55 pipe 200;
 #X msg 128 37 0;
-#X floatatom 163 136 5 0 0 0 - - -;
+#X floatatom 163 136 5 0 0 0 - - -, f 5;
 #X obj 41 120 t b b;
 #X connect 0 0 10 0;
 #X connect 1 0 2 0;
@@ -1066,7 +1066,7 @@
 #X obj 41 34 t f f f;
 #X obj 41 55 pipe 200;
 #X msg 128 37 0;
-#X floatatom 163 136 5 0 0 0 - - -;
+#X floatatom 163 136 5 0 0 0 - - -, f 5;
 #X obj 41 120 t b b;
 #X connect 0 0 10 0;
 #X connect 1 0 2 0;
@@ -1109,7 +1109,7 @@
 #X obj 17 160 > 1;
 #X obj 7 220 s xbank_01;
 #X obj 114 95 r i;
-#X floatatom 165 230 5 0 0 0 - - -;
+#X floatatom 165 230 5 0 0 0 - - -, f 5;
 #X obj 165 131 loadbang;
 #X obj 78 161 < 10;
 #X msg 165 154 13;
@@ -1475,7 +1475,7 @@
 #N canvas 634 388 695 446 keyboard 0;
 #X obj 294 37 key;
 #X obj 294 77 == 32;
-#X floatatom 342 79 5 0 0 0 - - -;
+#X floatatom 342 79 5 0 0 0 - - -, f 5;
 #X obj 205 58 keyname;
 #X msg 244 147 0;
 #X msg 264 147 1;
@@ -1819,7 +1819,7 @@ btn_2 btn_1;
 #N canvas 513 114 1008 882 bhoreal 0;
 #X obj 85 30 inlet;
 #X msg 170 314 \; shader-effect \$1;
-#X floatatom 170 276 5 0 0 0 - - -;
+#X floatatom 170 276 5 0 0 0 - - -, f 5;
 #X obj 85 66 moses 24;
 #X obj 138 107 moses 32;
 #X obj 138 141 & 7;
@@ -1832,7 +1832,7 @@ btn_2 btn_1;
 #X obj 570 427 s __autoblend_01;
 #X obj 586 458 s __autohop_01;
 #X obj 602 492 s __autojump_01;
-#X floatatom 486 322 5 0 0 0 - - -;
+#X floatatom 486 322 5 0 0 0 - - -, f 5;
 #X obj 245 655 moses 48;
 #X obj 245 698 & 7;
 #X obj 245 769 s __strobe_mode;
@@ -1941,7 +1941,7 @@ btn_2 btn_1;
 #N canvas 495 91 1195 884 midicontrol 0;
 #X obj 332 32 inlet;
 #X msg 170 314 \; shader-effect \$1;
-#X floatatom 170 276 5 0 0 0 - - -;
+#X floatatom 170 276 5 0 0 0 - - -, f 5;
 #X obj 85 66 moses 24;
 #X obj 138 107 moses 32;
 #X obj 138 141 & 7;
