@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 5892 1;
+-1 -262144 0 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 33 256;
+-262144 -1 0 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -2193,13 +2193,101 @@ btn_2 btn_1;
 #X connect 9 0 2 0;
 #X connect 9 0 3 0;
 #X connect 12 0 11 1;
-#X restore 982 406 pd flash;
-#X obj 982 391 hradio 15 1 1 4 empty empty empty 0 -8 0 8 -4034 -1
+#X restore 895 623 pd flash;
+#X obj 895 608 hradio 15 1 1 4 empty empty empty 0 -8 0 8 -4034 -1
 -4034 0;
-#X obj 982 423 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+#X obj 895 640 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -4034;
-#X obj 1027 363 nbx 5 12 0 20000 0 1 empty empty empty 0 -8 0 8 -4034
+#X obj 940 580 nbx 5 12 0 20000 0 1 empty empty empty 0 -8 0 8 -4034
 -1 -1 89 256;
+#N canvas 535 353 627 296 lissajous 0;
+#X msg 124 104 draw fill;
+#X msg 124 81 draw point;
+#X msg 124 124 draw tri;
+#X msg 124 146 draw tristrip;
+#X msg 123 169 draw trifan;
+#X msg 123 190 draw quad;
+#X obj 123 248 scopeXYZ~ 1024;
+#X obj 276 129 *~ 10;
+#X obj 299 151 *~ 10;
+#X obj 124 54 select 1 2 3 4 5;
+#X obj 124 15 inlet;
+#X obj 278 15 inlet;
+#X obj 31 144 rotateXYZ;
+#X msg 82 116 135;
+#X obj 61 81 loadbang;
+#X obj 197 14 inlet;
+#X obj 31 14 inlet;
+#X obj 31 193 color 1 1 1 1;
+#X obj 31 56 gemhead 77;
+#X msg 53 116 0;
+#X obj 290 237 rotateXYZ;
+#X obj 339 184 r 3Dx_2;
+#X obj 408 175 r 3Dy_2;
+#X obj 415 209 r 3Dz_2;
+#X msg 200 114 draw lines;
+#X obj 289 193 *~ 10;
+#X obj 347 16 r sincomp_1;
+#X obj 430 16 r sincomp_2;
+#X obj 513 16 r sincomp_3;
+#X obj 347 63 osc~;
+#X obj 430 62 osc~;
+#X obj 513 62 osc~;
+#X obj 347 40 / 4;
+#X obj 430 40 / 4;
+#X obj 513 38 / 4;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 20 0;
+#X connect 7 0 6 1;
+#X connect 8 0 6 2;
+#X connect 9 0 1 0;
+#X connect 9 1 0 0;
+#X connect 9 2 2 0;
+#X connect 9 3 3 0;
+#X connect 9 4 4 0;
+#X connect 9 5 5 0;
+#X connect 10 0 9 0;
+#X connect 11 0 7 1;
+#X connect 11 0 8 1;
+#X connect 11 0 25 1;
+#X connect 12 0 17 0;
+#X connect 13 0 12 3;
+#X connect 14 0 13 0;
+#X connect 14 0 19 0;
+#X connect 15 0 12 3;
+#X connect 16 0 18 0;
+#X connect 17 0 6 0;
+#X connect 18 0 12 0;
+#X connect 19 0 18 0;
+#X connect 21 0 20 1;
+#X connect 22 0 20 2;
+#X connect 23 0 20 3;
+#X connect 24 0 6 0;
+#X connect 25 0 6 3;
+#X connect 26 0 32 0;
+#X connect 27 0 33 0;
+#X connect 28 0 34 0;
+#X connect 29 0 7 0;
+#X connect 30 0 8 0;
+#X connect 31 0 25 0;
+#X connect 32 0 29 0;
+#X connect 33 0 30 0;
+#X connect 34 0 31 0;
+#X restore 896 718 pd lissajous;
+#X obj 896 685 tgl 15 0 empty __lissajous empty 17 7 0 10 -4034 -1
+-1 0 64;
+#X obj 923 685 hradio 15 1 1 5 empty empty empty 0 -8 0 10 -4034 -1
+-1 4;
+#X obj 990 718 hsl 80 10 0 20 0 0 empty lissajous_preamp preamp 84
+6 0 7 -4034 -1 -4034 0 1;
+#X obj 953 703 hsl 80 10 0 360 0 0 empty empty rotation 84 6 0 7 -4034
+-1 -4034 0 1;
+#X msg 1000 682 90;
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
 #X connect 8 0 24 1;
@@ -2213,3 +2301,8 @@ btn_2 btn_1;
 #X connect 36 0 38 0;
 #X connect 37 0 36 0;
 #X connect 39 0 36 1;
+#X connect 41 0 40 0;
+#X connect 42 0 40 1;
+#X connect 43 0 40 3;
+#X connect 44 0 40 2;
+#X connect 45 0 44 0;
