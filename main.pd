@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 5259 1;
+-1 -262144 8900 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 29 256;
+-262144 -1 80 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -225,7 +225,7 @@
 #X connect 11 0 3 0;
 #X coords 0 -1 1 1 66 30 2 10 10;
 #X restore 21 742 pd record;
-#N canvas 233 291 455 399 output 1;
+#N canvas 233 291 455 399 output 0;
 #N canvas 953 122 794 803 cubes 0;
 #X obj 57 162 rotateXYZ 0 0 0;
 #X obj 57 3 inlet;
@@ -568,11 +568,11 @@
 #X obj 202 23 cnv 15 80 54 empty empty verteiler 4 8 0 10 -86277 -262144
 0;
 #X obj 207 38 hradio 15 1 1 4 empty verteiler empty 0 -8 0 10 -258113
--1 -1 0;
+-1 -1 1;
 #X obj 28 42 t f f f;
 #N canvas 433 705 397 182 audiotexturer 0;
 #X obj 30 12 inlet;
-#X obj 30 50 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1;
+#X obj 30 50 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1;
 #X obj 55 49 r~ filtered_mic;
 #X obj 56 105 s _sigtex;
 #X obj 30 135 outlet;
@@ -589,9 +589,10 @@
 #X coords 0 -1 1 1 200 22 1 30 50;
 #X restore 207 87 pd audiotexturer;
 #X obj 207 56 tgl 15 0 empty empty audiotex 17 7 0 10 -168197 -1 -228856
-0 1;
+1 1;
 #X msg 373 192 open whiteframe.png;
 #X obj 194 236 pix_image whiteframe.png;
+#X msg 420 87 red;
 #X connect 0 0 3 0;
 #X connect 2 0 3 1;
 #X connect 3 0 1 0;
@@ -615,9 +616,11 @@
 #X connect 20 1 12 0;
 #X connect 20 2 15 0;
 #X connect 21 0 3 2;
+#X connect 21 1 25 0;
 #X connect 22 0 21 0;
 #X connect 23 0 24 0;
 #X connect 24 0 13 0;
+#X connect 25 0 21 1;
 #X coords 0 -1 1 1 85 60 1 200 20;
 #X restore 705 348 pd verteiler;
 #X obj 290 348 glsl_contrast;
@@ -1608,7 +1611,7 @@ btn_2 btn_1;
 1;
 #X obj 516 301 tgl 20 0 7_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
-#X obj 491 411 tgl 20 0 8_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 1
+#X obj 491 411 tgl 20 0 8_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
 #X obj 571 348 tgl 20 0 9_bt_2 empty 9 20 0 0 10 -262144 -1 -1 0 1
 ;
@@ -1621,13 +1624,13 @@ btn_2 btn_1;
 #X obj 92 351 bng 20 250 50 0 right_2 empty empty 0 -6 0 8 -262144
 -1 -1;
 #X obj 127 353 hsl 128 15 0 255 0 0 left_x_2 empty empty -2 -6 0 8
--262144 -1 -1 12202 1;
+-262144 -1 -1 0 1;
 #X obj 182 296 vsl 15 128 255 0 0 0 left_y_2 empty empty 0 -8 0 8 -262144
--1 -1 10857 1;
+-1 -1 0 1;
 #X obj 282 353 hsl 128 15 0 255 0 0 right_x_2 empty empty -2 -6 0 8
--262144 -1 -1 5927 1;
+-262144 -1 -1 0 1;
 #X obj 337 296 vsl 15 128 255 0 0 0 right_y_2 empty empty 0 -8 0 8
--262144 -1 -1 5329 1;
+-262144 -1 -1 0 1;
 #X obj 540 37 spigot;
 #X obj 540 58 spigot;
 #X obj 540 81 spigot;
@@ -1743,13 +1746,13 @@ btn_2 btn_1;
 #X obj 92 351 bng 20 250 50 0 right empty empty 0 -6 0 8 -262144 -1
 -1;
 #X obj 127 353 hsl 128 15 0 255 0 0 left_x empty empty -2 -6 0 8 -262144
--1 -1 6375 1;
+-1 -1 0 1;
 #X obj 182 296 vsl 15 128 255 0 0 0 left_y empty empty 0 -8 0 8 -262144
--1 -1 6325 1;
+-1 -1 0 1;
 #X obj 282 353 hsl 128 15 0 255 0 0 right_x empty empty -2 -6 0 8 -262144
--1 -1 6375 1;
+-1 -1 0 1;
 #X obj 337 296 vsl 15 128 255 0 0 0 right_y empty empty 0 -8 0 8 -262144
--1 -1 6325 1;
+-1 -1 0 1;
 #X obj 549 39 spigot;
 #X obj 549 60 spigot;
 #X obj 549 83 spigot;
@@ -2199,7 +2202,7 @@ btn_2 btn_1;
 #X connect 12 0 11 1;
 #X restore 895 623 pd flash;
 #X obj 895 608 hradio 15 1 1 4 empty empty empty 0 -8 0 8 -4034 -1
--4034 0;
+-4034 1;
 #X obj 895 640 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -4034;
 #X obj 940 580 nbx 5 12 0 20000 0 1 empty empty empty 0 -8 0 8 -4034
@@ -2307,6 +2310,7 @@ btn_2 btn_1;
 #X restore 1133 732 pd the_end;
 #X obj 1133 709 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
 1;
+#X obj 460 587 strobe;
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
 #X connect 8 0 24 1;
@@ -2316,7 +2320,7 @@ btn_2 btn_1;
 #X connect 13 0 7 0;
 #X connect 14 0 6 0;
 #X connect 24 0 6 0;
-#X connect 25 0 5 0;
+#X connect 25 0 48 0;
 #X connect 36 0 38 0;
 #X connect 37 0 36 0;
 #X connect 39 0 36 1;
@@ -2326,3 +2330,4 @@ btn_2 btn_1;
 #X connect 44 0 40 2;
 #X connect 45 0 44 0;
 #X connect 47 0 46 0;
+#X connect 48 0 5 0;
