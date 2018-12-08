@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 8900 1;
+-1 -262144 5517 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 80 256;
+-262144 -1 30 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -572,7 +572,7 @@
 #X obj 28 42 t f f f;
 #N canvas 433 705 397 182 audiotexturer 0;
 #X obj 30 12 inlet;
-#X obj 30 50 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1;
+#X obj 30 50 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1;
 #X obj 55 49 r~ filtered_mic;
 #X obj 56 105 s _sigtex;
 #X obj 30 135 outlet;
@@ -589,7 +589,7 @@
 #X coords 0 -1 1 1 200 22 1 30 50;
 #X restore 207 87 pd audiotexturer;
 #X obj 207 56 tgl 15 0 empty empty audiotex 17 7 0 10 -168197 -1 -228856
-1 1;
+0 1;
 #X msg 373 192 open whiteframe.png;
 #X obj 194 236 pix_image whiteframe.png;
 #X msg 420 87 red;
@@ -2310,7 +2310,33 @@ btn_2 btn_1;
 #X restore 1133 732 pd the_end;
 #X obj 1133 709 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
 1;
-#X obj 460 587 strobe;
+#X obj 460 595 strobe;
+#X obj 38 578 wavesphere;
+#X msg 117 578 red;
+#X obj 38 554 tgl 15 1 empty __wavesphere empty 17 7 0 10 -260097 -1
+-1 0 64;
+#X obj 60 554 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 0
+1;
+#X obj 38 678 tgl 15 1 empty __waveshards empty 17 7 0 10 -260097 -1
+-1 64 64;
+#X obj 90 643 tgl 15 0 empty empty autorotate 17 7 0 10 -260097 -1
+-260097 0 1;
+#X obj 82 554 tgl 15 0 empty empty autorotate 17 7 0 10 -260097 -1
+-260097 1 1;
+#X obj 38 659 hradio 15 1 0 3 empty empty texture 0 -8 0 10 -260097
+-1 -260097 0;
+#X obj 90 658 tgl 15 0 empty empty XY/Z 17 7 0 10 -260097 -1 -260097
+0 1;
+#X obj 135 658 tgl 15 0 empty empty object 17 7 0 10 -260097 -1 -260097
+0 1;
+#X obj 40 633 hsl 200 10 1 20000 0 1 empty waveshard_filter filter
+-30 4 0 7 -260097 -1 -260097 3100 1;
+#X obj 174 646 hsl 66 10 0 30 0 1 empty waveshard_amp empty -2 -8 0
+10 -260097 -1 -1 2600 1;
+#X obj 38 693 waveshards;
+#X msg 116 693 red;
+#X obj 54 678 tgl 15 0 empty empty audiosource 17 7 0 10 -260097 -1
+-260097 0 1;
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
 #X connect 8 0 24 1;
@@ -2331,3 +2357,18 @@ btn_2 btn_1;
 #X connect 45 0 44 0;
 #X connect 47 0 46 0;
 #X connect 48 0 5 0;
+#X connect 49 0 50 0;
+#X connect 50 0 49 4;
+#X connect 51 0 49 0;
+#X connect 52 0 49 2;
+#X connect 53 0 61 0;
+#X connect 54 0 61 2;
+#X connect 55 0 49 3;
+#X connect 56 0 61 1;
+#X connect 57 0 61 3;
+#X connect 58 0 61 4;
+#X connect 59 0 61 5;
+#X connect 60 0 61 6;
+#X connect 61 0 62 0;
+#X connect 62 0 61 8;
+#X connect 63 0 61 7;
