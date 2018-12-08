@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 0 1;
+-1 -262144 8900 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 0 256;
+-262144 -1 59 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -151,9 +151,9 @@
 #X obj 12 12 cnv 15 85 55 empty empty empty 20 12 0 14 -86277 -262144
 0;
 #X obj 17 44 tgl 15 0 empty empty fullscreen 16 11 0 8 -258113 -1 -262144
-0 1;
+1 1;
 #X obj 17 21 tgl 15 0 empty empty render 16 11 0 8 -258113 -1 -262144
-0 1;
+1 1;
 #X obj 395 211 t b b;
 #X obj 201 157 gemwin 50;
 #X msg 414 276 border 1 \, offset 0 0 \, dimen 1280 720 \, fullscreen
@@ -225,7 +225,7 @@
 #X connect 11 0 3 0;
 #X coords 0 -1 1 1 66 30 2 10 10;
 #X restore 21 742 pd record;
-#N canvas 253 307 455 399 output 0;
+#N canvas 233 291 455 399 output 1;
 #N canvas 953 122 794 803 cubes 0;
 #X obj 57 162 rotateXYZ 0 0 0;
 #X obj 57 3 inlet;
@@ -456,7 +456,7 @@
 -1 3;
 #X obj 199 12 inlet gemlist;
 #X obj 16 113 cyclone/gate 4 1, f 31;
-#N canvas 845 221 852 604 grid 0;
+#N canvas 835 213 852 604 grid 0;
 #X text 468 25 rutt-etra like spatial line/grid distortion effect;
 #X obj 95 28 inlet;
 #X obj 253 260 change;
@@ -491,6 +491,8 @@
 #X obj 95 87 rectangle;
 #X obj 95 501 scaleXYZ 6 2 1;
 #X msg 249 390 tex0 \$1;
+#X obj 18 27 loadbang;
+#X msg 18 51 0;
 #X connect 1 0 21 0;
 #X connect 2 0 3 0;
 #X connect 3 0 9 0;
@@ -527,6 +529,8 @@
 #X connect 30 0 21 0;
 #X connect 32 0 25 0;
 #X connect 33 0 5 0;
+#X connect 34 0 35 0;
+#X connect 35 0 27 0;
 #X restore 199 294 pd grid;
 #X obj 244 180 t b;
 #X obj 244 217 print WARNING: not implemented;
@@ -1604,7 +1608,7 @@ btn_2 btn_1;
 1;
 #X obj 516 301 tgl 20 0 7_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
-#X obj 491 411 tgl 20 0 8_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 0
+#X obj 491 411 tgl 20 0 8_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 1
 1;
 #X obj 571 348 tgl 20 0 9_bt_2 empty 9 20 0 0 10 -262144 -1 -1 0 1
 ;
@@ -1617,13 +1621,13 @@ btn_2 btn_1;
 #X obj 92 351 bng 20 250 50 0 right_2 empty empty 0 -6 0 8 -262144
 -1 -1;
 #X obj 127 353 hsl 128 15 0 255 0 0 left_x_2 empty empty -2 -6 0 8
--262144 -1 -1 0 1;
+-262144 -1 -1 12202 1;
 #X obj 182 296 vsl 15 128 255 0 0 0 left_y_2 empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 10857 1;
 #X obj 282 353 hsl 128 15 0 255 0 0 right_x_2 empty empty -2 -6 0 8
--262144 -1 -1 0 1;
+-262144 -1 -1 5927 1;
 #X obj 337 296 vsl 15 128 255 0 0 0 right_y_2 empty empty 0 -8 0 8
--262144 -1 -1 0 1;
+-262144 -1 -1 5329 1;
 #X obj 540 37 spigot;
 #X obj 540 58 spigot;
 #X obj 540 81 spigot;
@@ -1739,13 +1743,13 @@ btn_2 btn_1;
 #X obj 92 351 bng 20 250 50 0 right empty empty 0 -6 0 8 -262144 -1
 -1;
 #X obj 127 353 hsl 128 15 0 255 0 0 left_x empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 6375 1;
 #X obj 182 296 vsl 15 128 255 0 0 0 left_y empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 6325 1;
 #X obj 282 353 hsl 128 15 0 255 0 0 right_x empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 6375 1;
 #X obj 337 296 vsl 15 128 255 0 0 0 right_y empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 6325 1;
 #X obj 549 39 spigot;
 #X obj 549 60 spigot;
 #X obj 549 83 spigot;
