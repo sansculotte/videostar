@@ -20,7 +20,7 @@
 #X obj 231 13 hradio 15 1 1 20 \$0-device-number empty choose_a_device
 0 -6 1 8 -260097 -1 -1 18;
 #X obj 196 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
-0 -6 0 14 -166441 -1 -1 4 256;
+0 -6 0 14 -166441 -1 -1 19 256;
 #X msg 117 15 print;
 #X obj 134 88 route abs key ff;
 #X obj 596 39 print abs:;
@@ -153,9 +153,9 @@ btn_2 btn_1;
 ;
 #X msg 195 34 open \$1;
 #X obj 231 13 hradio 15 1 1 20 \$0-device-number empty choose_a_device
-0 -6 1 9 -4034 -1 -1 4;
+0 -6 1 9 -4034 -1 -1 19;
 #X obj 195 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
-0 -6 0 14 -166441 -1 -1 4 256;
+0 -6 0 14 -166441 -1 -1 19 256;
 #X msg 117 15 print;
 #X obj 134 83 route abs key ff;
 #X obj 587 37 print abs:;
@@ -223,6 +223,7 @@ btn_2 btn_1;
 #X obj 91 222 change;
 #X obj 134 64 hid \$1;
 #X obj 53 126 outlet;
+#X msg 24 52 refresh;
 #X connect 5 0 51 0;
 #X connect 6 0 51 0;
 #X connect 7 0 6 0;
@@ -277,6 +278,7 @@ btn_2 btn_1;
 #X connect 50 0 37 0;
 #X connect 51 0 10 0;
 #X connect 51 0 52 0;
+#X connect 53 0 51 0;
 #X restore 179 25 pd joystick2 15;
 #X obj 1 97 outlet;
 #X obj 1 58 prepend send joystick_1;
@@ -684,8 +686,8 @@ btn_2 btn_1;
 #X obj 879 8 r __set_clip_1;
 #X obj 1076 8 r __set_clip_2;
 #X obj 822 170 clipgrid 1;
-#X obj 1019 170 clipgrid 2;
 #X text 969 115 joy1;
+#X obj 1019 170 clipgrid 2;
 #X connect 0 0 158 0;
 #X connect 1 0 160 0;
 #X connect 3 0 159 0;
@@ -720,7 +722,7 @@ btn_2 btn_1;
 #X connect 38 0 39 0;
 #X connect 39 0 194 0;
 #X connect 40 0 41 0;
-#X connect 41 0 195 0;
+#X connect 41 0 196 0;
 #X connect 42 0 68 0;
 #X connect 48 0 115 0;
 #X connect 48 0 116 0;
@@ -731,10 +733,10 @@ btn_2 btn_1;
 #X connect 54 0 194 2;
 #X connect 55 0 194 3;
 #X connect 56 0 194 4;
-#X connect 57 0 195 1;
-#X connect 58 0 195 2;
-#X connect 59 0 195 3;
-#X connect 60 0 195 4;
+#X connect 57 0 196 1;
+#X connect 58 0 196 2;
+#X connect 59 0 196 3;
+#X connect 60 0 196 4;
 #X connect 62 0 77 1;
 #X connect 63 0 64 0;
 #X connect 64 0 66 0;
@@ -872,9 +874,9 @@ btn_2 btn_1;
 #X connect 190 0 182 0;
 #X connect 191 0 185 0;
 #X connect 192 0 194 5;
-#X connect 193 0 195 5;
+#X connect 193 0 196 5;
 #X connect 194 0 140 0;
-#X connect 195 0 141 0;
+#X connect 196 0 141 0;
 #X coords 0 -1 1 1 85 16 1 100 100;
 #X restore 57 117 pd joystick_ctrl;
 #X msg 642 19 clear;
@@ -882,7 +884,7 @@ btn_2 btn_1;
 #X obj 289 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -99865 -1
 -1;
 #X msg 289 62 putvideo \$1;
-#N canvas 593 347 450 300 playlist 1;
+#N canvas 593 347 450 300 playlist 0;
 #X msg 153 123 seek \$1;
 #X obj 28 184 outlet;
 #X obj 153 29 r clip_1;
@@ -1213,11 +1215,9 @@ btn_2 btn_1;
 #X connect 8 1 10 0;
 #X restore 1149 37 pd init-gui.023;
 #X obj 369 36 videogrid videogrid1 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 /home/ub/visuals/live/darkmatter/clips/amit/amit_skull3.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_moth2.mov|/home/ub/visuals/live/darkmatter/clips/amit/01_circuit_paralell.mov|/home/ub/visuals/live/darkmatter/clips/amit/ninenine.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_skull.mov|/home/ub/visuals/live/darkmatter/clips/amit/bug_moths2.mov|/home/ub/visuals/live/darkmatter/clips/amit/bug_moths.mov|/home/ub/visuals/live/darkmatter/clips/amit/nine.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_moth.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_spaceship2.mov|/home/ub/visuals/live/darkmatter/clips/amit/billibug2.mov|/home/ub/visuals/live/darkmatter/clips/amit/schritzy.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_lines.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_skull2.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_fall.mov|/home/ub/visuals/live/darkmatter/clips/amit/blutwurtz.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_clock.mov|/home/ub/visuals/live/darkmatter/clips/amit/billibug.mov|/home/ub/visuals/live/darkmatter/clips/amit/amit_spaceship.mov|
-;
+60 40 ;
 #X obj 811 35 videogrid videogrid2 4 5 #F0F0F0 #0F0F0F #00fb14 mov:mpg:avi
-60 40 /home/ub/visuals/live/darkmatter/clips/3D/stayhuman06.mov|/home/ub/visuals/live/darkmatter/clips/3D/braindance.mov|/home/ub/visuals/live/darkmatter/clips/3D/roundup.mov|/home/ub/visuals/live/darkmatter/clips/3D/power4.mov|/home/ub/visuals/live/darkmatter/clips/3D/p0wer2.mov|/home/ub/visuals/live/darkmatter/clips/3D/ketchup.mov|/home/ub/visuals/live/darkmatter/clips/3D/power5.mov|/home/ub/visuals/live/darkmatter/clips/3D/lighthouse.mov|/home/ub/visuals/live/darkmatter/clips/3D/billibug.mov|/home/ub/visuals/live/darkmatter/clips/3D/razer380.mov|/home/ub/visuals/live/darkmatter/clips/3D/stayhuman04.mov|/home/ub/visuals/live/darkmatter/clips/3D/braindance_eye.mov|/home/ub/visuals/live/darkmatter/clips/3D/news.mov|/home/ub/visuals/live/darkmatter/clips/3D/p0wer3.mov|/home/ub/visuals/live/darkmatter/clips/3D/rennbahn2.mov|/home/ub/visuals/live/darkmatter/clips/3D/red_robot.mov|/home/ub/visuals/live/darkmatter/clips/3D/subblend.mov|
-;
+60 40 ;
 #N canvas 0 91 450 300 README 0;
 #X text 23 17 requirements:;
 #X text 23 37 - hcs (folder_list);
