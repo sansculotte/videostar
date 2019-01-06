@@ -62,8 +62,8 @@
 #X msg 89 295 fade \$1;
 #X obj 13 13 cnv 15 194 194 empty empty mixer_\$1_\$2 4 8 0 10 -86277
 -262144 0;
-#X obj 46 152 hradio 15 1 1 7 empty shader-effect effects 110 8 0 10
--258113 -1 -262144 4;
+#X obj 50 152 hradio 15 1 1 8 empty shader-effect FX 122 8 0 10 -258113
+-1 -262144 7;
 #X obj 26 152 tgl 15 1 empty __blending_onoff empty 17 7 0 10 -258113
 -1 -1 1 1;
 #X obj 27 25 cnv 15 10 10 empty empty channel_one 20 12 0 10 -86277
@@ -81,7 +81,7 @@
 #X obj 27 117 cnv 15 10 10 empty empty difference 20 12 0 10 -86277
 -262144 0;
 #X obj 26 30 vradio 15 1 0 7 empty empty empty 0 -8 0 10 -258113 -1
--1 3;
+-1 4;
 #X obj 28 173 hsl 140 12 0 1 0 0 empty fade_second_layer alpha 144
 6 0 10 -258113 -1 -262144 0 1;
 #X obj 28 188 hsl 140 12 0 1 0 0 empty fade_second_layer fade 144 8
