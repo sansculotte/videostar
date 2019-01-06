@@ -1202,7 +1202,7 @@ btn_2 btn_1;
 #X obj 30 98 loadbang;
 #X obj 30 120 t b b;
 #X msg 30 257 \; grid_rows 4 \; grid_cols 5 \; init_clipdir 1 \;;
-#X msg 57 166 \; video_dir /home/ub/visuals/live/darkmatter/clips \;
+#X msg 57 166 \; video_dir /home/ub/visuals/live/meccanismo/clips \;
 ;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
