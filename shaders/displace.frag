@@ -19,5 +19,8 @@ void main (void)
         float Y = 0.33 * color.r + 0.5 * color.g + 0.16 * color.b;
         color.a = Y > 0.25 ? Y : 0.;
     }
+    else {
+        color.a = 1.;
+    }
 	pixels = color;
 }

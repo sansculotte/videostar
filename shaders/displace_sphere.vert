@@ -19,10 +19,10 @@ void main()
     vec4 pos = vec4(gl_Vertex);
     vec4 color = texture2D(tex0, texcoord);
 
-    float Y = vec3(0.33 * color.r + 0.5 * color.g + 0.16 * color.b);
+    float Y = 0.33 * color.r + 0.5 * color.g + 0.16 * color.b;
 
-    pos += gl_Normal * color * push;
+    pos += vec4(vec4(gl_Normal, Y) * color * push);
 
-    C = Y;
+    C = vec4(Y);
     gl_Position = gl_ModelViewProjectionMatrix * pos;
 }
