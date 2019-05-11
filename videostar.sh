@@ -7,6 +7,7 @@ AUDIO_BACKEND=""
 VJ_PATCH="main.pd"
 GUI_PATCH="main_gui.pd"
 USE_JACK=0
+PD="$HOME/build/pure-data/bin/pd"
 
 
 vj_help() {
@@ -38,10 +39,10 @@ vj_start() {
         AUDIO_BACKEND="-alsa"
     fi
 
-    pd $PDOPTS $AUDIO_BACKEND $VJ_PATCH &
+    $PD $PDOPTS $AUDIO_BACKEND $VJ_PATCH &
     echo $! > /tmp/pd_vjset.pid
 
-    pd $PDOPTS -noaudio -alsamidi $GUI_PATCH &
+    $PD $PDOPTS -noaudio -alsamidi $GUI_PATCH &
     echo $! > /tmp/pd_vjgui.pid
 }
 
