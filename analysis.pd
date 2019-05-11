@@ -1,6 +1,7 @@
 #N canvas 37 433 1383 547 10;
+#X declare -lib cyclone -path mapping -lib aubio;
 #X obj 138 264 env~ 32;
-#X floatatom 466 434 5 0 0 0 - - -, f 5;
+#X floatatom 466 434 5 0 0 0 - - -;
 #X obj 466 460 s takt;
 #X obj 122 326 *~;
 #X obj 138 306 >;
@@ -30,7 +31,7 @@
 #X msg 360 317 read templates.txt;
 #X obj 122 366 mapping/autoscale 0 128;
 #X obj 16 326 s~ filtered_mic;
-#X floatatom 519 436 5 0 0 0 - - -, f 5;
+#X floatatom 519 436 5 0 0 0 - - -;
 #X obj 359 390 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X obj 519 460 s duration;
@@ -137,7 +138,7 @@
 #X obj 419 133 dac~;
 #X obj 384 240 bng 15 250 50 0 bonkbonk2 empty empty 0 -6 0 8 -258113
 -1 -1;
-#X floatatom 495 190 5 0 1 0 - - -, f 5;
+#X floatatom 495 190 5 0 1 0 - - -;
 #X obj 407 239 s aubio_tempo;
 #X obj 416 179 aubio;
 #X obj 407 213 aubiotempo~ 5;
@@ -171,9 +172,9 @@
 3;
 #X text 70 44 off;
 #X obj 16 48 vsl 15 130 0 127 0 0 empty volume empty 0 -8 0 8 -4034
--13381 -1 0 1;
+-13381 -1 4689 1;
 #X obj 33 48 vsl 15 130 0 128 0 1 empty empty empty 0 -8 0 8 -99865
--4034 -1 2100 1;
+-4034 -1 4200 1;
 #X obj 70 166 bng 15 250 50 0 fiddlebonk empty empty 17 7 0 10 -4034
 -1 -1;
 #X obj 55 166 bng 15 250 50 0 bonkbonk empty empty 17 7 0 10 -4034
@@ -188,11 +189,11 @@
 1;
 #X msg 17 221 \; pd dsp \$1;
 #X obj 219 258 aubioonset~;
-#X text 645 414 uses: cyclone \, mapping \, aubio;
 #N canvas 0 91 450 300 switch~ 0;
 #X restore 870 68 pd switch~;
 #X obj 219 334 s bumm;
 #X obj 219 281 s zack;
+#X obj 974 21 declare -lib cyclone -path mapping -lib aubio;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 3 0 5 0;
@@ -220,7 +221,7 @@
 #X connect 23 0 81 1;
 #X connect 24 0 114 0;
 #X connect 24 0 118 0;
-#X connect 24 0 124 0;
+#X connect 24 0 123 0;
 #X connect 25 0 24 0;
 #X connect 26 0 24 0;
 #X connect 27 0 24 0;
@@ -307,5 +308,5 @@
 #X connect 118 1 10 0;
 #X connect 118 1 31 0;
 #X connect 119 0 120 0;
-#X connect 121 0 125 0;
+#X connect 121 0 124 0;
 #X coords 0 -1 1 1 100 180 1 10 10;
