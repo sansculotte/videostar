@@ -11,7 +11,7 @@
 #X obj 568 85 inlet;
 #X obj 201 149 pack f f;
 #X obj 288 218 pack f f;
-#X obj 84 465 square;
+#X obj 84 495 square;
 #X obj 84 289 alpha 1;
 #X obj 293 336 delay;
 #X obj 288 112 t f b;
@@ -41,6 +41,7 @@
 #X obj 84 219 pix_buffer_read \$3;
 #X obj 84 436 translateXYZ 0 0 1;
 #X obj 111 36 unpack f f f f f f f f;
+#X obj 84 468 emission 1 1 1;
 #X connect 0 0 13 0;
 #X connect 1 0 30 1;
 #X connect 2 0 30 0;
@@ -86,7 +87,7 @@
 #X connect 38 0 37 0;
 #X connect 38 1 39 1;
 #X connect 39 0 0 0;
-#X connect 40 0 12 0;
+#X connect 40 0 42 0;
 #X connect 41 0 38 0;
 #X connect 41 1 7 0;
 #X connect 41 1 35 0;
@@ -96,3 +97,4 @@
 #X connect 41 5 29 0;
 #X connect 41 6 40 1;
 #X connect 41 7 40 2;
+#X connect 42 0 12 0;
