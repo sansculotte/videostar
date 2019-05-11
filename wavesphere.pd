@@ -20,7 +20,7 @@
 #X obj 24 510 scale 1;
 #X obj 63 484 r volume;
 #X obj 38 116 loadbang;
-#X obj 218 347 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 218 347 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 157 453 autorotate;
 #X obj 223 453 autorotate;
@@ -39,27 +39,28 @@
 #X obj 123 23 cnv 15 114 94 empty empty empty 4 8 0 11 -86277 -262144
 0;
 #X obj 126 26 tgl 15 0 empty empty wavesphere 17 7 0 10 -258113 -1
--262144 1 1;
+-262144 0 1;
 #X obj 126 58 tgl 15 0 empty empty autorotate 0 -8 0 10 -260097 -1
--228856 1 1;
+-228856 0 1;
 #X obj 187 58 tgl 15 0 empty empty alpha 17 7 0 10 -260097 -1 -228856
-1 1;
+0 1;
 #X msg 38 249 open shaders/displace.frag;
 #X msg 218 371 black \$1;
 #X obj 283 225 sig2pix;
 #X obj 145 58 tgl 15 0 empty empty empty 0 -8 0 10 -260097 -1 -228856
-1 1;
+0 1;
 #X obj 164 58 tgl 15 0 empty empty empty 0 -8 0 10 -260097 -1 -228856
-1 1;
+0 1;
 #X msg 38 164 open shaders/displace.vert;
 #X msg 405 328 push \$1;
 #X obj 130 104 hsl 104 12 0 5 0 0 empty empty push -2 -8 0 10 -258113
--260097 -228856 2000 1;
+-260097 -228856 2060 1;
 #X obj 24 633 sphere 1 84;
 #X obj 74 509 / 128;
 #X obj 187 77 tgl 15 0 empty empty boost 17 7 0 10 -260097 -1 -228856
 0 1;
 #X msg 55 142 1;
+#X msg 88 142 0;
 #X connect 0 0 1 0;
 #X connect 0 1 10 0;
 #X connect 1 0 2 0;
@@ -86,6 +87,7 @@
 #X connect 20 0 44 0;
 #X connect 20 0 39 0;
 #X connect 20 0 50 0;
+#X connect 20 0 51 0;
 #X connect 21 0 40 0;
 #X connect 22 0 15 0;
 #X connect 23 0 16 0;
@@ -114,4 +116,5 @@
 #X connect 48 0 18 1;
 #X connect 49 0 34 0;
 #X connect 50 0 46 0;
+#X connect 51 0 36 0;
 #X coords 0 -1 1 1 120 100 2 120 20;
