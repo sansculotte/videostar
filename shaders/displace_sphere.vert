@@ -5,11 +5,12 @@
 #version 130
 
 out vec2 texcoord;
+out vec4 C;
 
 uniform sampler2D tex0;
 uniform float push = 1.0;
 
-out vec4 C;
+
 
 void main()
 {
