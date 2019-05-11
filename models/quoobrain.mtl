@@ -1,0 +1,12 @@
+# Blender MTL File: 'quoobrain_clean_mesh.blend'
+# Material Count: 1
+
+newmtl redglass
+Ns 303.921569
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.020315 0.000000
+Ks 0.805785 0.805785 0.805785
+Ke 0.000000 0.000000 0.000000
+Ni 2.762496
+d 0.307269
+illum 2
