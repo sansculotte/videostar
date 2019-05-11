@@ -1,4 +1,5 @@
 #N canvas 929 473 649 441 10;
+#X declare -path hcs;
 #X obj 28 19 inlet bank;
 #X obj 28 382 outlet;
 #X obj 390 147 hcs/folder_list;
@@ -13,29 +14,30 @@
 #X msg 513 67 0;
 #X obj 373 209 int;
 #X obj 373 44 t b a b b;
-#X floatatom 473 218 5 0 0 0 - - -, f 5;
-#X floatatom 373 236 5 0 0 0 - - -, f 5;
+#X floatatom 473 218 5 0 0 0 - - -;
+#X floatatom 373 236 5 0 0 0 - - -;
 #X msg 373 313 \; init_banks \$1;
 #X obj 476 389 outlet name;
 #X obj 28 356 prepend putvideodir;
 #X obj 156 44 text define -k \$0-video-dir-list;
-#A set /home/ub/visuals/live/darkmatter/3D \; /home/ub/visuals/live/darkmatter/amit
-\; /home/ub/visuals/live/darkmatter/cinder \; /home/ub/visuals/live/darkmatter/circular
-\; /home/ub/visuals/live/darkmatter/dark \; /home/ub/visuals/live/darkmatter/figures
-\; /home/ub/visuals/live/darkmatter/freaky \; /home/ub/visuals/live/darkmatter/gang
-\; /home/ub/visuals/live/darkmatter/heads \; /home/ub/visuals/live/darkmatter/kao
-\; /home/ub/visuals/live/darkmatter/light \; /home/ub/visuals/live/darkmatter/machine
-\; /home/ub/visuals/live/darkmatter/organic \; /home/ub/visuals/live/darkmatter/schwarzweiss
-\; /home/ub/visuals/live/darkmatter/slow \; /home/ub/visuals/live/darkmatter/space
-\; /home/ub/visuals/live/darkmatter/strct \; /home/ub/visuals/live/darkmatter/strct2
-\; /home/ub/visuals/live/darkmatter/stuff \; /home/ub/visuals/live/darkmatter/teneriffa
-\; /home/ub/visuals/live/darkmatter/tex \; /home/ub/visuals/live/darkmatter/trailer
-\; /home/ub/visuals/live/darkmatter/whrite \; /home/ub/visuals/live/darkmatter/wild
+#A set /home/ub/visuals/live/darkmatter/3D \; /home/ub/visuals/live/meccanismo/clips/001_slow
+\; /home/ub/visuals/live/meccanismo/clips/002_cinder \; /home/ub/visuals/live/meccanismo/clips/003_3D
+\; /home/ub/visuals/live/meccanismo/clips/004_amit \; /home/ub/visuals/live/meccanismo/clips/005_circular
+\; /home/ub/visuals/live/meccanismo/clips/006_dark \; /home/ub/visuals/live/meccanismo/clips/007_figures
+\; /home/ub/visuals/live/meccanismo/clips/008_heads \; /home/ub/visuals/live/meccanismo/clips/009_organic
+\; /home/ub/visuals/live/meccanismo/clips/010_freaky \; /home/ub/visuals/live/meccanismo/clips/011_machine
+\; /home/ub/visuals/live/meccanismo/clips/012_gang \; /home/ub/visuals/live/meccanismo/clips/013_light
+\; /home/ub/visuals/live/meccanismo/clips/014_schwarzweiss \; /home/ub/visuals/live/meccanismo/clips/015_space
+\; /home/ub/visuals/live/meccanismo/clips/016_strct \; /home/ub/visuals/live/meccanismo/clips/017_strct2
+\; /home/ub/visuals/live/meccanismo/clips/018_trailer \; /home/ub/visuals/live/meccanismo/clips/019_whrite
+\; /home/ub/visuals/live/meccanismo/clips/020_wild \; /home/ub/visuals/live/meccanismo/clips/021_stuff
+\; /home/ub/visuals/live/meccanismo/clips/022_teneriffa \; /home/ub/visuals/live/darkmatter/wild
 \; /home/ub/visuals/live/darkmatter/zfe \;;
 #X obj 422 277 text set \$0-video-dir-list;
 #X obj 28 278 text get \$0-video-dir-list;
 #X text 156 20 make this global \, we only need one;
 #X text 420 295 split off last directory as name;
+#X obj 480 18 declare -path hcs;
 #X connect 0 0 21 0;
 #X connect 2 0 9 0;
 #X connect 3 0 13 0;
