@@ -6,21 +6,21 @@
 #X obj 128 331 t b f;
 #X obj 128 288 change;
 #X msg 110 380 link \$1 \$2;
-#X floatatom 128 312 2 0 0 0 ID - -;
-#X floatatom 110 226 2 0 0 0 ID - -;
+#X floatatom 128 312 2 0 0 0 ID - -, f 2;
+#X floatatom 110 226 2 0 0 0 ID - -, f 2;
 #X obj 110 408 print linking;
 #X obj 110 202 change;
 #X obj 24 547 rotateXYZ;
 #X obj 24 459 pix_texture;
 #X obj 519 18 inlet red/white;
 #X obj 24 485 alpha;
-#X floatatom 157 483 5 0 0 0 - - -;
-#X floatatom 223 483 5 0 0 0 - - -;
-#X floatatom 289 483 5 0 0 0 - - -;
+#X floatatom 157 483 5 0 0 0 - - -, f 5;
+#X floatatom 223 483 5 0 0 0 - - -, f 5;
+#X floatatom 289 483 5 0 0 0 - - -, f 5;
 #X obj 24 510 scale 1;
 #X obj 63 484 r volume;
 #X obj 38 116 loadbang;
-#X obj 218 347 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 218 347 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 157 453 autorotate;
 #X obj 223 453 autorotate;
@@ -29,38 +29,38 @@
 #X obj 306 49 r~ filtered_mic;
 #X msg 191 560 draw line;
 #X msg 296 565 draw fill;
-#X floatatom 107 449 5 0 0 0 - - -;
-#X floatatom 129 546 5 0 0 0 - - -;
+#X floatatom 107 449 5 0 0 0 - - -, f 5;
+#X floatatom 129 546 5 0 0 0 - - -, f 5;
 #X obj 24 87 gemhead 66;
 #X obj 24 577 translateXYZ 0 0 0;
 #X msg 274 327 boost \$1;
-#X obj 274 298 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 274 298 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 123 23 cnv 15 114 94 empty empty empty 4 8 0 11 -86277 -262144
+#X obj 123 23 cnv 15 114 94 empty empty empty 4 8 0 11 -13330 -262144
 0;
-#X obj 126 26 tgl 15 0 empty empty wavesphere 17 7 0 10 -258113 -1
--262144 0 1;
-#X obj 126 58 tgl 15 0 empty empty autorotate 0 -8 0 10 -260097 -1
--228856 0 1;
-#X obj 187 58 tgl 15 0 empty empty alpha 17 7 0 10 -260097 -1 -228856
+#X obj 126 26 tgl 15 0 empty empty wavesphere 17 7 0 10 -2304 -1 -262144
 0 1;
+#X obj 126 58 tgl 15 0 empty empty autorotate 0 -8 0 10 -2341 -1 -228856
+1 1;
+#X obj 187 58 tgl 15 0 empty empty alpha 17 7 0 10 -2341 -1 -228856
+1 1;
 #X msg 38 249 open shaders/displace.frag;
 #X msg 218 371 black \$1;
 #X obj 283 225 sig2pix;
-#X obj 145 58 tgl 15 0 empty empty empty 0 -8 0 10 -260097 -1 -228856
-0 1;
-#X obj 164 58 tgl 15 0 empty empty empty 0 -8 0 10 -260097 -1 -228856
-0 1;
+#X obj 145 58 tgl 15 0 empty empty empty 0 -8 0 10 -2341 -1 -228856
+1 1;
+#X obj 164 58 tgl 15 0 empty empty empty 0 -8 0 10 -2341 -1 -228856
+1 1;
 #X msg 405 328 push \$1;
-#X obj 130 104 hsl 104 12 0 5 0 0 empty empty push -2 -8 0 10 -258113
--260097 -228856 6760 1;
+#X obj 130 104 hsl 104 12 0 5 0 0 empty empty push -2 -8 0 10 -2340
+-262144 -228856 4700 1;
 #X obj 24 633 sphere 1 84;
 #X obj 74 509 / 128;
-#X obj 187 77 tgl 15 0 empty empty boost 17 7 0 10 -260097 -1 -228856
-0 1;
+#X obj 187 77 tgl 15 0 empty empty boost 17 7 0 10 -2341 -1 -228856
+1 1;
 #X msg 55 142 1;
 #X msg 88 142 0;
-#X msg 38 164 open shaders/displace_sphere.vert;
+#X msg 38 164 open shaders/displace.vert;
 #X connect 0 0 1 0;
 #X connect 0 1 10 0;
 #X connect 1 0 2 0;

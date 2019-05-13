@@ -6,17 +6,17 @@
 #X obj 155 311 t b f;
 #X obj 155 270 change;
 #X msg 137 360 link \$1 \$2;
-#X floatatom 155 292 2 0 0 0 ID - -;
-#X floatatom 137 206 2 0 0 0 ID - -;
+#X floatatom 155 292 2 0 0 0 ID - -, f 2;
+#X floatatom 137 206 2 0 0 0 ID - -, f 2;
 #X obj 142 384 print linking;
 #X obj 137 184 change;
 #X obj 51 439 pix_texture;
 #X obj 777 626 outlet;
 #X msg 738 142 1;
 #X obj 51 465 alpha;
-#X floatatom 184 463 5 0 0 0 - - -;
-#X floatatom 240 463 5 0 0 0 - - -;
-#X floatatom 296 463 5 0 0 0 - - -;
+#X floatatom 184 463 5 0 0 0 - - -, f 5;
+#X floatatom 240 463 5 0 0 0 - - -, f 5;
+#X floatatom 296 463 5 0 0 0 - - -, f 5;
 #X obj 65 125 loadbang;
 #X obj 1022 21 inlet red/white;
 #X obj 24 38 gemhead 61;
@@ -26,7 +26,7 @@
 #X obj 284 540 r zack;
 #X obj 284 566 i;
 #X obj 312 566 r duration;
-#X floatatom 367 605 5 0 0 0 - - -;
+#X floatatom 367 605 5 0 0 0 - - -, f 5;
 #X obj 265 638 scale 3;
 #X obj 332 313 autorotate;
 #X obj 332 281 autorotate;
@@ -42,8 +42,8 @@
 #X obj 739 84 int;
 #X obj 265 664 model /home/ub/3D/objects/quoobrain03_clip.obj;
 #X obj 638 85 r~ direct_mic;
-#X floatatom 434 386 5 0 0 0 - - -;
-#X floatatom 435 412 5 0 0 0 - - -;
+#X floatatom 434 386 5 0 0 0 - - -, f 5;
+#X floatatom 435 412 5 0 0 0 - - -, f 5;
 #X msg 469 386 -0.3;
 #X msg 470 410 0.4;
 #X msg 485 345 bang;
@@ -59,50 +59,49 @@
 #X obj 941 50 == 0;
 #X obj 759 216 *~;
 #X msg 235 205 boost \$1;
-#X obj 235 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 235 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 637 200 *~ 1;
 #X msg 65 229 open shaders/displace.frag;
 #X msg 75 362 tex0 \$1;
-#X obj 153 23 cnv 15 234 114 empty empty empty 4 8 0 10 -86277 -262144
+#X obj 153 23 cnv 15 234 114 empty empty empty 4 8 0 10 -13330 -262144
 0;
-#X obj 156 25 tgl 15 0 empty empty waveshards 17 7 0 10 -258113 -1
--262144 1 1;
-#X obj 156 89 tgl 15 0 empty empty autorotate 17 7 0 10 -260097 -1
--260097 0 1;
-#X obj 322 55 hradio 15 1 0 4 empty empty texture 0 -8 0 10 -260097
--1 -260097 2;
-#X obj 240 89 tgl 15 0 empty empty XY/Z 17 7 0 10 -260097 -1 -260097
+#X obj 156 25 tgl 15 0 empty empty waveshards 17 7 0 10 -2368 -1 -262144
+0 1;
+#X obj 156 89 tgl 15 0 empty empty autorotate 17 7 0 10 -2341 -228856
+-162280 0 1;
+#X obj 322 55 hradio 15 1 0 4 empty empty texture 0 -8 0 10 -2341 -1
+-162280 0;
+#X obj 240 89 tgl 15 0 empty empty XY/Z 17 7 0 10 -2341 -1 -162280
 0 1;
 #X obj 159 61 hsl 144 11 1 20000 0 1 empty waveshard_filter filter
-0 6 0 8 -260097 -1 -86277 8800 1;
+0 6 0 8 -2341 -1 -86277 8800 1;
 #X obj 159 75 hsl 144 10 0 30 0 1 empty waveshard_amp gain 0 5 0 8
--260097 -1 -86277 4600 1;
-#X obj 156 43 tgl 15 0 empty empty audiosource 17 7 0 10 -260097 -1
--260097 0 1;
+-2341 -1 -86277 4600 1;
+#X obj 156 43 tgl 15 0 empty empty audiosource 17 7 0 10 -2341 -1 -162280
+1 1;
 #X obj 739 57 t f f;
 #X obj 296 178 t f f f;
 #X msg 313 735 open models/skull.obj;
-#X obj 239 27 tgl 15 0 empty empty distort 17 7 0 10 -258113 -1 -228856
-1 1;
+#X obj 322 25 tgl 15 0 empty empty distort 17 7 0 10 -13381 -228856
+-228856 1 1;
 #X obj 24 81 shunt;
-#X obj 322 83 hradio 15 1 0 4 empty empty object 0 -8 0 10 -260097
--1 -260097 0;
+#X obj 322 83 hradio 15 1 0 4 empty empty object 0 -8 0 10 -2341 -1
+-162280 3;
 #X obj 51 629 spigot;
 #X obj 97 629 == 0;
 #X obj 216 585 > 0;
 #X obj 183 628 spigot;
 #X obj 391 479 sel 1 2 3;
 #X msg 318 703 open /home/ub/3D/objects/hexagonzo.obj;
-#X obj 156 108 tgl 15 0 empty empty alpha 17 7 0 10 -260097 -1 -260097
-0 1;
-#X obj 212 108 tgl 15 0 empty empty boost 17 7 0 10 -260097 -1 -260097
-0 1;
+#X obj 156 108 tgl 15 0 empty empty alpha 17 7 0 10 -2341 -1 -162280
+1 1;
+#X obj 212 108 tgl 15 0 empty empty boost 17 7 0 10 -2341 -1 -162280
+1 1;
 #X msg 356 637 open /home/ub/3D/objects/3dgraffity.obj;
 #X obj 51 597 translateXYZ 0 0 0;
 #X msg 203 264 black \$1;
 #X msg 284 591 1.5 \, 1 \$1;
-#X msg 65 144 open shaders/displace_sphere.vert;
 #X obj 570 424 spigot;
 #X obj 570 399 r volume;
 #X obj 570 503 line;
@@ -111,9 +110,10 @@
 #X msg 532 455 1;
 #X obj 576 369 t f f;
 #X obj 51 519 scale 1;
-#X obj 266 108 tgl 15 0 empty empty autoscale 17 7 0 10 -260097 -1
--260097 1 1;
+#X obj 266 108 tgl 15 0 empty empty autoscale 17 7 0 10 -2341 -1 -162280
+0 1;
 #X obj 570 446 / 128;
+#X msg 65 144 open shaders/displace.vert;
 #X connect 0 0 1 0;
 #X connect 0 1 10 0;
 #X connect 1 0 2 0;
@@ -130,11 +130,11 @@
 #X connect 10 0 8 0;
 #X connect 11 0 14 0;
 #X connect 13 0 50 0;
-#X connect 14 0 98 0;
+#X connect 14 0 97 0;
 #X connect 15 0 21 1;
 #X connect 16 0 21 2;
 #X connect 17 0 21 3;
-#X connect 18 0 90 0;
+#X connect 18 0 100 0;
 #X connect 18 0 62 0;
 #X connect 18 0 13 0;
 #X connect 19 0 50 2;
@@ -224,16 +224,16 @@
 #X connect 87 0 81 0;
 #X connect 88 0 2 0;
 #X connect 89 0 23 0;
-#X connect 90 0 0 0;
-#X connect 91 0 100 0;
-#X connect 92 0 91 0;
-#X connect 93 0 98 1;
-#X connect 94 0 93 0;
-#X connect 95 0 96 0;
+#X connect 90 0 99 0;
+#X connect 91 0 90 0;
+#X connect 92 0 97 1;
+#X connect 93 0 92 0;
+#X connect 94 0 95 0;
+#X connect 95 0 93 0;
 #X connect 96 0 94 0;
-#X connect 97 0 95 0;
-#X connect 97 1 91 1;
-#X connect 98 0 21 0;
-#X connect 99 0 97 0;
-#X connect 100 0 94 0;
+#X connect 96 1 90 1;
+#X connect 97 0 21 0;
+#X connect 98 0 96 0;
+#X connect 99 0 93 0;
+#X connect 100 0 0 0;
 #X coords 0 -1 1 1 240 120 1 150 20;
