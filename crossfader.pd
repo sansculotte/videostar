@@ -1,0 +1,172 @@
+#N canvas 369 114 1354 973 10;
+#X obj 68 25 inlet;
+#X obj 703 24 inlet;
+#X obj 68 229 translateXYZ 0 0 -2;
+#X obj 68 201 gemframebuffer;
+#X obj 88 110 t b;
+#X obj 98 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 88 69 loadbang;
+#X obj 88 137 int \$1;
+#X obj 68 258 rectangle 2 2;
+#X msg 88 163 type FLOAT \, dimen 1280 1280 \, rectangle 0 \, texunit
+\$1;
+#X obj 703 229 translateXYZ 0 0 -2;
+#X obj 703 201 gemframebuffer;
+#X obj 723 110 t b;
+#X obj 733 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 723 69 loadbang;
+#X obj 703 259 rectangle 2 2;
+#X obj 723 137 int \$2;
+#X text 140 136 <- first channel;
+#X text 775 137 <- second channel;
+#X obj 514 557 change;
+#X floatatom 514 581 5 0 0 0 - - -, f 5;
+#X msg 267 422 blendMode \$1;
+#X msg 299 707 print;
+#X obj 356 708 glsl_program;
+#X obj 469 557 change;
+#X floatatom 469 580 5 0 0 0 - - -, f 5;
+#X obj 469 607 pack;
+#X obj 514 607 t b f;
+#X msg 419 624 link;
+#X msg 314 545 print;
+#X msg 316 512 print;
+#X obj 356 512 glsl_vertex;
+#X obj 356 545 glsl_fragment;
+#X msg 404 679 link \$1 \$2;
+#X obj 443 423 loadbang;
+#N canvas 239 251 450 300 onebang 0;
+#X obj 120 71 inlet;
+#X obj 120 151 outlet;
+#X obj 120 120 t b;
+#X obj 120 100 change;
+#X msg 161 71 set -1;
+#X obj 161 11 gemhead;
+#X obj 161 51 route 0;
+#X obj 161 31 route gem_state;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
+#X restore 528 783 pd onebang;
+#X msg 509 692 tex0 0;
+#X msg 540 376 effect \$1;
+#X msg 218 667 push \$1;
+#X floatatom 218 634 5 0 0 0 - - -, f 5;
+#X obj 218 554 spigot;
+#X obj 218 593 / 100;
+#X floatatom 245 493 5 0 0 0 - - -, f 5;
+#X obj 273 528 > 0;
+#X obj 356 785 outlet;
+#X msg 34 491 alpha \$1;
+#X msg 98 491 fade \$1;
+#X obj 540 341 i;
+#X obj 218 528 r volume;
+#X text 554 640 channels from creation argument;
+#X obj 262 206 cnv 15 200 160 empty empty crossfader_\$1_\$2 6 12 0
+12 -86277 -262144 0;
+#X obj 356 423 gemhead 56;
+#X obj 556 662 int \$1;
+#X obj 627 663 int \$2;
+#X obj 267 227 cnv 15 10 10 empty empty channel_one 20 12 0 10 -86277
+-262144 0;
+#X obj 268 241 cnv 15 10 10 empty empty alpha_blend 20 12 0 10 -86277
+-262144 0;
+#X obj 268 256 cnv 15 10 10 empty empty add 20 12 0 10 -86277 -262144
+0;
+#X obj 268 271 cnv 15 10 10 empty blend_mode multiply 20 12 0 10 -86277
+-262144 0;
+#X obj 268 287 cnv 15 10 10 empty empty hard_light 20 12 0 10 -86277
+-262144 0;
+#X obj 268 303 cnv 15 10 10 empty empty overlay 20 12 0 10 -86277 -262144
+0;
+#X obj 268 317 cnv 15 10 10 empty empty difference 20 12 0 10 -86277
+-262144 0;
+#X obj 267 230 vradio 15 1 0 7 empty empty empty 0 -8 0 10 -258113
+-1 -1 0;
+#X obj 21 338 hsl 140 12 0 1 0 0 empty fade_second_layer alpha 144
+6 0 10 -128992 -1 -262144 0 1;
+#X obj 61 386 hsl 140 12 0 1 0 0 empty fade_second_layer fade 144 8
+0 10 -128992 -1 -262144 0 1;
+#X msg 443 476 open shaders/CrossFader.frag;
+#X msg 443 449 open shaders/CrossFader.vert;
+#X msg 138 426 mixFactor \$1;
+#X obj 266 345 hsl 194 20 0 1 0 0 empty empty empty 144 6 0 10 -258113
+-1 -262144 19300 1;
+#X obj 542 197 loadbang;
+#X msg 542 222 0.5;
+#X msg 723 163 type FLOAT \, dimen 1280 1280 \, rectangle 0 \, texunit
+\$1;
+#X msg 556 692 texture1 \$1;
+#X msg 628 692 texture2 \$1;
+#X connect 0 0 3 0;
+#X connect 1 0 11 0;
+#X connect 2 0 8 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 9 0;
+#X connect 9 0 3 0;
+#X connect 10 0 15 0;
+#X connect 11 0 10 0;
+#X connect 12 0 16 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 16 0 70 0;
+#X connect 19 0 20 0;
+#X connect 20 0 27 0;
+#X connect 21 0 23 0;
+#X connect 22 0 23 0;
+#X connect 23 0 44 0;
+#X connect 23 1 35 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 33 0;
+#X connect 27 0 26 0;
+#X connect 27 1 26 1;
+#X connect 28 0 23 0;
+#X connect 29 0 32 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 31 1 24 0;
+#X connect 32 0 23 0;
+#X connect 32 1 19 0;
+#X connect 33 0 23 0;
+#X connect 34 0 64 0;
+#X connect 34 0 65 0;
+#X connect 35 0 36 0;
+#X connect 35 0 52 0;
+#X connect 35 0 53 0;
+#X connect 37 0 23 0;
+#X connect 38 0 23 0;
+#X connect 39 0 38 0;
+#X connect 40 0 41 0;
+#X connect 41 0 39 0;
+#X connect 42 0 41 1;
+#X connect 43 0 40 1;
+#X connect 45 0 23 0;
+#X connect 46 0 23 0;
+#X connect 47 0 43 0;
+#X connect 47 0 37 0;
+#X connect 48 0 40 0;
+#X connect 51 0 31 0;
+#X connect 52 0 71 0;
+#X connect 53 0 72 0;
+#X connect 61 0 21 0;
+#X connect 62 0 45 0;
+#X connect 63 0 46 0;
+#X connect 64 0 32 0;
+#X connect 65 0 31 0;
+#X connect 66 0 23 0;
+#X connect 68 0 69 0;
+#X connect 69 0 67 0;
+#X connect 70 0 11 0;
+#X connect 71 0 23 0;
+#X connect 72 0 23 0;
+#X coords 0 -1 1 1 204 164 1 260 204;
