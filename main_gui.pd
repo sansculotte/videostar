@@ -2,8 +2,8 @@
 #X obj 4 3 cnv 15 1270 222 empty empty empty 20 12 0 14 -33289 -66577
 0;
 #X symbolatom 811 206 55 0 0 0 - - -;
-#N canvas 315 432 367 134 joystick 0;
-#N canvas 0 200 773 563 joystick1 0;
+#N canvas 315 432 367 134 joystick 1;
+#N canvas 513 281 773 563 joystick1 1;
 #X obj 463 348 bng 20 250 50 0 6_b empty empty 0 -6 0 8 -262144 -1
 -1;
 #X obj 215 315 bng 15 250 50 0 0_b empty empty 0 -6 0 8 -262144 -1
@@ -17,15 +17,15 @@
 #X obj 168 15 tgl 15 0 empty empty empty 1 12 1 9 -262144 -1 -1 1 1
 ;
 #X msg 196 34 open \$1;
-#X obj 231 13 hradio 15 1 1 20 \$0-device-number empty choose_a_device
-0 -6 1 8 -260097 -1 -1 18;
+#X obj 231 13 hradio 15 1 1 30 \$0-device-number empty choose_a_device
+0 -6 1 8 -260097 -1 -1 19;
 #X obj 196 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
-0 -6 0 14 -166441 -1 -1 19 256;
+0 -6 0 14 -166441 -1 -1 20 256;
 #X msg 117 15 print;
 #X obj 134 88 route abs key ff;
-#X obj 596 39 print abs:;
-#X obj 596 60 print key:;
-#X obj 596 83 print ff:;
+#X obj 613 63 print abs:;
+#X obj 613 84 print key:;
+#X obj 613 107 print ff:;
 #X obj 394 260 bng 15 250 50 0 4_b empty empty 0 -6 0 8 -262144 -1
 -1;
 #X obj 302 314 bng 15 250 50 0 5_b empty empty 0 -6 0 8 -262144 -1
@@ -60,10 +60,10 @@
 -1 -1 0 1;
 #X obj 337 296 vsl 15 128 255 0 0 0 right_y empty empty 0 -8 0 8 -262144
 -1 -1 0 1;
-#X obj 549 39 spigot;
-#X obj 549 60 spigot;
-#X obj 549 83 spigot;
-#X obj 549 17 tgl 15 0 empty empty debug 20 8 0 8 -262144 -1 -1 0 1
+#X obj 566 63 spigot;
+#X obj 566 84 spigot;
+#X obj 566 107 spigot;
+#X obj 566 41 tgl 15 0 empty empty debug 20 8 0 8 -262144 -1 -1 0 1
 ;
 #X obj 374 244 tgl 15 0 3_t empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
