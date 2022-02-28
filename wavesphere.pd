@@ -6,17 +6,17 @@
 #X obj 128 331 t b f;
 #X obj 128 288 change;
 #X msg 110 380 link \$1 \$2;
-#X floatatom 128 312 2 0 0 0 ID - -, f 2;
-#X floatatom 110 226 2 0 0 0 ID - -, f 2;
+#X floatatom 128 312 2 0 0 0 ID - -;
+#X floatatom 110 226 2 0 0 0 ID - -;
 #X obj 110 408 print linking;
 #X obj 110 202 change;
 #X obj 24 547 rotateXYZ;
 #X obj 24 459 pix_texture;
 #X obj 519 18 inlet red/white;
 #X obj 24 485 alpha;
-#X floatatom 157 483 5 0 0 0 - - -, f 5;
-#X floatatom 223 483 5 0 0 0 - - -, f 5;
-#X floatatom 289 483 5 0 0 0 - - -, f 5;
+#X floatatom 157 483 5 0 0 0 - - -;
+#X floatatom 223 483 5 0 0 0 - - -;
+#X floatatom 289 483 5 0 0 0 - - -;
 #X obj 24 510 scale 1;
 #X obj 63 484 r volume;
 #X obj 38 116 loadbang;
@@ -29,8 +29,8 @@
 #X obj 306 49 r~ filtered_mic;
 #X msg 191 560 draw line;
 #X msg 296 565 draw fill;
-#X floatatom 107 449 5 0 0 0 - - -, f 5;
-#X floatatom 129 546 5 0 0 0 - - -, f 5;
+#X floatatom 107 449 5 0 0 0 - - -;
+#X floatatom 129 546 5 0 0 0 - - -;
 #X obj 24 87 gemhead 66;
 #X obj 24 577 translateXYZ 0 0 0;
 #X msg 274 327 boost \$1;
@@ -41,26 +41,26 @@
 #X obj 126 26 tgl 15 0 empty empty wavesphere 17 7 0 10 -4032 -1 -262144
 0 1;
 #X obj 126 58 tgl 15 0 empty empty autorotate 0 -8 0 10 -2341 -1 -228856
-0 1;
+1 1;
 #X obj 187 58 tgl 15 0 empty empty alpha 17 7 0 10 -2341 -1 -228856
 0 1;
 #X msg 38 249 open shaders/displace.frag;
 #X msg 218 371 black \$1;
 #X obj 283 225 sig2pix;
 #X obj 145 58 tgl 15 0 empty empty empty 0 -8 0 10 -2341 -1 -228856
-0 1;
+1 1;
 #X obj 164 58 tgl 15 0 empty empty empty 0 -8 0 10 -2341 -1 -228856
-0 1;
+1 1;
 #X msg 405 328 push \$1;
 #X obj 130 104 hsl 104 12 0 5 0 0 empty empty push -2 -8 0 10 -2340
--262144 -228856 2060 1;
-#X obj 24 633 sphere 1 84;
+-262144 -228856 7360 1;
 #X obj 74 509 / 128;
 #X obj 187 77 tgl 15 0 empty empty boost 17 7 0 10 -2341 -1 -228856
 0 1;
 #X msg 55 142 1;
 #X msg 88 142 0;
 #X msg 38 164 open shaders/displace.vert;
+#X obj 24 633 sphere 1 84;
 #X connect 0 0 1 0;
 #X connect 0 1 10 0;
 #X connect 1 0 2 0;
@@ -83,22 +83,22 @@
 #X connect 16 0 11 2;
 #X connect 17 0 11 3;
 #X connect 18 0 11 0;
-#X connect 19 0 47 0;
-#X connect 20 0 51 0;
-#X connect 20 0 39 0;
-#X connect 20 0 49 0;
+#X connect 19 0 46 0;
 #X connect 20 0 50 0;
+#X connect 20 0 39 0;
+#X connect 20 0 48 0;
+#X connect 20 0 49 0;
 #X connect 21 0 40 0;
 #X connect 22 0 15 0;
 #X connect 23 0 16 0;
 #X connect 24 0 17 0;
 #X connect 25 0 12 0;
 #X connect 26 0 41 1;
-#X connect 27 0 46 0;
-#X connect 28 0 46 0;
+#X connect 27 0 51 0;
+#X connect 28 0 51 0;
 #X connect 30 0 32 3;
 #X connect 31 0 0 0;
-#X connect 32 0 46 0;
+#X connect 32 0 51 0;
 #X connect 33 0 2 0;
 #X connect 34 0 33 0;
 #X connect 36 0 31 0;
@@ -112,9 +112,9 @@
 #X connect 43 0 24 0;
 #X connect 44 0 2 0;
 #X connect 45 0 44 0;
-#X connect 47 0 18 1;
-#X connect 48 0 34 0;
-#X connect 49 0 45 0;
-#X connect 50 0 36 0;
-#X connect 51 0 0 0;
+#X connect 46 0 18 1;
+#X connect 47 0 34 0;
+#X connect 48 0 45 0;
+#X connect 49 0 36 0;
+#X connect 50 0 0 0;
 #X coords 0 -1 1 1 120 100 2 120 20;
