@@ -1,7 +1,7 @@
-#N canvas 502 109 1408 689 10;
+#N canvas 492 101 1408 689 10;
 #X obj 3 5 cnv 15 1400 680 empty empty empty 20 12 0 14 -33289 -66577
 0;
-#N canvas 473 278 383 288 fps 0;
+#N canvas 463 270 383 288 fps 0;
 #X obj 22 62 realtime;
 #X obj 22 41 t b b;
 #X obj 22 19 gemhead;
@@ -18,9 +18,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 8900 1;
+-1 -262144 3486 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 144 256;
+-262144 -1 19 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -34,7 +34,7 @@
 #X connect 9 0 13 0;
 #X coords 0 -1 1 1 50 120 2 100 20;
 #X restore 1333 30 pd fps;
-#N canvas 47 468 886 315 gemwin 0;
+#N canvas 37 460 886 315 gemwin 0;
 #X msg 64 184 destroy;
 #N canvas 174 656 317 295 Gem.init 0;
 #X obj 59 46 loadbang;
@@ -145,9 +145,9 @@
 #X obj 12 12 cnv 15 86 76 empty empty empty 20 12 0 14 -86277 -262144
 0;
 #X obj 17 44 tgl 15 0 empty empty fullscreen 16 11 0 8 -258113 -1 -262144
-1 1;
+0 1;
 #X obj 17 21 tgl 15 0 empty empty render 16 11 0 8 -258113 -1 -262144
-1 1;
+0 1;
 #X obj 395 211 t b b;
 #X msg 414 276 border 1 \, offset 0 0 \, dimen 1280 720 \, fullscreen
 0;
@@ -204,7 +204,7 @@
 #X connect 28 0 25 0;
 #X connect 29 0 30 0;
 #X coords 0 -1 1 1 90 80 2 10 10;
-#X restore 1239 30 pd gemwin;
+#X restore 1240 30 pd gemwin;
 #X obj 21 30 analysis, f 12;
 #N canvas 67 684 495 303 record 0;
 #X obj 15 93 t a b;
@@ -642,7 +642,7 @@
 #X obj 410 119 inline_movieplayer 1;
 #X obj 825 267 glsl_contrast;
 #X obj 410 338 qprojection 1;
-#N canvas 344 260 450 300 config 0;
+#N canvas 334 252 450 300 config 0;
 #X obj 39 10 loadbang;
 #X obj 102 12 cnv 15 80 16 empty empty config 20 8 0 10 -83269 -262144
 0;
@@ -2108,11 +2108,15 @@ btn_2 btn_1;
 #X connect 12 0 9 0;
 #X coords 0 -1 1 1 85 30 1 200 20;
 #X restore 328 30 pd receiver;
-#N canvas 353 403 450 300 README 0;
+#N canvas 313 371 450 300 README 0;
 #X text 38 32 dependencies;
 #X text 38 52 - markex (average);
 #X text 38 71 - mapping (autoscale);
-#X restore 1324 629 pd README;
+#X text 39 91 - Gem (obviously);
+#X text 39 111 - cyclone;
+#X text 39 131 - boids;
+#X text 39 151 - aubio;
+#X restore 1317 648 pd README;
 #N canvas 557 150 450 300 flash 0;
 #X obj 112 115 spigot;
 #X obj 158 115 spigot;
@@ -2335,9 +2339,9 @@ btn_2 btn_1;
 #X obj 580 410 scale;
 #X obj 627 411 hsl 128 15 0 2 0 1 empty empty empty -2 -8 0 10 -99865
 -1 -1 6350 1;
-#X obj 21 340 brainqube;
+#X obj 21 378 brainqube;
 #X msg 763 413 1;
-#X obj 129 340 brainbrain;
+#X obj 129 378 brainbrain;
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
 #X connect 8 0 22 1;
