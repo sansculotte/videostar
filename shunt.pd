@@ -1,11 +1,13 @@
-#N canvas 1050 477 450 300 10;
-#X obj 49 36 inlet;
-#X obj 280 33 inlet;
+#N canvas 1040 469 450 300 10;
+#X declare -lib cyclone;
+#X obj 35 32 inlet;
+#X obj 136 32 inlet;
 #X obj 49 248 outlet;
 #X obj 142 246 outlet;
 #X text 178 170 approximate gridflow's shunt object;
 #X obj 49 173 cyclone/gate 2 1;
-#X obj 280 60 + 1;
+#X obj 136 59 + 1;
+#X obj 293 30 declare -lib cyclone;
 #X connect 0 0 5 1;
 #X connect 1 0 6 0;
 #X connect 5 0 2 0;
