@@ -19,9 +19,9 @@
 #X obj 104 73 cnv 15 16 10 empty empty -25 20 12 0 10 -86277 -262144
 0;
 #X obj 108 40 vsl 10 90 0 50 0 0 empty fps_recv fps 0 -9 0 10 -258113
--1 -262144 0 1;
+-1 -262144 8900 1;
 #X obj 121 124 nbx 2 10 0 144 0 0 empty empty empty 0 -8 0 10 -258113
--262144 -1 0 256;
+-262144 -1 144 256;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -148,7 +148,7 @@
 #X obj 17 44 tgl 15 0 empty empty fullscreen 16 11 0 8 -258113 -1 -262144
 0 1;
 #X obj 17 21 tgl 15 0 empty empty render 16 11 0 8 -258113 -1 -262144
-0 1;
+1 1;
 #X obj 395 211 t b b;
 #X obj 376 152 t b f b;
 #X obj 37 101 t f f;
@@ -1294,8 +1294,8 @@ fullscreen 0;
 #X obj 701 430 counter 1 3;
 #X obj 822 170 clipgrid 1;
 #X obj 905 170 clipgrid 2;
-#X obj 102 102 cnv 15 81 25 empty empty joystick 20 12 0 11 -99865
--228856 0;
+#X obj 102 102 cnv 15 81 25 empty empty joystick 4 12 0 11 -99865 -228856
+0;
 #X obj 1077 306 spigot 1;
 #X obj 1150 306 spigot 1;
 #X obj 1226 306 spigot 1;
@@ -1531,7 +1531,7 @@ fullscreen 0;
 #X text 525 80 < key;
 #X obj 76 63 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj 12 12 cnv 15 81 25 empty empty keyboard 20 12 0 11 -99865 -228856
+#X obj 12 12 cnv 15 81 25 empty empty keyboard 4 12 0 11 -99865 -228856
 0;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
@@ -2092,41 +2092,22 @@ btn_2 btn_1;
 #X connect 56 1 53 0;
 #X connect 57 0 58 0;
 #X restore 128 158 pd midicontrol;
-#X obj 202 22 cnv 15 81 25 empty empty receiver 20 12 0 11 -99865 -228856
+#X obj 202 22 cnv 15 81 25 empty empty receiver 4 12 0 11 -99865 -228856
 0;
 #X obj 336 41 netreceive -u 3001;
 #X obj 13 40 netreceive -u 3000;
-#N canvas 132 296 450 403 iphone_sensors 0;
-#X obj 48 35 inlet;
-#X obj 48 77 route gyro accelerate magnet;
-#X obj 48 128 unpack f f f;
-#X obj 48 182 s 3Dx_2;
-#X obj 82 251 s 3Dy_2;
-#X obj 117 321 s 3Dz_2;
-#X obj 278 35 declare -lib mapping;
-#X obj 48 157 mapping/autoscale 0 360;
-#X obj 82 227 mapping/autoscale 0 360;
-#X obj 117 297 mapping/autoscale 0 360;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 7 0;
-#X connect 2 1 8 0;
-#X connect 2 2 9 0;
-#X connect 7 0 3 0;
-#X connect 8 0 4 0;
-#X connect 9 0 5 0;
-#X restore 186 217 pd iphone_sensors;
 #X obj 13 70 route joystick_1 joystick_2 midi iphone;
+#X obj 186 234 s iphone_sensors;
 #X connect 0 0 3 0;
 #X connect 0 1 4 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
 #X connect 10 0 0 0;
-#X connect 11 0 13 0;
-#X connect 13 0 6 0;
-#X connect 13 1 5 0;
-#X connect 13 2 8 0;
-#X connect 13 3 12 0;
+#X connect 11 0 12 0;
+#X connect 12 0 6 0;
+#X connect 12 1 5 0;
+#X connect 12 2 8 0;
+#X connect 12 3 13 0;
 #X coords 0 -1 1 1 85 30 1 200 20;
 #X restore 328 30 pd receiver;
 #N canvas 303 363 450 300 README 0;
@@ -2363,6 +2344,51 @@ btn_2 btn_1;
 #X obj 21 378 brainqube;
 #X msg 763 413 1;
 #X obj 129 378 brainbrain;
+#N canvas 1013 230 613 312 iphoe 0;
+#X obj 202 22 cnv 15 115 25 empty empty iphone 2 12 0 11 -99865 -228856
+0;
+#X obj 39 27 r iphone_sensors;
+#N canvas 132 296 590 405 mapping 0;
+#X obj 48 35 inlet;
+#X obj 48 128 unpack f f f;
+#X obj 48 182 s 3Dx_2;
+#X obj 82 251 s 3Dy_2;
+#X obj 117 321 s 3Dz_2;
+#X obj 408 35 declare -lib mapping;
+#X obj 48 157 mapping/autoscale 0 360;
+#X obj 82 227 mapping/autoscale 0 360;
+#X obj 117 297 mapping/autoscale 0 360;
+#X obj 48 102 spigot;
+#X obj 95 35 inlet;
+#X obj 198 101 spigot;
+#X obj 231 35 inlet;
+#X obj 48 77 route gyro accelerate magnet delta;
+#X obj 198 157 s speed_2;
+#X obj 198 124 mapping/autoscale 0 25;
+#X connect 0 0 13 0;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 1 2 8 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;
+#X connect 9 0 1 0;
+#X connect 10 0 9 1;
+#X connect 11 0 15 0;
+#X connect 12 0 11 1;
+#X connect 13 0 9 0;
+#X connect 13 3 11 0;
+#X connect 15 0 14 0;
+#X restore 39 103 pd mapping;
+#X obj 250 26 tgl 15 0 empty empty empty 17 7 0 10 -228856 -1 -1 0
+1;
+#X obj 280 26 tgl 15 0 empty empty empty 17 7 0 10 -228856 -1 -1 0
+1;
+#X connect 1 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 2;
+#X coords 0 -1 1 1 120 30 1 200 20;
+#X restore 421 30 pd iphoe;
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
 #X connect 8 0 22 1;

@@ -917,7 +917,7 @@ btn_2 btn_1;
 #X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 -86277 -66577
 0;
 #X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 -258113
--1 -1 16 256;
+-1 -1 13 256;
 #X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 3 0 8 0;
@@ -1214,10 +1214,10 @@ btn_2 btn_1;
 #X connect 8 0 9 0;
 #X connect 8 1 10 0;
 #X restore 1149 37 pd init-gui.023;
-#X obj 369 36 videogrid videogrid1 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
+#X obj 369 36 videogrid videogrid5 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
 60 40 ;
-#X obj 811 35 videogrid videogrid2 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 /home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/pyramid.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/amit_skull2.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/darkstar.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/citter.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/linenoise.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/apollo.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/newkett01.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/diagram_drive.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/01_circuit_paralell.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/biomuell.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/particle_symbol_storm.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/flimmer.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/lines_diagrams.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/zackzackzack.mov|/home/ub/visuals/live/corrupted_state/clips/001_schwarzweiss/struct01.mov|
+#X obj 811 35 videogrid videogrid6 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
+60 40 /home/ub/visuals/live/rust/clips/001_schwarzweiss/glitch.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/darkstar.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/citter.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/linenoise.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/apollo.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/convolution01.avi|/home/ub/visuals/live/rust/clips/001_schwarzweiss/01_circuit_paralell.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/blob01.avi|/home/ub/visuals/live/rust/clips/001_schwarzweiss/biomuell.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/particle_symbol_storm.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/flimmer.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/lines_diagrams.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/zackzackzack.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/struct01.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/pyramid.mov|
 ;
 #N canvas 0 91 450 300 README 0;
 #X text 23 17 requirements:;
@@ -1306,7 +1306,7 @@ btn_2 btn_1;
 #X connect 8 0 9 0;
 #X restore 289 157 pd 3dlop;
 #X obj 289 186 t l b l;
-#N canvas 0 69 459 350 delta 0;
+#N canvas 257 305 459 350 delta 0;
 #X obj 46 31 inlet;
 #X obj 190 34 inlet;
 #X obj 46 56 unpack f f f;
@@ -1385,21 +1385,22 @@ btn_2 btn_1;
 ;
 #X obj 82 48 spigot;
 #X obj 32 125 prepend send iphone;
-#X obj 156 191 print;
 #X obj 82 25 netreceive -u 8888;
 #X msg 387 291 0.22;
+#X obj 213 269 prepend delta;
 #X connect 1 0 5 1;
 #X connect 2 0 5 2;
 #X connect 3 0 5 3;
 #X connect 4 0 1 0;
 #X connect 4 0 2 0;
 #X connect 4 0 3 0;
-#X connect 4 0 24 0;
+#X connect 4 0 23 0;
 #X connect 5 0 6 0;
 #X connect 6 0 9 1;
 #X connect 6 1 9 0;
 #X connect 6 2 7 1;
 #X connect 7 0 8 0;
+#X connect 7 0 24 0;
 #X connect 8 0 11 0;
 #X connect 9 0 7 0;
 #X connect 10 0 4 0;
@@ -1412,9 +1413,9 @@ btn_2 btn_1;
 #X connect 20 0 17 0;
 #X connect 20 0 21 0;
 #X connect 21 0 16 0;
-#X connect 23 0 20 0;
-#X connect 23 0 22 0;
-#X connect 24 0 11 1;
+#X connect 22 0 20 0;
+#X connect 23 0 11 1;
+#X connect 24 0 21 0;
 #X coords 0 -1 1 1 85 20 1 100 100;
 #X restore 57 86 pd iphone-sensors;
 #X connect 1 0 25 1;
