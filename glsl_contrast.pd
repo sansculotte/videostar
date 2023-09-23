@@ -13,12 +13,9 @@
 #X obj 241 360 t b;
 #X obj 93 20 inlet;
 #X obj 424 54 purepd/once;
-#X obj 202 53 cnv 15 146 48 empty empty contrast/color 4 6 0 10 -86277
--262144 0;
-#X obj 208 82 hsl 128 12 0 2 0 1 empty contrast_02 empty -2 -8 0 9
--258113 -1 -260097 6700 0;
-#X obj 208 67 hsl 128 12 0 2 0 1 empty saturation_02 empty -2 -8 0
-9 -258113 -1 -260097 6600 0;
+#X obj 202 53 cnv 15 146 48 empty empty contrast/color 4 6 0 10 #541010 #fcfcfc 0;
+#X obj 208 82 hsl 128 12 0 2 0 1 empty contrast_02 empty -2 -8 0 9 #fc0400 #000000 #fc8000 6700 0;
+#X obj 208 67 hsl 128 12 0 2 0 1 empty saturation_02 empty -2 -8 0 9 #fc0400 #000000 #fc8000 6800 0;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 2 1 11 0;
@@ -33,6 +30,8 @@
 #X connect 9 0 3 0;
 #X connect 10 0 2 0;
 #X connect 11 0 13 0;
+#X connect 11 0 16 0;
+#X connect 11 0 15 0;
 #X connect 12 0 5 0;
 #X connect 13 0 8 0;
 #X connect 15 0 7 0;
