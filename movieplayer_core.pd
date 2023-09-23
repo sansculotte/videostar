@@ -1,7 +1,7 @@
 #N canvas 403 408 787 430 10;
 #X obj 61 238 unpack;
-#X floatatom 61 266 5 0 0 0 - - -, f 5;
-#X obj 136 91 metro 40;
+#X floatatom 61 266 5 0 0 0 - - - 0;
+#X obj 133 91 metro 40;
 #X obj 316 151 /;
 #X msg 316 103 1000;
 #X obj 316 79 t b f;
@@ -24,8 +24,7 @@
 #X obj 45 312 pix_set 1 1;
 #X msg 125 289 0 0 0 0;
 #X obj 125 61 t b f f;
-#X obj 103 92 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
-1;
+#X obj 103 92 tgl 15 0 empty empty empty 17 7 0 10 #fc0400 #000000 #000000 0 1;
 #X obj 358 243 *;
 #X msg 358 277 jam \$1;
 #X obj 556 17 inlet cpos;
