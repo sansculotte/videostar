@@ -1194,7 +1194,7 @@ btn_2 btn_1;
 #X connect 31 0 22 0;
 #X connect 34 0 33 0;
 #X restore 57 145 pd midi_ctrl bhoreal;
-#X obj 369 36 videogrid videogrid1 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
+#X obj 369 36 videogrid videogrid1 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
 60 40 ;
 #X obj 811 35 videogrid videogrid2 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
 60 40 ;
