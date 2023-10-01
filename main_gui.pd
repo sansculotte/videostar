@@ -1,80 +1,80 @@
 #N canvas 622 74 1292 236 10;
 #X declare -lib mapping;
-#X obj 4 3 cnv 15 1270 222 empty empty empty 20 12 0 14 -33289 -66577
+#X obj 4 3 cnv 15 1270 222 empty empty empty 20 12 0 14 #202020 #404040
 0;
-#X symbolatom 811 206 55 0 0 0 - - -;
+#X symbolatom 811 206 55 0 0 0 - - - 0;
 #N canvas 315 432 353 135 joystick 0;
 #N canvas 513 281 773 563 joystick1 0;
-#X obj 463 348 bng 20 250 50 0 6_b empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 215 315 bng 15 250 50 0 0_b empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 91 250 bng 15 250 50 0 1_b empty empty 0 -6 0 8 -262144 -1 -1
-;
-#X obj 91 265 bng 15 250 50 0 2_b empty empty 0 -6 0 8 -262144 -1 -1
-;
-#X obj 394 245 bng 15 250 50 0 3_b empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 168 15 tgl 15 0 empty empty empty 1 12 1 9 -262144 -1 -1 1 1
-;
+#X obj 463 348 bng 20 250 50 0 6_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 215 315 bng 15 250 50 0 0_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 91 250 bng 15 250 50 0 1_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 91 265 bng 15 250 50 0 2_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 394 245 bng 15 250 50 0 3_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 168 15 tgl 15 0 empty empty empty 1 12 1 9 #fcfcfc #000000 #000000
+0 1;
 #X msg 196 34 open \$1;
 #X obj 231 13 hradio 15 1 1 30 \$0-device-number empty choose_a_device
-0 -6 1 8 -260097 -1 -1 24;
+0 -6 1 8 #fc8000 #000000 #000000 22;
 #X obj 196 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
-0 -6 0 14 -166441 -1 -1 19 256;
+0 -6 0 14 #a0a0a0 #000000 #000000 0 256;
 #X msg 117 15 print;
 #X obj 134 88 route abs key ff;
 #X obj 613 63 print abs:;
 #X obj 613 84 print key:;
 #X obj 613 107 print ff:;
-#X obj 394 260 bng 15 250 50 0 4_b empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 302 314 bng 15 250 50 0 5_b empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 491 301 bng 20 250 50 0 7_b empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 518 411 bng 20 250 50 0 8_b empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 545 348 bng 20 250 50 0 9_b empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 437 349 tgl 20 0 6_bt empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 516 301 tgl 20 0 7_bt empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 491 411 tgl 20 0 8_bt empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 571 348 tgl 20 0 9_bt empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 53 319 bng 20 250 50 0 up empty empty 0 -6 0 8 -262144 -1 -1
-;
-#X obj 13 350 bng 20 250 50 0 left empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 52 385 bng 20 250 50 0 down empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 92 351 bng 20 250 50 0 right empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 127 353 hsl 128 15 0 255 0 0 left_x empty empty -2 -6 0 8 -262144
--1 -1 0 1;
-#X obj 182 296 vsl 15 128 255 0 0 0 left_y empty empty 0 -8 0 8 -262144
--1 -1 0 1;
-#X obj 282 353 hsl 128 15 0 255 0 0 right_x empty empty -2 -6 0 8 -262144
--1 -1 0 1;
-#X obj 337 296 vsl 15 128 255 0 0 0 right_y empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+#X obj 394 260 bng 15 250 50 0 4_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 302 314 bng 15 250 50 0 5_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 491 301 bng 20 250 50 0 7_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 518 411 bng 20 250 50 0 8_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 545 348 bng 20 250 50 0 9_b empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 437 349 tgl 20 0 6_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 516 301 tgl 20 0 7_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 491 411 tgl 20 0 8_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 571 348 tgl 20 0 9_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 53 319 bng 20 250 50 0 up empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 13 350 bng 20 250 50 0 left empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 52 385 bng 20 250 50 0 down empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 92 351 bng 20 250 50 0 right empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 127 353 hsl 128 15 0 255 0 0 left_x empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 182 296 vsl 15 128 255 0 0 0 left_y empty empty 0 -8 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 282 353 hsl 128 15 0 255 0 0 right_x empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 337 296 vsl 15 128 255 0 0 0 right_y empty empty 0 -8 0 8 #fcfcfc
+#000000 #000000 0 1;
 #X obj 566 63 spigot;
 #X obj 566 84 spigot;
 #X obj 566 107 spigot;
-#X obj 566 41 tgl 15 0 empty empty debug 20 8 0 8 -262144 -1 -1 0 1
-;
-#X obj 374 244 tgl 15 0 3_t empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 110 251 tgl 15 0 1_t empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
+#X obj 566 41 tgl 15 0 empty empty debug 20 8 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 374 244 tgl 15 0 3_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 110 251 tgl 15 0 1_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
 #X obj 20 -2 inlet;
-#X obj 374 260 tgl 15 0 4_t empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 110 266 tgl 15 0 2_t empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
+#X obj 374 260 tgl 15 0 4_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 110 266 tgl 15 0 2_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
 #X obj 169 177 route btn_8 btn_6 btn_4 btn_7 btn_5 btn_9 btn_3 btn_0
 btn_2 btn_1;
 #X obj 134 108 route abs_x abs_y abs_hat0x abs_hat0y abs_z abs_rz;
@@ -140,78 +140,78 @@ btn_2 btn_1;
 #X connect 49 0 50 0;
 #X restore 1 25 pd joystick1 5;
 #N canvas 759 198 698 511 joystick2 0;
-#X obj 463 348 bng 20 250 50 0 6_b_2 empty 6 0 -6 0 10 -262144 -1 -1
-;
-#X obj 215 315 bng 15 250 50 0 0_b_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 91 250 bng 15 250 50 0 1_b_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 91 265 bng 15 250 50 0 2_b_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 394 245 bng 15 250 50 0 3_b_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 168 15 tgl 15 0 empty empty empty 1 12 1 9 -262144 -1 -1 1 1
-;
+#X obj 463 348 bng 20 250 50 0 6_b_2 empty 6 0 -6 0 10 #fcfcfc #000000
+#000000;
+#X obj 215 315 bng 15 250 50 0 0_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 91 250 bng 15 250 50 0 1_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 91 265 bng 15 250 50 0 2_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 394 245 bng 15 250 50 0 3_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 168 15 tgl 15 0 empty empty empty 1 12 1 9 #fcfcfc #000000 #000000
+0 1;
 #X msg 195 34 open \$1;
 #X obj 231 13 hradio 15 1 1 20 \$0-device-number empty choose_a_device
-0 -6 1 9 -4034 -1 -1 19;
+0 -6 1 9 #00fc04 #000000 #000000 19;
 #X obj 195 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
-0 -6 0 14 -166441 -1 -1 19 256;
+0 -6 0 14 #a0a0a0 #000000 #000000 0 256;
 #X msg 117 15 print;
 #X obj 134 83 route abs key ff;
 #X obj 587 37 print abs:;
 #X obj 587 58 print key:;
 #X obj 587 81 print ff:;
-#X obj 394 260 bng 15 250 50 0 4_b_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 302 314 bng 15 250 50 0 5_b_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 491 301 bng 20 250 50 0 7_b_2 empty 7 -12 0 0 10 -262144 -1
--1;
-#X obj 518 411 bng 20 250 50 0 8_b_2 empty 8 0 -6 0 8 -262144 -1 -1
-;
+#X obj 394 260 bng 15 250 50 0 4_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 302 314 bng 15 250 50 0 5_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 491 301 bng 20 250 50 0 7_b_2 empty 7 -12 0 0 10 #fcfcfc #000000
+#000000;
+#X obj 518 411 bng 20 250 50 0 8_b_2 empty 8 0 -6 0 8 #fcfcfc #000000
+#000000;
 #X obj 545 348 bng 20 250 50 0 9_b_2 empty empty 10 0 0 1.65798e+07
--262144 -1 -262144;
+#fcfcfc #000000 #fcfcfc;
 #X obj 169 177 route btn_9 btn_6 btn_4 btn_7 btn_5 btn_8 btn_3 btn_0
 btn_2 btn_1;
-#X obj 437 349 tgl 20 0 6_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 516 301 tgl 20 0 7_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 491 411 tgl 20 0 8_bt_2 empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 571 348 tgl 20 0 9_bt_2 empty 9 20 0 0 10 -262144 -1 -1 0 1
-;
-#X obj 53 319 bng 20 250 50 0 up_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 13 350 bng 20 250 50 0 left_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 52 385 bng 20 250 50 0 down_2 empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 92 351 bng 20 250 50 0 right_2 empty empty 0 -6 0 8 -262144
--1 -1;
+#X obj 437 349 tgl 20 0 6_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 516 301 tgl 20 0 7_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 491 411 tgl 20 0 8_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 571 348 tgl 20 0 9_bt_2 empty 9 20 0 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 53 319 bng 20 250 50 0 up_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 13 350 bng 20 250 50 0 left_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 52 385 bng 20 250 50 0 down_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000;
+#X obj 92 351 bng 20 250 50 0 right_2 empty empty 0 -6 0 8 #fcfcfc
+#000000 #000000;
 #X obj 127 353 hsl 128 15 0 255 0 0 left_x_2 empty empty -2 -6 0 8
--262144 -1 -1 0 1;
-#X obj 182 296 vsl 15 128 255 0 0 0 left_y_2 empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+#fcfcfc #000000 #000000 0 1;
+#X obj 182 296 vsl 15 128 255 0 0 0 left_y_2 empty empty 0 -8 0 8 #fcfcfc
+#000000 #000000 0 1;
 #X obj 282 353 hsl 128 15 0 255 0 0 right_x_2 empty empty -2 -6 0 8
--262144 -1 -1 0 1;
+#fcfcfc #000000 #000000 0 1;
 #X obj 337 296 vsl 15 128 255 0 0 0 right_y_2 empty empty 0 -8 0 8
--262144 -1 -1 0 1;
+#fcfcfc #000000 #000000 0 1;
 #X obj 540 37 spigot;
 #X obj 540 58 spigot;
 #X obj 540 81 spigot;
-#X obj 540 15 tgl 15 0 empty empty debug 20 8 0 8 -262144 -1 -1 0 1
-;
-#X obj 374 244 tgl 15 0 3_t_2 empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 110 251 tgl 15 0 1_t_2 empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
+#X obj 540 15 tgl 15 0 empty empty debug 20 8 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 374 244 tgl 15 0 3_t_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 110 251 tgl 15 0 1_t_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
 #X obj 8 -1 inlet;
-#X obj 374 260 tgl 15 0 4_t_2 empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 110 267 tgl 15 0 2_t_2 empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
+#X obj 374 260 tgl 15 0 4_t_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 110 267 tgl 15 0 2_t_2 empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
 #X obj 541 105 spigot;
 #X obj 587 106 print;
 #X obj 134 103 route abs_x abs_y abs_hat0x abs_hat0y abs_z abs_rz;
@@ -284,10 +284,12 @@ btn_2 btn_1;
 #X obj 1 97 outlet;
 #X obj 1 58 prepend send joystick_1;
 #X obj 179 57 prepend send joystick_2;
-#X obj 2 2 cnv 15 92 16 empty empty empty 20 12 0 14 -86277 -66577
+#X obj 2 2 cnv 15 92 16 empty empty empty 20 12 0 14 #541010 #404040
 0;
-#X obj 1 2 tgl 15 1 joy_1 empty empty 20 8 0 8 -260293 -1 -1 1 1;
-#X obj 18 2 tgl 15 1 joy_2 empty empty 20 8 0 8 -4037 -1 -1 1 1;
+#X obj 1 2 tgl 15 1 joy_1 empty empty 20 8 0 8 #fc8c10 #000000 #000000
+1 1;
+#X obj 18 2 tgl 15 1 joy_2 empty gamepads 20 8 0 10 #00fc10 #000000
+#ffffff 1 1;
 #X connect 0 0 3 0;
 #X connect 1 0 4 0;
 #X connect 3 0 2 0;
@@ -314,7 +316,7 @@ btn_2 btn_1;
 #X msg 679 19 1;
 #X obj 512 0 r flash;
 #X obj 650 0 delay 20;
-#X floatatom 878 361 5 0 0 0 - - -;
+#X floatatom 878 361 5 0 0 0 - - - 0;
 #X msg 878 395 1;
 #X obj 878 377 t b f;
 #X obj 1226 31 r 1_t;
@@ -322,9 +324,9 @@ btn_2 btn_1;
 #X obj 879 283 - 36;
 #X obj 879 304 spigot;
 #X text 912 287 kettle connection;
-#X floatatom 825 378 3 1 2 2 layer layer -;
-#X obj 878 343 bng 15 250 50 0 empty empty re-trigger 0 -6 0 8 -262144
--1 -262144;
+#X floatatom 825 378 3 1 2 2 layer layer - 0;
+#X obj 878 343 bng 15 250 50 0 empty empty re-trigger 0 -6 0 8 #fcfcfc
+#000000 #fcfcfc;
 #X obj 825 394 + 1;
 #X text 213 6 knubbelachsen;
 #X text 513 62 [ ];
@@ -333,15 +335,15 @@ btn_2 btn_1;
 #X text 635 62 x;
 #X obj 1226 96 s ms1;
 #X obj 1294 94 s ms2;
-#X obj 1226 75 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 1294 74 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 926 305 tgl 15 0 empty kettle kettle 20 3 0 8 -262144 -1 -262144
-0 1;
-#X floatatom 822 66 3 1 2 2 bank bank_01 -;
+#X obj 1226 75 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 1294 74 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 926 305 tgl 15 0 empty kettle kettle 20 3 0 8 #fcfcfc #000000
+#fcfcfc 0 1;
+#X floatatom 822 66 3 1 2 2 bank bank_01 - 0;
 #X obj 822 89 - 1;
-#X floatatom 1019 68 3 1 2 2 bank bank_02 -;
+#X floatatom 1019 68 3 1 2 2 bank bank_02 - 0;
 #X obj 1019 91 - 1;
 #X obj 1294 30 r 1_t_2;
 #X text 1225 8 moviescratch on/off;
@@ -400,16 +402,16 @@ btn_2 btn_1;
 #X obj 1226 282 r 2_t_2;
 #X obj 1299 283 r 4_t_2;
 #X obj 213 335 r 3_t;
-#X obj 283 357 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 213 356 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 427 329 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
+#X obj 283 357 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 213 356 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X obj 427 329 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
 #X obj 427 346 sel 1;
 #X obj 350 311 r 0_b;
-#X obj 350 329 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
+#X obj 350 329 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
 #X obj 350 346 sel 1;
 #X obj 350 364 s lonoff1;
 #X obj 427 364 s lonoff2;
@@ -427,7 +429,7 @@ btn_2 btn_1;
 #X obj 41 34 t f f f;
 #X obj 41 55 pipe 200;
 #X msg 128 37 0;
-#X floatatom 163 136 5 0 0 0 - - -;
+#X floatatom 163 136 5 0 0 0 - - - 0;
 #X obj 41 120 t b b;
 #X connect 0 0 10 0;
 #X connect 1 0 2 0;
@@ -464,7 +466,7 @@ btn_2 btn_1;
 #X obj 41 34 t f f f;
 #X obj 41 55 pipe 200;
 #X msg 128 37 0;
-#X floatatom 163 136 5 0 0 0 - - -;
+#X floatatom 163 136 5 0 0 0 - - - 0;
 #X obj 41 120 t b b;
 #X connect 0 0 10 0;
 #X connect 1 0 2 0;
@@ -507,7 +509,7 @@ btn_2 btn_1;
 #X obj 17 240 > 1;
 #X obj 7 300 s xbank_01;
 #X obj 114 155 r i;
-#X floatatom 165 310 5 0 0 0 - - -;
+#X floatatom 165 310 5 0 0 0 - - - 0;
 #X obj 165 211 loadbang;
 #X obj 78 241 < 10;
 #X msg 165 234 13;
@@ -608,22 +610,22 @@ btn_2 btn_1;
 #X obj 427 311 r 5_b_2;
 #X obj 213 87 spigot;
 #X msg 131 55 1;
-#X obj 46 34 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
+#X obj 46 34 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
 #X obj 46 6 r midijoy;
 #X obj 61 33 s mjoy;
 #X obj 38 312 r 0_b_2;
 #X obj 47 95 r 5_b;
-#X obj 38 331 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 47 113 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
+#X obj 38 331 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 47 113 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
 #X obj 47 131 sel 1;
 #X obj 38 349 sel 1;
-#X obj 38 366 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
-;
-#X obj 47 148 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
-;
+#X obj 38 366 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
+#X obj 47 148 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
+0 1;
 #X obj 38 406 sel 0;
 #X obj 47 189 sel 0;
 #X obj 47 209 del 10;
@@ -882,8 +884,8 @@ btn_2 btn_1;
 #X restore 57 117 pd joystick_ctrl;
 #X msg 642 19 clear;
 #X obj 289 39 openpanel;
-#X obj 289 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -99865 -1
--1;
+#X obj 289 10 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
+#000000;
 #X msg 289 62 putvideo \$1;
 #N canvas 593 347 450 300 playlist 0;
 #X msg 153 123 seek \$1;
@@ -893,10 +895,10 @@ btn_2 btn_1;
 #X obj 214 187 print bank_1;
 #X obj 28 70 videodir;
 #X obj 73 184 outlet title;
-#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 -86277 -66577
+#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040
 0;
-#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 -258113
--1 -1 5 256;
+#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400
+#000000 #000000 0 256;
 #X connect 0 0 1 0;
 #X connect 2 0 8 0;
 #X connect 3 0 5 0;
@@ -914,10 +916,10 @@ btn_2 btn_1;
 #X obj 146 185 outlet;
 #X obj 186 158 print bank_2;
 #X obj 28 70 videodir;
-#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 -86277 -66577
+#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040
 0;
-#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 -258113
--1 -1 5 256;
+#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400
+#000000 #000000 0 256;
 #X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 3 0 8 0;
@@ -929,12 +931,12 @@ btn_2 btn_1;
 #X restore 811 3 pd playlist;
 #X msg 1086 18 clear;
 #X obj 734 36 openpanel;
-#X obj 734 7 bng 15 250 50 0 empty empty empty 17 7 0 10 -99865 -1
--1;
+#X obj 734 7 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
+#000000;
 #X msg 734 59 putvideo \$1;
-#X symbolatom 454 11 10 0 0 0 - - -;
-#X symbolatom 896 6 10 0 0 0 - - -;
-#X symbolatom 369 207 55 0 0 0 - - -;
+#X symbolatom 454 11 10 0 0 0 - - - 0;
+#X symbolatom 896 6 10 0 0 0 - - - 0;
+#X symbolatom 369 207 55 0 0 0 - - - 0;
 #N canvas 70 94 837 566 midi_ctrl 0;
 #N canvas 956 550 697 295 video_grid 0;
 #X obj 32 125 & 7;
@@ -1132,7 +1134,7 @@ btn_2 btn_1;
 #X connect 7 0 6 0;
 #X restore 140 145 pd set_videogrid_led;
 #X obj 57 92 stripnote;
-#X floatatom 57 120 5 0 0 0 - - -;
+#X floatatom 57 120 5 0 0 0 - - - 0;
 #X obj 118 410 loadbang;
 #X obj 264 559 outlet;
 #X obj 264 373 prepend send midi;
@@ -1215,7 +1217,8 @@ btn_2 btn_1;
 #X connect 8 1 10 0;
 #X restore 1149 37 pd init-gui.023;
 #X obj 369 36 videogrid videogrid1 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 ;
+60 40 /home/ub/visuals/live/rust/clips/001_schwarzweiss/zucker.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/pyramid.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/linenoise.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/diarahmen.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/biomuell.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/apollo.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/citter.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/zackzackzack.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/convolution01.avi|/home/ub/visuals/live/rust/clips/001_schwarzweiss/polymeer.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/schritzy.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/struct01.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/darkstar.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/particle_symbol_storm.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/glitch.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/lines_diagrams.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/01_circuit_paralell.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/blob01.avi|/home/ub/visuals/live/rust/clips/001_schwarzweiss/flimmer.mov|/home/ub/visuals/live/rust/clips/001_schwarzweiss/amit_lines.mov|
+;
 #X obj 811 35 videogrid videogrid2 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
 60 40 ;
 #N canvas 0 91 450 300 README 0;
@@ -1227,7 +1230,7 @@ btn_2 btn_1;
 #X restore 97 30 pd README;
 #X obj 540 11 bankswitch 1;
 #N canvas 0 91 450 300 control.net 0;
-#X floatatom 189 166 5 0 0 0 - - -;
+#X floatatom 189 166 5 0 0 0 - - - 0;
 #X msg 264 143 connect localhost 3000;
 #X obj 64 100 metro 250;
 #X obj 64 50 loadbang;
@@ -1245,7 +1248,7 @@ btn_2 btn_1;
 #X connect 7 0 6 0;
 #X restore 189 206 pd control.net;
 #N canvas 0 91 457 261 clip.net 0;
-#X floatatom 151 178 5 0 0 0 - - -;
+#X floatatom 151 178 5 0 0 0 - - - 0;
 #X msg 118 49 send movie_1 \$1;
 #X msg 221 49 send movie_2 \$1;
 #X msg 226 161 connect localhost 3001;
@@ -1338,7 +1341,7 @@ btn_2 btn_1;
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
 #X restore 312 269 pd delta;
-#X floatatom 312 294 5 0 0 0 - - -;
+#X floatatom 312 294 5 0 0 0 - - - 0;
 #X obj 312 228 list;
 #X obj 304 45 loadbang;
 #N canvas 17 65 534 346 short_stop 0;
@@ -1351,8 +1354,8 @@ btn_2 btn_1;
 #X obj 200 221 outlet;
 #X obj 233 73 > \$2;
 #X obj 254 30 inlet;
-#X obj 233 170 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 233 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 173 33 t f f;
 #X obj 233 96 sel 1;
 #X msg 233 119 1;
@@ -1371,17 +1374,17 @@ btn_2 btn_1;
 #X connect 11 0 12 0;
 #X connect 12 0 9 0;
 #X restore 312 322 pd short_stop;
-#X obj 312 351 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 312 351 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 312 371 random 19;
 #X obj 312 394 + 1;
 #X obj 312 417 s clip_2;
 #X obj 32 165 outlet;
 #X obj 82 75 route accelerate;
-#X obj 102 102 cnv 15 80 16 empty empty iphone 20 8 0 12 -86277 -228856
+#X obj 102 102 cnv 15 80 16 empty empty iphone 20 8 0 12 #541010 #dcdcdc
 0;
-#X obj 103 103 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
-;
+#X obj 103 103 tgl 15 0 empty empty empty 17 7 0 10 #00fc04 #000000
+#000000 0 1;
 #X obj 82 48 spigot;
 #X obj 32 125 prepend send iphone;
 #X obj 82 25 netreceive -u 8888;
