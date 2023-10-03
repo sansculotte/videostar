@@ -1414,7 +1414,7 @@ btn_2 btn_1;
 #X obj 57 162 symbol /home/ub/visuals/live/scrap/clips;
 #X obj 267 72 openpanel 1;
 #X obj 267 102 t b s;
-#X msg 30 257 \; grid_rows 4 \; grid_cols 5 \; init_banks 1 \;;
+#X msg 30 258 \; grid_rows 4 \; grid_cols 5 \;;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 6 0;
