@@ -1,0 +1,47 @@
+#N canvas 702 283 942 521 10;
+#X floatatom 129 181 5 0 0 0 - - - 0;
+#X obj 24 212 translateXYZ 0 0 0;
+#X obj 123 23 cnv 15 114 74 empty empty empty 4 8 0 11 #0c4044 #fcfcfc
+0;
+#X obj 126 26 tgl 15 0 empty empty figurehead 17 7 0 10 #00f8fc #000000
+#fcfcfc 0 1;
+#X obj 126 78 tgl 15 0 empty empty flash 17 7 0 10 #b8b8b8 #fc8000
+#dcdcdc 0 1;
+#X obj 26 9 loadbang;
+#X msg 26 32 0;
+#X obj 24 87 gemhead 69;
+#X text 351 212 motorhead dark. light up on beat;
+#X text 354 254 others?;
+#X obj 126 47 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #28b3ff #000000
+#000000 0;
+#X obj 24 62 t f;
+#X obj 24 295 pix_texture;
+#X obj 24 411 rectangle 9 5;
+#X floatatom 64 382 5 0 0 0 - - - 0;
+#X floatatom 123 370 5 0 0 0 - - - 0;
+#X obj 324 326 pix_buffer figurehead 3;
+#X obj 324 57 r texture_dir;
+#X obj 24 253 pix_buffer_read figurehead;
+#X obj 24 327 alpha;
+#X msg 324 154 open /home/ub/visuals/live/scrap/tex/heads/zylinderkopf_01.png
+0;
+#X obj 24 142 rotateXYZ 0 0 0;
+#X obj 24 165 scale 0.75;
+#X connect 0 0 1 3;
+#X connect 1 0 18 0;
+#X connect 3 0 11 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 21 0;
+#X connect 10 0 18 1;
+#X connect 11 0 7 0;
+#X connect 12 0 19 0;
+#X connect 14 0 13 1;
+#X connect 15 0 13 2;
+#X connect 17 0 20 0;
+#X connect 18 0 12 0;
+#X connect 19 0 13 0;
+#X connect 20 0 16 0;
+#X connect 21 0 22 0;
+#X connect 22 0 1 0;
+#X coords 0 -1 1 1 120 80 2 120 20;

@@ -1,10 +1,10 @@
 #N canvas 723 411 335 632 10;
-#X symbolatom 56 394 10 0 0 0 - - -;
+#X symbolatom 56 394 10 0 0 0 - - - 0;
 #X obj 56 313 moses 10;
 #X obj 63 367 makefilename 0%d.png;
 #X obj 56 337 makefilename 00%d.png;
 #X obj 56 425 t b s;
-#X obj 166 25 r texture_dir;
+#X obj 166 24 r texture_dir;
 #X obj 56 482 symbol;
 #X obj 56 584 outlet;
 #X obj 55 69 i \$2;
@@ -23,7 +23,7 @@
 #X msg 257 163 resize \$1;
 #X msg 56 549 open \$1/\$2/\$3 \$4;
 #X obj 56 515 pack s s s f;
-#X obj 166 52 t b a;
+#X obj 166 51 t b a;
 #X obj 193 182 symbol;
 #X text 116 318 TODO: can be %02i i think;
 #X obj 154 583 print;
