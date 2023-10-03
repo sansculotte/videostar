@@ -27,6 +27,10 @@
 0;
 #X obj 24 142 rotateXYZ 0 0 0;
 #X obj 24 165 scale 0.75;
+#X obj 130 65 hsl 100 10 0 1 0 0 empty empty empty -2 -8 0 10 #7c7c7c
+#000000 #000000 0 1;
+#X obj 220 126 loadbang;
+#X msg 220 149 0.75;
 #X connect 0 0 1 3;
 #X connect 1 0 18 0;
 #X connect 3 0 11 0;
@@ -44,4 +48,7 @@
 #X connect 20 0 16 0;
 #X connect 21 0 22 0;
 #X connect 22 0 1 0;
+#X connect 23 0 22 1;
+#X connect 24 0 25 0;
+#X connect 25 0 23 0;
 #X coords 0 -1 1 1 120 80 2 120 20;

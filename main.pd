@@ -644,7 +644,7 @@ fullscreen 0;
 #X obj 410 119 inline_movieplayer 1;
 #X obj 825 267 glsl_contrast;
 #X obj 410 338 qprojection 1;
-#N canvas 334 252 450 300 config 1;
+#N canvas 334 252 450 300 config 0;
 #X obj 39 10 loadbang;
 #X obj 102 12 cnv 15 80 16 empty empty config 20 8 0 10 #505410 #fcfcfc
 0;
