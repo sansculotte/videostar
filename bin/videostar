@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+VERSION=videostar
+PIDFILE=/tmp/pd_vjset.pid
+GUIPIDFILE=/tmp/pd_vjgui.pid
+
+
+set -eu
+
+main() {
+    case "$1" in
+    start)
+       start 
+       ;;
+    stop)
+       stop
+       ;;
+    *)
+        usage
+        ;;
+   esac
+
+}
+
+usage() {
+    echo "$0" start|stop
+}
+
+start() {
+    # don't blank screen during performance
+    xset -dpms
+    xset s noblank
+    xset s off
+
+    notify-send "enable ForceFullCompositionPipeline!"
+
+#    jackd -d alsa &
+
+    cd "$HOME/visuals/pd/$VERSION"
+
+    pd main.pd &
+    echo $! > "$PIDFILE"
+
+    pd -noaudio -alsamidi main_gui.pd &
+    echo $! > "$GUIPIDFILE"
+}
+
+stop() {
+    [ -f "$PIDFILE" ] && stop_pid "$PIDFILE"
+    [ -f "$GUIPIDFILE" ] && stop_pid "$GUIPIDFILE"
+}
+
+stop_pid() {
+    local pidfile="$1"
+    kill "$(cat "$pidfile")"
+    rm "$pidfile" 
+}
+
+main "$@"
