@@ -1,4 +1,4 @@
-#N canvas 502 314 1408 689 10;
+#N canvas 2420 311 1408 689 10;
 #X declare -lib mapping;
 #X obj 3 5 cnv 15 1400 680 empty empty empty 20 12 0 14 #202020 #404040
 0;
@@ -164,14 +164,14 @@
 #X obj 282 251 loadbang;
 #X msg 282 274 1;
 #X obj 200 156 gemwin 50;
-#X msg 414 276 border 1 \, offset 0 0 \, dimen 1280 720 \, FSAA 8 \,
-fullscreen 0;
 #X msg 422 244 border 0 \, offset 1920 0 \, dimen 1280 720 \, FSAA
 8 \, fullscreen 0, f 62;
+#X msg 414 276 border 1 \, offset 0 0 \, dimen 1280 720 \, FSAA 8 \,
+fullscreen 0;
 #X connect 0 0 28 0;
 #X connect 1 0 28 0;
 #X connect 2 0 15 0;
-#X connect 2 1 29 0;
+#X connect 2 1 30 0;
 #X connect 3 0 28 0;
 #X connect 4 0 28 0;
 #X connect 5 0 28 0;
@@ -186,7 +186,7 @@ fullscreen 0;
 #X connect 14 0 17 0;
 #X connect 14 0 19 1;
 #X connect 15 0 18 0;
-#X connect 15 1 30 0;
+#X connect 15 1 29 0;
 #X connect 16 0 19 0;
 #X connect 16 1 2 0;
 #X connect 16 2 3 0;
@@ -640,7 +640,7 @@ fullscreen 0;
 #X restore 825 198 pd verteiler;
 #X obj 410 267 glsl_contrast;
 #X symbolatom 825 102 60 0 0 0 - movie_2 - 0;
-#X symbolatom 410 102 50 0 0 0 - movie_1 - 0;
+#X symbolatom 410 102 60 0 0 0 - movie_1 - 0;
 #X obj 410 119 inline_movieplayer 1;
 #X obj 825 267 glsl_contrast;
 #X obj 410 338 qprojection 1;
