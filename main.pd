@@ -68,10 +68,10 @@
 #X restore 201 22 pd Gem.init;
 #X obj 395 184 sel 1 0;
 #X msg 339 194 destroy;
-#X msg 307 44 dimen 800 600;
-#X msg 307 22 dimen 640 480;
+#X msg 307 54 dimen 800 600;
+#X msg 307 32 dimen 640 480;
 #X msg 139 105 lighting \$1;
-#X msg 307 66 dimen 1024 768;
+#X msg 307 76 dimen 1024 768;
 #X msg 704 99 perspec \$1 \$2 \$3 \$4 \$5 \$6;
 #N canvas 900 478 544 500 perspec 0;
 #X obj 90 428 outlet;
@@ -141,7 +141,7 @@
 #X connect 25 2 15 0;
 #X coords 0 -1 1 1 100 67 1 100 100;
 #X restore 704 27 pd perspec;
-#X msg 307 88 dimen 1280 720;
+#X msg 307 98 dimen 1280 720;
 #X obj 64 146 sel 0 1;
 #X obj 12 12 cnv 15 86 76 empty empty empty 20 12 0 14 #541010 #fcfcfc
 0;
@@ -168,6 +168,7 @@
 8 \, fullscreen 0, f 62;
 #X msg 414 276 border 1 \, offset 0 0 \, dimen 1280 720 \, FSAA 8 \,
 fullscreen 0;
+#X msg 307 11 dimen 256 144;
 #X connect 0 0 28 0;
 #X connect 1 0 28 0;
 #X connect 2 0 15 0;
@@ -204,6 +205,7 @@ fullscreen 0;
 #X connect 27 0 24 0;
 #X connect 29 0 28 0;
 #X connect 30 0 28 0;
+#X connect 31 0 28 0;
 #X coords 0 -1 1 1 90 80 2 10 10;
 #X restore 1240 30 pd gemwin;
 #X obj 21 30 analysis, f 12;
