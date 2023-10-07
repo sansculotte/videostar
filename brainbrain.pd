@@ -1,25 +1,25 @@
 #N canvas 739 167 942 521 10;
-#X floatatom 157 158 5 0 0 0 - - -;
-#X floatatom 223 158 5 0 0 0 - - -;
-#X floatatom 289 158 5 0 0 0 - - -;
+#X floatatom 157 158 5 0 0 0 - - - 0;
+#X floatatom 223 158 5 0 0 0 - - - 0;
+#X floatatom 289 158 5 0 0 0 - - - 0;
 #X obj 157 128 autorotate;
 #X obj 223 128 autorotate;
 #X obj 289 128 autorotate;
-#X floatatom 129 221 5 0 0 0 - - -;
+#X floatatom 129 221 5 0 0 0 - - - 0;
 #X obj 24 252 translateXYZ 0 0 0;
-#X obj 123 23 cnv 15 114 74 empty empty empty 4 8 0 11 -13330 -262144
+#X obj 123 23 cnv 15 114 74 empty empty empty 4 8 0 11 #0c4044 #fcfcfc
 0;
-#X obj 126 26 tgl 15 0 empty empty brain 17 7 0 10 -4032 -1 -262144
-1 1;
-#X obj 126 58 tgl 15 0 empty empty autorotate 0 -8 0 10 -2341 -1 -228856
-0 1;
-#X obj 145 58 tgl 15 0 empty empty empty 0 -8 0 10 -2405 -1 -228856
-0 1;
-#X obj 164 58 tgl 15 0 empty empty empty 0 -8 0 10 -2405 -1 -228856
-0 1;
+#X obj 126 26 tgl 15 0 empty empty brain 17 7 0 10 #00f8fc #000000
+#fcfcfc 0 1;
+#X obj 126 58 tgl 15 0 empty empty autorotate 0 -8 0 10 #009090 #000000
+#dcdcdc 0 1;
+#X obj 145 58 tgl 15 0 empty empty empty 0 -8 0 10 #009490 #000000
+#dcdcdc 0 1;
+#X obj 164 58 tgl 15 0 empty empty empty 0 -8 0 10 #009490 #000000
+#dcdcdc 0 1;
 #X obj 24 335 color 1 0 0;
-#X obj 126 78 tgl 15 0 empty empty flashlight 17 7 0 10 -191407 -260097
--228856 0 1;
+#X obj 126 78 tgl 15 0 empty empty flashlight 17 7 0 10 #b8b8b8 #fc8000
+#dcdcdc 0 1;
 #X obj 455 61 r volume;
 #X obj 455 108 spigot;
 #X obj 366 80 sel 0;
@@ -33,15 +33,15 @@
 #X obj 24 62 t f f;
 #X obj 51 128 s __lighting;
 #X obj 24 359 model models/brain.obj;
-#X obj 218 78 tgl 15 0 empty empty pulse -15 -9 0 10 -191407 -1 -228856
-0 1;
+#X obj 218 78 tgl 15 0 empty empty pulse -15 -9 0 10 #b8b8b8 #000000
+#dcdcdc 0 1;
 #X obj 24 290 scale 1;
 #X msg 218 256 1;
 #X obj 349 233 r duration;
 #X obj 349 256 moses 1;
 #X obj 388 280 t b f;
 #X obj 388 322 /;
-#X floatatom 388 344 5 0 0 0 - - -;
+#X floatatom 388 344 5 0 0 0 - - - 0;
 #X msg 388 300 250;
 #X text 418 301 scale by 4;
 #X obj 294 317 osc~;
