@@ -1,7 +1,6 @@
 #N canvas 929 473 649 441 10;
 #X declare -path hcs;
 #X obj 28 19 inlet bank;
-#X obj 28 382 outlet;
 #X obj 390 147 hcs/folder_list;
 #X obj 373 21 r video_dir;
 #X msg 435 70 symbol *;
@@ -11,26 +10,25 @@
 #X obj 473 193 int;
 #X obj 390 175 t s b;
 #X obj 497 193 + 1;
-#X msg 513 67 0;
 #X obj 373 209 int;
 #X obj 373 44 t b a b b;
-#X floatatom 473 218 5 0 0 0 - - -;
-#X floatatom 373 236 5 0 0 0 - - -;
+#X floatatom 473 218 5 0 0 0 - - - 0;
+#X floatatom 373 236 5 0 0 0 - - - 0;
 #X msg 373 313 \; init_banks \$1;
-#X obj 476 389 outlet name;
-#X obj 28 356 prepend putvideodir;
+#X obj 182 394 outlet name;
+#X obj 28 366 prepend putvideodir;
 #X obj 156 44 text define -k \$0-video-dir-list;
-#A set /home/ub/visuals/live/darkmatter/3D \; /home/ub/visuals/live/meccanismo/clips/001_slow
-\; /home/ub/visuals/live/meccanismo/clips/002_cinder \; /home/ub/visuals/live/meccanismo/clips/003_3D
-\; /home/ub/visuals/live/meccanismo/clips/004_amit \; /home/ub/visuals/live/meccanismo/clips/005_circular
-\; /home/ub/visuals/live/meccanismo/clips/006_dark \; /home/ub/visuals/live/meccanismo/clips/007_figures
-\; /home/ub/visuals/live/meccanismo/clips/008_heads \; /home/ub/visuals/live/meccanismo/clips/009_organic
-\; /home/ub/visuals/live/meccanismo/clips/010_freaky \; /home/ub/visuals/live/meccanismo/clips/011_machine
-\; /home/ub/visuals/live/meccanismo/clips/012_gang \; /home/ub/visuals/live/meccanismo/clips/013_light
-\; /home/ub/visuals/live/meccanismo/clips/014_schwarzweiss \; /home/ub/visuals/live/meccanismo/clips/015_space
-\; /home/ub/visuals/live/meccanismo/clips/016_strct \; /home/ub/visuals/live/meccanismo/clips/017_strct2
-\; /home/ub/visuals/live/meccanismo/clips/018_trailer \; /home/ub/visuals/live/meccanismo/clips/019_whrite
-\; /home/ub/visuals/live/meccanismo/clips/020_wild \; /home/ub/visuals/live/meccanismo/clips/021_stuff
+#A set /home/ub/visuals/live/darkmatter/3D \; /home/ub/visuals/live/scrap/clips/01_start
+\; /home/ub/visuals/live/scrap/clips/01_start \; /home/ub/visuals/live/scrap/clips/02_energy
+\; /home/ub/visuals/live/scrap/clips/03_chemistry \; /home/ub/visuals/live/scrap/clips/04_machinery
+\; /home/ub/visuals/live/scrap/clips/05_architecture \; /home/ub/visuals/live/scrap/clips/06_figures
+\; /home/ub/visuals/live/scrap/clips/07_organic \; /home/ub/visuals/live/scrap/clips/08_scrap
+\; /home/ub/visuals/live/scrap/clips/09_poetry \; /home/ub/visuals/live/scrap/clips/10_noface
+\; /home/ub/visuals/live/scrap/clips/11_trailer \; /home/ub/visuals/live/scrap/clips/12_light
+\; /home/ub/visuals/live/scrap/clips/13_schwarzweiss \; /home/ub/visuals/live/scrap/clips/14_dark
+\; /home/ub/visuals/live/scrap/clips/15_gang \; /home/ub/visuals/live/scrap/clips/16_luke
+\; /home/ub/visuals/live/scrap/clips/17_vektor \; /home/ub/visuals/live/scrap/clips/18_zfe
+\; /home/ub/visuals/live/scrap/clips/20_reste \; /home/ub/visuals/live/meccanismo/clips/021_stuff
 \; /home/ub/visuals/live/meccanismo/clips/022_teneriffa \; /home/ub/visuals/live/darkmatter/wild
 \; /home/ub/visuals/live/darkmatter/zfe \;;
 #X obj 422 277 text set \$0-video-dir-list;
@@ -38,26 +36,35 @@
 #X text 156 20 make this global \, we only need one;
 #X text 420 295 split off last directory as name;
 #X obj 480 18 declare -path hcs;
-#X connect 0 0 21 0;
-#X connect 2 0 9 0;
-#X connect 3 0 13 0;
-#X connect 4 0 5 1;
-#X connect 5 0 7 0;
-#X connect 6 0 5 0;
-#X connect 7 0 2 0;
-#X connect 8 0 10 0;
-#X connect 8 0 14 0;
-#X connect 9 0 20 0;
-#X connect 9 1 8 0;
-#X connect 10 0 8 1;
-#X connect 11 0 8 0;
-#X connect 12 0 15 0;
-#X connect 13 0 12 0;
-#X connect 13 1 6 0;
-#X connect 13 2 4 0;
-#X connect 13 3 11 0;
-#X connect 14 0 12 1;
-#X connect 14 0 20 1;
-#X connect 15 0 16 0;
-#X connect 18 0 1 0;
-#X connect 21 0 18 0;
+#X obj 28 392 outlet path;
+#X obj 101 319 hcs/split_path;
+#X obj 28 301 t s s;
+#X obj 85 53 print bank;
+#X msg 513 67 0;
+#X connect 0 0 26 0;
+#X connect 0 0 19 0;
+#X connect 1 0 8 0;
+#X connect 2 0 11 0;
+#X connect 3 0 4 1;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 0;
+#X connect 7 0 9 0;
+#X connect 7 0 12 0;
+#X connect 8 0 18 0;
+#X connect 8 1 7 0;
+#X connect 9 0 7 1;
+#X connect 10 0 13 0;
+#X connect 11 0 10 0;
+#X connect 11 1 5 0;
+#X connect 11 2 3 0;
+#X connect 11 3 27 0;
+#X connect 12 0 10 1;
+#X connect 12 0 18 1;
+#X connect 13 0 14 0;
+#X connect 16 0 23 0;
+#X connect 19 0 25 0;
+#X connect 24 1 15 0;
+#X connect 25 0 16 0;
+#X connect 25 1 24 0;
+#X connect 27 0 7 0;

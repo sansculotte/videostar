@@ -1,9 +1,9 @@
-#N canvas 618 19 1292 236 10;
+#N canvas 631 19 1279 230 10;
 #X declare -lib mapping;
-#X obj 4 3 cnv 15 1270 222 empty empty empty 20 12 0 14 #202020 #404040
+#X obj 4 2 cnv 15 1270 222 empty empty empty 20 12 0 14 #202020 #404040
 0;
-#X symbolatom 811 206 55 0 0 0 - - - 0;
-#N canvas 315 432 353 135 joystick 1;
+#X symbolatom 811 175 55 0 0 0 - - - 0;
+#N canvas 315 432 353 135 joystick 0;
 #N canvas 513 281 773 563 joystick1 0;
 #X obj 463 348 bng 20 250 50 0 6_b empty empty 0 -6 0 8 #fcfcfc #000000
 #000000;
@@ -19,7 +19,7 @@
 0 1;
 #X msg 196 34 open \$1;
 #X obj 231 13 hradio 15 1 1 30 \$0-device-number empty choose_a_device
-0 -6 1 8 #fc8000 #000000 #000000 20;
+0 -6 1 8 #fc8000 #000000 #000000 6;
 #X obj 196 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
 0 -6 0 14 #a0a0a0 #000000 #000000 0 256;
 #X msg 114 29 print;
@@ -185,7 +185,7 @@ btn_2 btn_1;
 0 1;
 #X msg 195 34 open \$1;
 #X obj 231 13 hradio 15 1 1 20 \$0-device-number empty choose_a_device
-0 -6 1 9 #00fc04 #000000 #000000 19;
+0 -6 1 9 #00fc04 #000000 #000000 6;
 #X obj 195 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
 0 -6 0 14 #a0a0a0 #000000 #000000 0 256;
 #X msg 117 15 print;
@@ -363,7 +363,7 @@ btn_2 btn_1;
 #X connect 8 0 0 1;
 #X connect 9 0 1 1;
 #X coords 0 -1 1 1 97 20 1 0 0;
-#X restore 189 87 pd joystick;
+#X restore 189 86 pd joystick;
 #N canvas 412 218 1423 529 joystick_ctrl 0;
 #X obj 213 22 r left_x;
 #X obj 272 22 r left_y;
@@ -947,62 +947,16 @@ btn_2 btn_1;
 #X connect 194 0 140 0;
 #X connect 196 0 141 0;
 #X coords 0 -1 1 1 85 16 1 100 100;
-#X restore 57 117 pd joystick_ctrl;
-#X msg 642 19 clear;
-#X obj 289 39 openpanel;
-#X obj 289 10 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
+#X restore 57 116 pd joystick_ctrl;
+#X obj 289 38 openpanel;
+#X obj 289 9 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
 #000000;
-#X msg 289 62 putvideo \$1;
-#N canvas 593 347 450 300 playlist 0;
-#X msg 153 123 seek \$1;
-#X obj 28 184 outlet;
-#X obj 153 29 r clip_1;
-#X obj 28 35 r xbank_01;
-#X obj 214 187 print bank_1;
-#X obj 28 70 videodir;
-#X obj 73 184 outlet title;
-#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040
-0;
-#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400
-#000000 #000000 0 256;
-#X connect 0 0 1 0;
-#X connect 2 0 8 0;
-#X connect 3 0 5 0;
-#X connect 5 0 1 0;
-#X connect 5 1 4 0;
-#X connect 5 1 6 0;
-#X connect 8 0 0 0;
-#X coords 0 -1 1 1 40 22 2 148 66;
-#X restore 369 9 pd playlist;
-#N canvas 552 341 450 300 playlist 0;
-#X msg 153 123 seek \$1;
-#X obj 28 184 outlet;
-#X obj 28 35 r xbank_02;
-#X obj 153 29 r clip_2;
-#X obj 146 185 outlet;
-#X obj 186 158 print bank_2;
-#X obj 28 70 videodir;
-#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040
-0;
-#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400
-#000000 #000000 0 256;
-#X connect 0 0 1 0;
-#X connect 2 0 6 0;
-#X connect 3 0 8 0;
-#X connect 6 0 1 0;
-#X connect 6 1 4 0;
-#X connect 6 1 5 0;
-#X connect 8 0 0 0;
-#X coords 0 -1 1 1 40 22 2 148 66;
-#X restore 811 3 pd playlist;
-#X msg 1086 18 clear;
-#X obj 734 36 openpanel;
-#X obj 734 7 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
+#X msg 289 61 putvideo \$1;
+#X obj 734 35 openpanel;
+#X obj 734 6 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
 #000000;
-#X msg 734 59 putvideo \$1;
-#X symbolatom 454 11 10 0 0 0 - - - 0;
-#X symbolatom 896 6 10 0 0 0 - - - 0;
-#X symbolatom 369 207 55 0 0 0 - - - 0;
+#X msg 734 58 putvideo \$1;
+#X symbolatom 369 176 55 0 0 0 - - - 0;
 #N canvas 70 94 837 566 midi_ctrl 0;
 #N canvas 956 550 697 295 video_grid 0;
 #X obj 32 125 & 7;
@@ -1093,7 +1047,7 @@ btn_2 btn_1;
 #X connect 26 0 20 0;
 #X connect 27 0 21 0;
 #X connect 28 0 22 0;
-#X restore 57 175 pd midi_ctrl korg;
+#X restore 57 174 pd midi_ctrl korg;
 #N canvas 638 91 1060 706 midi_ctrl 0;
 #X obj 57 63 notein;
 #X obj 76 556 noteout;
@@ -1259,19 +1213,20 @@ btn_2 btn_1;
 #X connect 30 0 31 1;
 #X connect 31 0 22 0;
 #X connect 34 0 33 0;
-#X restore 57 145 pd midi_ctrl bhoreal;
-#X obj 369 36 videogrid videogrid1 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 ;
-#X obj 811 35 videogrid videogrid2 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 ;
+#X restore 57 144 pd midi_ctrl bhoreal;
+#X obj 369 35 videogrid videogrid1 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
+60 40 /home/ub/visuals/live/scrap/clips/01_start/echo.mov|/home/ub/visuals/live/scrap/clips/01_start/round01.mov|/home/ub/visuals/live/scrap/clips/01_start/mars01.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-1.mov|/home/ub/visuals/live/scrap/clips/01_start/faden_piano.mov|/home/ub/visuals/live/scrap/clips/01_start/blob.mov|/home/ub/visuals/live/scrap/clips/01_start/brazil.mov|/home/ub/visuals/live/scrap/clips/01_start/mars.mov|/home/ub/visuals/live/scrap/clips/01_start/round03.mov|/home/ub/visuals/live/scrap/clips/01_start/mars02.mov|/home/ub/visuals/live/scrap/clips/01_start/round04.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-2.mov|/home/ub/visuals/live/scrap/clips/01_start/polymeer.mov|/home/ub/visuals/live/scrap/clips/01_start/diarahmen.mov|/home/ub/visuals/live/scrap/clips/01_start/lighthouse.mov|
+;
+#X obj 811 34 videogrid videogrid2 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
+60 40 /home/ub/visuals/live/scrap/clips/01_start/echo.mov|/home/ub/visuals/live/scrap/clips/01_start/round01.mov|/home/ub/visuals/live/scrap/clips/01_start/mars01.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-1.mov|/home/ub/visuals/live/scrap/clips/01_start/faden_piano.mov|/home/ub/visuals/live/scrap/clips/01_start/blob.mov|/home/ub/visuals/live/scrap/clips/01_start/brazil.mov|/home/ub/visuals/live/scrap/clips/01_start/mars.mov|/home/ub/visuals/live/scrap/clips/01_start/round03.mov|/home/ub/visuals/live/scrap/clips/01_start/mars02.mov|/home/ub/visuals/live/scrap/clips/01_start/round04.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-2.mov|/home/ub/visuals/live/scrap/clips/01_start/polymeer.mov|/home/ub/visuals/live/scrap/clips/01_start/diarahmen.mov|/home/ub/visuals/live/scrap/clips/01_start/lighthouse.mov|
+;
 #N canvas 0 91 450 300 README 0;
 #X text 23 17 requirements:;
 #X text 23 37 - hcs (folder_list);
 #X text 23 57 - list-abs (list-l2s);
 #X text 25 97 - cyclone (counter);
 #X text 25 77 - hid;
-#X restore 97 30 pd README;
-#X obj 540 11 bankswitch 1;
+#X restore 97 29 pd README;
 #N canvas 0 91 450 300 control.net 0;
 #X floatatom 189 166 5 0 0 0 - - - 0;
 #X msg 264 143 connect localhost 3000;
@@ -1289,7 +1244,7 @@ btn_2 btn_1;
 #X connect 5 0 2 0;
 #X connect 6 0 0 0;
 #X connect 7 0 6 0;
-#X restore 189 206 pd control.net;
+#X restore 189 175 pd control.net;
 #N canvas 0 91 457 261 clip.net 0;
 #X floatatom 151 178 5 0 0 0 - - - 0;
 #X msg 118 49 send movie_1 \$1;
@@ -1313,8 +1268,7 @@ btn_2 btn_1;
 #X connect 8 0 0 0;
 #X connect 9 0 1 0;
 #X connect 10 0 2 0;
-#X restore 715 207 pd clip.net;
-#X obj 981 10 bankswitch 2;
+#X restore 715 176 pd clip.net;
 #N canvas 189 433 705 469 iphone-sensors 0;
 #X obj 555 17 declare -lib mapping;
 #X msg 304 122 1;
@@ -1462,8 +1416,8 @@ btn_2 btn_1;
 #X connect 23 0 11 1;
 #X connect 24 0 21 0;
 #X coords 0 -1 1 1 105 20 1 100 100;
-#X restore 57 86 pd iphone-sensors;
-#X obj 1146 37 cnv 15 100 24 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X restore 57 85 pd iphone-sensors;
+#X obj 1146 36 cnv 15 100 24 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
 #N canvas 522 441 449 358 init-gui.023 0;
 #X obj 29 25 loadbang;
@@ -1481,6 +1435,7 @@ btn_2 btn_1;
 #X obj 267 72 openpanel 1;
 #X obj 267 102 t b s;
 #X msg 30 258 \; grid_rows 4 \; grid_cols 5 \;;
+#X msg 84 98 bang;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 6 0;
@@ -1495,25 +1450,78 @@ btn_2 btn_1;
 #X connect 12 0 13 0;
 #X connect 13 0 8 0;
 #X connect 13 1 11 1;
-#X restore 1149 40 pd init-gui.023;
-#X obj 1148 10 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060
-#000000 #000000;
-#X connect 1 0 24 1;
-#X connect 2 0 23 0;
-#X connect 4 0 19 0;
-#X connect 5 0 7 0;
-#X connect 6 0 5 0;
-#X connect 7 0 19 0;
-#X connect 8 0 19 0;
-#X connect 8 1 14 0;
-#X connect 9 0 20 0;
-#X connect 9 1 15 0;
-#X connect 10 0 20 0;
-#X connect 11 0 13 0;
-#X connect 12 0 11 0;
-#X connect 13 0 20 0;
-#X connect 16 0 24 0;
-#X connect 19 0 16 0;
-#X connect 20 0 1 0;
-#X connect 26 0 23 0;
-#X connect 29 0 28 0;
+#X connect 15 0 8 0;
+#X restore 1149 39 pd init-gui.023;
+#X obj 1148 9 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
+#000000;
+#X obj 370 12 cnv 15 310 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X msg 640 13 clear;
+#X symbolatom 412 14 22 0 0 0 - - - 0;
+#X obj 551 9 bankswitch 1;
+#N canvas 593 347 450 300 playlist 0;
+#X msg 153 123 seek \$1;
+#X obj 28 184 outlet;
+#X obj 153 29 r clip_1;
+#X obj 28 35 r xbank_01;
+#X obj 214 187 print bank_1;
+#X obj 28 70 videodir;
+#X obj 73 184 outlet title;
+#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040
+0;
+#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400
+#000000 #000000 0 256;
+#X connect 0 0 1 0;
+#X connect 2 0 8 0;
+#X connect 3 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 1 4 0;
+#X connect 5 1 6 0;
+#X connect 8 0 0 0;
+#X coords 0 -1 1 1 40 22 2 148 66;
+#X restore 370 11 pd playlist;
+#X obj 811 11 cnv 15 310 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#N canvas 552 341 450 300 playlist 0;
+#X msg 153 123 seek \$1;
+#X obj 28 184 outlet;
+#X obj 28 35 r xbank_02;
+#X obj 153 29 r clip_2;
+#X obj 146 185 outlet;
+#X obj 186 158 print bank_2;
+#X obj 28 70 videodir;
+#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040
+0;
+#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400
+#000000 #000000 0 256;
+#X connect 0 0 1 0;
+#X connect 2 0 6 0;
+#X connect 3 0 8 0;
+#X connect 6 0 1 0;
+#X connect 6 1 4 0;
+#X connect 6 1 5 0;
+#X connect 8 0 0 0;
+#X coords 0 -1 1 1 40 22 2 148 66;
+#X restore 811 9 pd playlist;
+#X msg 1082 12 clear;
+#X symbolatom 854 12 22 0 0 0 - - - 0;
+#X obj 993 9 bankswitch 2;
+#X connect 1 0 17 1;
+#X connect 2 0 16 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 13 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 14 0;
+#X connect 10 0 17 0;
+#X connect 13 0 10 0;
+#X connect 14 0 1 0;
+#X connect 18 0 16 0;
+#X connect 21 0 20 0;
+#X connect 23 0 13 0;
+#X connect 26 0 13 0;
+#X connect 26 1 24 0;
+#X connect 28 0 14 0;
+#X connect 28 1 30 0;
+#X connect 29 0 14 0;
