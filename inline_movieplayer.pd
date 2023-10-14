@@ -1,4 +1,5 @@
 #N canvas 225 231 951 752 10;
+#X declare -lib hcs;
 #X obj 53 31 inlet on/off;
 #X obj 268 32 inlet filename;
 #X obj 50 630 outlet gemlist;
@@ -53,8 +54,12 @@
 #X obj 467 346 t b f;
 #X msg 467 367 1000;
 #X obj 571 117 r xspeed\$1;
+#X obj 365 570 hcs/split_path;
+#X obj 446 627 outlet filename;
+#X obj 762 41 declare -lib hcs;
 #X connect 0 0 16 0;
 #X connect 1 0 13 0;
+#X connect 1 0 46 0;
 #X connect 3 0 10 0;
 #X connect 3 1 18 1;
 #X connect 4 0 27 0;
@@ -104,4 +109,5 @@
 #X connect 43 1 42 1;
 #X connect 44 0 42 0;
 #X connect 45 0 17 0;
+#X connect 46 1 47 0;
 #X coords 0 -1 1 1 150 66 2 50 70;
