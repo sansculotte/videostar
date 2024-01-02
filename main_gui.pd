@@ -2,7 +2,7 @@
 #X declare -lib mapping;
 #X obj 4 2 cnv 15 1270 222 empty empty empty 20 12 0 14 #202020 #404040
 0;
-#X symbolatom 811 175 55 0 0 0 - - - 0;
+#X symbolatom 811 205 55 0 0 0 - - - 0;
 #N canvas 315 432 353 135 joystick 0;
 #N canvas 513 281 773 563 joystick1 0;
 #X obj 463 348 bng 20 250 50 0 6_b empty empty 0 -6 0 8 #fcfcfc #000000
@@ -956,7 +956,7 @@ btn_2 btn_1;
 #X obj 734 6 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
 #000000;
 #X msg 734 58 putvideo \$1;
-#X symbolatom 369 176 55 0 0 0 - - - 0;
+#X symbolatom 369 206 55 0 0 0 - - - 0;
 #N canvas 70 94 837 566 midi_ctrl 0;
 #N canvas 956 550 697 295 video_grid 0;
 #X obj 32 125 & 7;
@@ -1214,11 +1214,11 @@ btn_2 btn_1;
 #X connect 31 0 22 0;
 #X connect 34 0 33 0;
 #X restore 57 144 pd midi_ctrl bhoreal;
-#X obj 369 35 videogrid videogrid1 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 /home/ub/visuals/live/scrap/clips/01_start/echo.mov|/home/ub/visuals/live/scrap/clips/01_start/round01.mov|/home/ub/visuals/live/scrap/clips/01_start/mars01.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-1.mov|/home/ub/visuals/live/scrap/clips/01_start/faden_piano.mov|/home/ub/visuals/live/scrap/clips/01_start/blob.mov|/home/ub/visuals/live/scrap/clips/01_start/brazil.mov|/home/ub/visuals/live/scrap/clips/01_start/mars.mov|/home/ub/visuals/live/scrap/clips/01_start/round03.mov|/home/ub/visuals/live/scrap/clips/01_start/mars02.mov|/home/ub/visuals/live/scrap/clips/01_start/round04.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-2.mov|/home/ub/visuals/live/scrap/clips/01_start/polymeer.mov|/home/ub/visuals/live/scrap/clips/01_start/diarahmen.mov|/home/ub/visuals/live/scrap/clips/01_start/lighthouse.mov|
+#X obj 369 35 videogrid videogrid1 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
+60 40 /home/ub/visuals/live/scrap/clips/01_start/round01.mov|/home/ub/visuals/live/scrap/clips/01_start/power4.mov|/home/ub/visuals/live/scrap/clips/01_start/mars01.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-1.mov|/home/ub/visuals/live/scrap/clips/01_start/faden_piano.mov|/home/ub/visuals/live/scrap/clips/01_start/blob.mov|/home/ub/visuals/live/scrap/clips/01_start/brazil.mov|/home/ub/visuals/live/scrap/clips/01_start/mars.mov|/home/ub/visuals/live/scrap/clips/01_start/round03.mov|/home/ub/visuals/live/scrap/clips/01_start/mars02.mov|/home/ub/visuals/live/scrap/clips/01_start/round04.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-2.mov|/home/ub/visuals/live/scrap/clips/01_start/polymeer.mov|/home/ub/visuals/live/scrap/clips/01_start/diarahmen.mov|/home/ub/visuals/live/scrap/clips/01_start/lighthouse.mov|
 ;
-#X obj 811 34 videogrid videogrid2 3 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 /home/ub/visuals/live/scrap/clips/01_start/echo.mov|/home/ub/visuals/live/scrap/clips/01_start/round01.mov|/home/ub/visuals/live/scrap/clips/01_start/mars01.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-1.mov|/home/ub/visuals/live/scrap/clips/01_start/faden_piano.mov|/home/ub/visuals/live/scrap/clips/01_start/blob.mov|/home/ub/visuals/live/scrap/clips/01_start/brazil.mov|/home/ub/visuals/live/scrap/clips/01_start/mars.mov|/home/ub/visuals/live/scrap/clips/01_start/round03.mov|/home/ub/visuals/live/scrap/clips/01_start/mars02.mov|/home/ub/visuals/live/scrap/clips/01_start/round04.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-2.mov|/home/ub/visuals/live/scrap/clips/01_start/polymeer.mov|/home/ub/visuals/live/scrap/clips/01_start/diarahmen.mov|/home/ub/visuals/live/scrap/clips/01_start/lighthouse.mov|
+#X obj 811 34 videogrid videogrid2 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
+60 40 /home/ub/visuals/live/scrap/clips/01_start/round01.mov|/home/ub/visuals/live/scrap/clips/01_start/mars01.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-1.mov|/home/ub/visuals/live/scrap/clips/01_start/faden_piano.mov|/home/ub/visuals/live/scrap/clips/01_start/blob.mov|/home/ub/visuals/live/scrap/clips/01_start/brazil.mov|/home/ub/visuals/live/scrap/clips/01_start/mars.mov|/home/ub/visuals/live/scrap/clips/01_start/round03.mov|/home/ub/visuals/live/scrap/clips/01_start/mars02.mov|/home/ub/visuals/live/scrap/clips/01_start/round04.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-2.mov|/home/ub/visuals/live/scrap/clips/01_start/polymeer.mov|/home/ub/visuals/live/scrap/clips/01_start/diarahmen.mov|/home/ub/visuals/live/scrap/clips/01_start/lighthouse.mov|/home/ub/visuals/live/scrap/clips/01_start/echo.mov|
 ;
 #N canvas 0 91 450 300 README 0;
 #X text 23 17 requirements:;
@@ -1244,7 +1244,7 @@ btn_2 btn_1;
 #X connect 5 0 2 0;
 #X connect 6 0 0 0;
 #X connect 7 0 6 0;
-#X restore 189 175 pd control.net;
+#X restore 189 205 pd control.net;
 #N canvas 0 91 457 261 clip.net 0;
 #X floatatom 151 178 5 0 0 0 - - - 0;
 #X msg 118 49 send movie_1 \$1;
@@ -1268,7 +1268,7 @@ btn_2 btn_1;
 #X connect 8 0 0 0;
 #X connect 9 0 1 0;
 #X connect 10 0 2 0;
-#X restore 715 176 pd clip.net;
+#X restore 715 206 pd clip.net;
 #N canvas 189 433 705 469 iphone-sensors 0;
 #X obj 555 17 declare -lib mapping;
 #X msg 304 122 1;
