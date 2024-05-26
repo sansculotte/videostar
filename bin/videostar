@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 VERSION=videostar
-PIDFILE=/tmp/pd_vjset.pid
-GUIPIDFILE=/tmp/pd_vjgui.pid
+PIDFILE=/var/run/pd_vjset.pid
+GUIPIDFILE=/var/run/pd_vjgui.pid
 
 
 set -eu
