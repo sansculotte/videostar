@@ -1,0 +1,30 @@
+#N canvas 1139 177 536 347 10;
+#X obj 170 62 r duration;
+#X floatatom 170 94 5 0 0 0 - - - 0;
+#X obj 44 103 spigot;
+#X obj 42 23 cnv 15 116 24 empty empty empty 4 8 0 10 #541010 #dcdcdc
+0;
+#X obj 47 28 tgl 15 0 empty empty ring 17 7 0 10 #fc0400 #000000 #dcdcdc
+0 1;
+#X obj 139 28 bng 15 250 50 0 empty empty empty 17 7 0 10 #901010 #fc0400
+#000000;
+#X obj 190 22 r fiddlebonk;
+#X obj 98 28 nbx 2 14 1 96 0 0 empty empty empty 0 -8 0 10 #ff0400
+#ffffff #ffffff 0 256;
+#X obj 44 154 pack 1 f;
+#X obj 44 126 f 1;
+#X obj 44 207 clone 10 ringpartikel;
+#X msg 44 180 next \$1 \$2;
+#X obj 170 116 * 2;
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 2 0 9 0;
+#X connect 4 0 2 1;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
+#X connect 7 0 12 1;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 11 0 10 0;
+#X connect 12 0 8 1;
+#X coords 0 -1 1 1 120 30 1 40 20;
