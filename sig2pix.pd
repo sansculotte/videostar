@@ -19,7 +19,8 @@
 #X obj 310 37 loadbang;
 #X msg 310 54 white;
 #X obj 107 80 *~ 1;
-#X connect 0 0 3 0;
+#X obj 28 64 route f;
+#X connect 0 0 20 0;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
 #X connect 4 0 7 0;
@@ -41,3 +42,5 @@
 #X connect 18 0 16 0;
 #X connect 19 0 4 1;
 #X connect 19 0 4 2;
+#X connect 20 0 3 0;
+#X connect 20 1 4 0;
