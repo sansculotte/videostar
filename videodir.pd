@@ -1,5 +1,5 @@
 #N canvas 929 473 649 441 10;
-#X declare -path hcs;
+#X declare -path hcs -path cyclone;
 #X obj 28 19 inlet bank;
 #X obj 390 147 hcs/folder_list;
 #X obj 373 21 r video_dir;
@@ -18,30 +18,18 @@
 #X obj 182 394 outlet name;
 #X obj 28 366 prepend putvideodir;
 #X obj 156 44 text define -k \$0-video-dir-list;
-#A set /home/ub/visuals/live/darkmatter/3D \; /home/ub/visuals/live/scrap/clips/01_start
-\; /home/ub/visuals/live/scrap/clips/01_start \; /home/ub/visuals/live/scrap/clips/02_energy
-\; /home/ub/visuals/live/scrap/clips/03_chemistry \; /home/ub/visuals/live/scrap/clips/04_machinery
-\; /home/ub/visuals/live/scrap/clips/05_architecture \; /home/ub/visuals/live/scrap/clips/06_figures
-\; /home/ub/visuals/live/scrap/clips/07_organic \; /home/ub/visuals/live/scrap/clips/08_scrap
-\; /home/ub/visuals/live/scrap/clips/09_poetry \; /home/ub/visuals/live/scrap/clips/10_noface
-\; /home/ub/visuals/live/scrap/clips/11_trailer \; /home/ub/visuals/live/scrap/clips/12_light
-\; /home/ub/visuals/live/scrap/clips/13_schwarzweiss \; /home/ub/visuals/live/scrap/clips/14_dark
-\; /home/ub/visuals/live/scrap/clips/15_gang \; /home/ub/visuals/live/scrap/clips/16_luke
-\; /home/ub/visuals/live/scrap/clips/17_vektor \; /home/ub/visuals/live/scrap/clips/18_zfe
-\; /home/ub/visuals/live/scrap/clips/20_reste \; /home/ub/visuals/live/meccanismo/clips/021_stuff
-\; /home/ub/visuals/live/meccanismo/clips/022_teneriffa \; /home/ub/visuals/live/darkmatter/wild
-\; /home/ub/visuals/live/darkmatter/zfe \;;
+#A set /home/ub/visuals/live/darkmatter/3D \; /home/ub/visuals/live/adm/clips/01_start \; /home/ub/visuals/live/adm/clips/02_energy \; /home/ub/visuals/live/adm/clips/03_chemistry \; /home/ub/visuals/live/adm/clips/04_machinery \; /home/ub/visuals/live/adm/clips/05_architecture \; /home/ub/visuals/live/adm/clips/06_figures \; /home/ub/visuals/live/adm/clips/07_organic \; /home/ub/visuals/live/adm/clips/08_scrap \; /home/ub/visuals/live/adm/clips/09_poetry \; /home/ub/visuals/live/adm/clips/10_noface \; /home/ub/visuals/live/adm/clips/11_trailer \; /home/ub/visuals/live/adm/clips/12_light \; /home/ub/visuals/live/adm/clips/13_schwarzweiss \; /home/ub/visuals/live/adm/clips/14_dark \; /home/ub/visuals/live/adm/clips/15_gang \; /home/ub/visuals/live/adm/clips/16_luke \; /home/ub/visuals/live/adm/clips/17_vektor \; /home/ub/visuals/live/adm/clips/18_zfe \; /home/ub/visuals/live/adm/clips/19_shrill \; /home/ub/visuals/live/adm/clips/20_various \; /home/ub/visuals/live/adm/clips/21_videos \; /home/ub/visuals/live/adm/clips/22_hell \; /home/ub/visuals/live/darkmatter/wild \; /home/ub/visuals/live/darkmatter/zfe \;;
 #X obj 422 277 text set \$0-video-dir-list;
 #X obj 28 278 text get \$0-video-dir-list;
 #X text 156 20 make this global \, we only need one;
 #X text 420 295 split off last directory as name;
-#X obj 480 18 declare -path hcs;
 #X obj 28 392 outlet path;
 #X obj 101 319 hcs/split_path;
 #X obj 28 301 t s s;
 #X obj 85 53 print bank;
 #X msg 513 67 0;
-#X connect 0 0 26 0;
+#X obj 451 21 declare -path hcs -path cyclone;
+#X connect 0 0 25 0;
 #X connect 0 0 19 0;
 #X connect 1 0 8 0;
 #X connect 2 0 11 0;
@@ -58,13 +46,13 @@
 #X connect 11 0 10 0;
 #X connect 11 1 5 0;
 #X connect 11 2 3 0;
-#X connect 11 3 27 0;
+#X connect 11 3 26 0;
 #X connect 12 0 10 1;
 #X connect 12 0 18 1;
 #X connect 13 0 14 0;
-#X connect 16 0 23 0;
-#X connect 19 0 25 0;
-#X connect 24 1 15 0;
-#X connect 25 0 16 0;
-#X connect 25 1 24 0;
-#X connect 27 0 7 0;
+#X connect 16 0 22 0;
+#X connect 19 0 24 0;
+#X connect 23 1 15 0;
+#X connect 24 0 16 0;
+#X connect 24 1 23 0;
+#X connect 26 0 7 0;

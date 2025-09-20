@@ -1,4 +1,5 @@
 #N canvas 403 408 787 430 10;
+#X declare -path cyclone;
 #X obj 61 238 unpack;
 #X floatatom 61 266 5 0 0 0 - - - 0;
 #X obj 133 91 metro 40;
@@ -41,6 +42,7 @@
 #X obj 207 17 inlet moviefile;
 #X obj 316 17 inlet speed(fps);
 #X obj 13 17 inlet gemlist;
+#X obj 629 84 declare -path cyclone;
 #X connect 0 0 1 0;
 #X connect 0 0 18 0;
 #X connect 1 0 9 1;

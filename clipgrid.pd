@@ -1,10 +1,11 @@
-#N canvas 501 449 622 614 10;
+#N canvas 533 246 700 485 10;
+#X declare -path cyclone;
 #X obj 173 153 int;
 #X msg 188 67 -1;
 #X msg 229 67 1;
 #X obj 224 46 t b b;
 #X obj 173 46 t b b;
-#X floatatom 173 263 5 0 0 0 - - -, f 5;
+#X floatatom 173 263 5 0 0 0 - - - 0;
 #X obj 125 46 t b b;
 #X obj 75 46 t b b;
 #X obj 75 166 int;
@@ -14,12 +15,10 @@
 #X obj 173 191 t b f;
 #X obj 173 214 +;
 #X msg 19 161 1;
-#X obj 19 143 bng 15 250 50 0 empty empty reset 0 -6 0 8 -262144 -1
--1;
+#X obj 19 143 bng 15 250 50 0 empty empty reset 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 110 323 * 16;
 #X obj 173 284 +;
-#X obj 140 197 bng 15 250 50 0 empty empty re-trigger 0 -6 0 8 -262144
--1 -1;
+#X obj 140 197 bng 15 250 50 0 empty empty re-trigger 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 18 9 inlet;
 #X obj 384 8 inlet;
 #X text 29 26 bank;
@@ -39,8 +38,7 @@
 #X obj 368 196 r blockcs2;
 #X text 329 221 block while bankswitching;
 #X obj 264 219 switch 2;
-#X obj 362 295 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 362 295 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 237 175 t b b;
 #X obj 173 446 outlet;
 #X obj 19 109 loadbang;
@@ -57,10 +55,10 @@
 #X obj 188 110 + 4;
 #X obj 90 112 + 4;
 #X obj 110 367 spigot;
-#X obj 143 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 143 345 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 161 344 bank: continous clip numbers;
 #X text 387 25 set;
+#X obj 547 8 declare -path cyclone;
 #X connect 0 0 12 0;
 #X connect 1 0 49 0;
 #X connect 2 0 49 0;

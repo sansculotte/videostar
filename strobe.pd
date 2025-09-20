@@ -1,4 +1,5 @@
 #N canvas 800 198 933 429 10;
+#X declare -path cyclone;
 #X obj 183 54 r bumm;
 #X obj 250 53 r zack;
 #X obj 48 29 inlet;
@@ -12,13 +13,11 @@
 #X obj 119 54 t f f f;
 #X obj 48 240 outlet;
 #X obj 322 54 r aubio_tempo;
-#X obj 118 13 cnv 15 80 30 empty empty empty 20 12 0 14 -86277 -66577
-0;
-#X obj 119 26 hradio 15 1 0 4 empty empty strobe 0 -8 0 10 -258113
--1 -262144 0;
-#X obj 181 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113 -1
--1;
+#X obj 118 13 cnv 15 80 30 empty empty empty 20 12 0 14 #541010 #404040 0;
+#X obj 119 26 hradio 15 1 0 4 empty empty strobe 0 -8 0 10 #fc0400 #000000 #fcfcfc 0;
+#X obj 181 27 bng 15 250 50 0 empty empty empty 17 7 0 10 #fc0400 #000000 #000000;
 #X obj 164 156 del 50;
+#X obj 592 52 declare -path cyclone;
 #X connect 0 0 5 1;
 #X connect 1 0 5 2;
 #X connect 2 0 4 0;
