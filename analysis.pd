@@ -1,7 +1,7 @@
 #N canvas 37 433 1383 547 10;
 #X declare -lib cyclone -path mapping -lib aubio;
 #X obj 138 264 env~ 32;
-#X floatatom 466 434 5 0 0 0 - - -;
+#X floatatom 466 434 5 0 0 0 - - - 0;
 #X obj 466 512 s takt;
 #X obj 122 326 *~;
 #X obj 138 306 >;
@@ -29,35 +29,31 @@
 #X msg 360 317 read templates.txt;
 #X obj 122 366 mapping/autoscale 0 128;
 #X obj 16 326 s~ filtered_mic;
-#X floatatom 519 436 5 0 0 0 - - -;
-#X obj 359 390 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
+#X floatatom 519 436 5 0 0 0 - - - 0;
+#X obj 359 390 bng 15 250 50 0 empty empty empty 17 7 0 10 #fc0400 #000000 #000000;
 #X obj 519 512 s duration;
 #X obj 359 512 s retakt;
 #X obj 133 98 s~ __fx_adcdirect_R;
 #X obj 254 97 s~ __fx_adcdirect_L;
 #X msg 474 58 start;
 #X msg 506 101 stop;
-#X obj 474 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113 -1
--1;
+#X obj 474 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fc0400 #000000 #000000;
 #X obj 515 58 s start;
-#X obj 502 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113 -1
--1;
+#X obj 502 83 bng 15 250 50 0 empty empty empty 17 7 0 10 #fc0400 #000000 #000000;
 #X obj 503 129 s stop;
 #X obj 399 101 s~ il;
 #X obj 436 102 s~ ir;
 #X obj 399 70 readsf~ 2;
 #X obj 639 307 unpack;
-#X floatatom 639 351 0 0 0 0 - - sincomp_1;
-#X floatatom 653 328 0 0 0 0 - - sincomp_1_coef;
+#X floatatom 639 351 0 0 0 0 - - sincomp_1 0;
+#X floatatom 653 328 0 0 0 0 - - sincomp_1_coef 0;
 #X obj 685 307 unpack;
-#X floatatom 685 351 0 0 0 0 - - sincomp_2;
-#X floatatom 716 328 0 0 0 0 - - sincomp_2_coef;
+#X floatatom 685 351 0 0 0 0 - - sincomp_2 0;
+#X floatatom 716 328 0 0 0 0 - - sincomp_2_coef 0;
 #X obj 731 306 unpack;
-#X floatatom 731 352 0 0 0 0 - - sincomp_3;
-#X floatatom 775 327 0 0 0 0 - - sincomp_3_coef;
-#X obj 809 124 tgl 15 1 empty empty empty 17 7 0 10 -258113 -1 -1 1
-1;
+#X floatatom 731 352 0 0 0 0 - - sincomp_3 0;
+#X floatatom 775 327 0 0 0 0 - - sincomp_3_coef 0;
+#X obj 809 124 tgl 15 1 empty empty empty 17 7 0 10 #fc0400 #000000 #000000 1 1;
 #X obj 123 68 +~;
 #X obj 152 68 +~;
 #X obj 639 285 route 1 2 3;
@@ -73,8 +69,7 @@
 #X obj 241 286 t b b;
 #X obj 241 354 s spec_write_done;
 #X obj 241 263 metro 40;
-#X obj 588 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 588 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 40 253 max~ 0;
 #X obj 39 210 expr~ 0.5 - $v1;
 #X obj 588 234 gemhead 60;
@@ -111,8 +106,7 @@
 #X restore 692 162 pd spectrum_analyzer;
 #X obj 123 42 *~;
 #X obj 151 42 *~;
-#X obj 167 6 tgl 15 1 empty empty empty 17 7 0 10 -258113 -1 -1 1 1
-;
+#X obj 167 6 tgl 15 1 empty empty empty 17 7 0 10 #fc0400 #000000 #000000 1 1;
 #X obj 122 511 s volume;
 #X obj 203 34 clip~ -1 1;
 #X obj 287 34 clip~ -1 1;
@@ -127,16 +121,14 @@
 #X obj 346 179 loadbang;
 #X msg 346 201 0;
 #X obj 400 28 openpanel;
-#X obj 399 11 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113 -1
--1;
+#X obj 399 11 bng 15 250 50 0 empty empty empty 17 7 0 10 #fc0400 #000000 #000000;
 #X msg 400 50 open \$1;
 #X msg 517 31 rewind;
 #X obj 122 2 adc~;
 #X obj 123 145 +~;
 #X obj 419 133 dac~;
-#X obj 407 262 bng 15 250 50 0 bonkbonk2 empty empty 0 -6 0 8 -258113
--1 -1;
-#X floatatom 495 190 5 0 1 0 - - -;
+#X obj 407 262 bng 15 250 50 0 bonkbonk2 empty empty 0 -6 0 8 #fc0400 #000000 #000000;
+#X floatatom 495 190 5 0 1 0 - - - 0;
 #X obj 271 512 s aubio_tempo;
 #N canvas 97 573 450 300 (subpatch) 0;
 #X array spectrum 259 float 0;
@@ -154,35 +146,25 @@
 #X text 1106 305 10;
 #X text 1138 305 12;
 #X text 1170 305 14;
-#X obj 942 179 cnv 15 258 130 empty empty empty 20 12 0 14 -13381 -66577
-0;
+#X obj 942 179 cnv 15 258 130 empty empty empty 20 12 0 14 #0c4410 #404040 0;
 #X obj 205 131 s~ direct_mic;
 #X obj 122 209 filterbank;
-#X obj 13 13 cnv 15 94 174 empty empty empty 20 12 0 14 -13381 -66577
-0;
+#X obj 13 13 cnv 15 94 174 empty empty empty 20 12 0 14 #0c4410 #404040 0;
 #X text 69 106 bass;
 #X text 70 91 low;
 #X text 69 75 middle;
 #X text 69 60 high;
-#X obj 52 46 vradio 15 1 0 5 empty empty empty 0 -8 0 10 -4034 -1 -1
-3;
+#X obj 52 46 vradio 15 1 0 5 empty empty empty 0 -8 0 10 #00fc04 #000000 #000000 0;
 #X text 70 44 off;
-#X obj 16 48 vsl 15 130 0 127 0 0 empty volume empty 0 -8 0 8 -4034
--13381 -1 0 1;
-#X obj 33 48 vsl 15 130 0 128 0 1 empty empty empty 0 -8 0 8 -99865
--4034 -1 4200 1;
-#X obj 70 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
--1;
-#X obj 55 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
--1;
-#X obj 84 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
--1;
+#X obj 16 48 vsl 15 130 0 127 0 0 empty volume empty 0 -8 0 8 #00fc04 #0c4410 #000000 0 1;
+#X obj 33 48 vsl 15 130 0 128 0 1 empty empty empty 0 -8 0 8 #606060 #00fc04 #000000 2000 1;
+#X obj 70 166 bng 15 250 50 0 empty empty empty 17 7 0 10 #00fc04 #000000 #000000;
+#X obj 55 166 bng 15 250 50 0 empty empty empty 17 7 0 10 #00fc04 #000000 #000000;
+#X obj 84 166 bng 15 250 50 0 empty empty empty 17 7 0 10 #00fc04 #000000 #000000;
 #X obj 528 256 fiddle~ 1024 1 20 3;
-#X obj 55 131 cyclone/scope~ 44 30 2 3 128 -1 1 0 0 0 0 0 255 4 0 0
-0 32 32 32 0;
+#X obj 55 131 cyclone/scope~ 44 30 2 3 128 -1 1 0 0 0 0 0 255 4 0 0 0 32 32 32 0 empty;
 #X obj 359 360 rhythm_estimator x;
-#X obj 17 17 tgl 15 0 empty empty DSP~ 17 7 0 10 -4034 -1 -262144 0
-1;
+#X obj 17 17 tgl 15 0 empty empty DSP~ 17 7 0 10 #00fc04 #000000 #fcfcfc 0 1;
 #X msg 17 221 \; pd dsp \$1;
 #X obj 219 258 aubioonset~;
 #N canvas 0 91 450 300 switch~ 0;

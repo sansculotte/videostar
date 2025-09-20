@@ -1,83 +1,50 @@
 #N canvas 631 19 1279 230 10;
+#X declare -path easyflow;
 #X declare -lib mapping;
-#X obj 4 2 cnv 15 1270 222 empty empty empty 20 12 0 14 #202020 #404040
-0;
+#X obj 4 2 cnv 15 1270 222 empty empty empty 20 12 0 14 #202020 #404040 0;
 #X symbolatom 811 205 55 0 0 0 - - - 0;
-#N canvas 315 432 353 135 joystick 0;
-#N canvas 513 281 773 563 joystick1 0;
-#X obj 463 348 bng 20 250 50 0 6_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 215 315 bng 15 250 50 0 0_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 91 250 bng 15 250 50 0 1_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 91 265 bng 15 250 50 0 2_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 394 245 bng 15 250 50 0 3_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 167 16 tgl 15 0 empty empty empty 1 12 1 9 #fcfcfc #000000 #000000
-0 1;
+#N canvas 315 432 344 138 joystick 0;
+#N canvas 420 173 773 563 joystick1 0;
+#X obj 463 348 bng 20 250 50 0 6_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 215 315 bng 15 250 50 0 0_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 91 250 bng 15 250 50 0 1_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 91 265 bng 15 250 50 0 2_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 394 245 bng 15 250 50 0 3_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 167 16 tgl 15 0 empty empty empty 1 12 1 9 #fcfcfc #000000 #000000 0 1;
 #X msg 196 34 open \$1;
-#X obj 231 13 hradio 15 1 1 30 \$0-device-number empty choose_a_device
-0 -6 1 8 #fc8000 #000000 #000000 6;
-#X obj 196 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
-0 -6 0 14 #a0a0a0 #000000 #000000 0 256;
+#X obj 231 13 hradio 15 1 1 30 \$0-device-number empty choose_a_device 0 -6 1 8 #fc8000 #000000 #000000 18;
+#X obj 196 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty 0 -6 0 14 #a0a0a0 #000000 #000000 0 256;
 #X msg 114 29 print;
 #X obj 134 88 route abs key ff;
 #X obj 613 63 print abs:;
 #X obj 613 84 print key:;
 #X obj 613 107 print ff:;
-#X obj 394 260 bng 15 250 50 0 4_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 302 314 bng 15 250 50 0 5_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 491 301 bng 20 250 50 0 7_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 518 411 bng 20 250 50 0 8_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 545 348 bng 20 250 50 0 9_b empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 437 349 tgl 20 0 6_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 516 301 tgl 20 0 7_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 491 411 tgl 20 0 8_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 571 348 tgl 20 0 9_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 53 319 bng 20 250 50 0 up empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 13 350 bng 20 250 50 0 left empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 52 385 bng 20 250 50 0 down empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 92 351 bng 20 250 50 0 right empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 127 353 hsl 128 15 0 255 0 0 left_x empty empty -2 -6 0 8 #fcfcfc
-#000000 #000000 0 1;
-#X obj 182 296 vsl 15 128 255 0 0 0 left_y empty empty 0 -8 0 8 #fcfcfc
-#000000 #000000 0 1;
-#X obj 282 353 hsl 128 15 0 255 0 0 right_x empty empty -2 -6 0 8 #fcfcfc
-#000000 #000000 0 1;
-#X obj 337 296 vsl 15 128 255 0 0 0 right_y empty empty 0 -8 0 8 #fcfcfc
-#000000 #000000 0 1;
+#X obj 394 260 bng 15 250 50 0 4_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 302 314 bng 15 250 50 0 5_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 491 301 bng 20 250 50 0 7_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 518 411 bng 20 250 50 0 8_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 545 348 bng 20 250 50 0 9_b empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 437 349 tgl 20 0 6_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 516 301 tgl 20 0 7_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 491 411 tgl 20 0 8_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 571 348 tgl 20 0 9_bt empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 53 319 bng 20 250 50 0 up empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 13 350 bng 20 250 50 0 left empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 52 385 bng 20 250 50 0 down empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 92 351 bng 20 250 50 0 right empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 127 353 hsl 128 15 -32767 32767 0 0 left_x empty empty -2 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 182 296 vsl 15 128 -32767 32767 0 0 left_y empty empty 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 282 353 hsl 128 15 0 255 0 0 right_x empty empty -2 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 337 296 vsl 15 128 255 0 0 0 right_y empty empty 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 566 63 spigot;
 #X obj 566 84 spigot;
 #X obj 566 107 spigot;
-#X obj 566 41 tgl 15 0 empty empty debug 20 8 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 374 244 tgl 15 0 3_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 110 251 tgl 15 0 1_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
+#X obj 566 41 tgl 15 0 empty empty debug 20 8 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 374 244 tgl 15 0 3_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 110 251 tgl 15 0 1_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 20 -2 inlet;
-#X obj 374 260 tgl 15 0 4_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 110 266 tgl 15 0 2_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 169 177 route btn_8 btn_6 btn_4 btn_7 btn_5 btn_9 btn_3 btn_0
-btn_2 btn_1;
-#X obj 134 108 route abs_x abs_y abs_hat0x abs_hat0y abs_z abs_rz;
+#X obj 374 260 tgl 15 0 4_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 110 266 tgl 15 0 2_t empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 215 156 route -1 1;
 #X obj 282 156 route -1 1;
 #X obj 216 129 change;
@@ -115,15 +82,17 @@ btn_2 btn_1;
 #X connect 11 0 7 0;
 #X restore 230 63 pd scan;
 #X obj 269 37 inlet;
-#X connect 5 0 49 0;
-#X connect 6 0 49 0;
+#X obj 169 177 route btn_10 btn_9 btn_2 btn_7 btn_5 btn_11 btn_3 btn_4 btn_0 btn_1, f 75;
+#X obj 134 108 route abs_x abs_y abs_hat0x abs_hat0y abs_z abs_rz;
+#X connect 5 0 47 0;
+#X connect 6 0 47 0;
 #X connect 7 0 6 0;
-#X connect 9 0 49 0;
-#X connect 10 0 41 0;
-#X connect 10 1 31 0;
-#X connect 10 1 40 0;
-#X connect 10 2 32 0;
-#X connect 10 3 33 0;
+#X connect 9 0 47 0;
+#X connect 10 0 52 0;
+#X connect 10 0 31 0;
+#X connect 10 1 51 0;
+#X connect 10 1 32 0;
+#X connect 10 2 33 0;
 #X connect 31 0 11 0;
 #X connect 32 0 12 0;
 #X connect 33 0 13 0;
@@ -131,118 +100,87 @@ btn_2 btn_1;
 #X connect 34 0 32 1;
 #X connect 34 0 33 1;
 #X connect 37 0 5 0;
-#X connect 40 0 46 0;
-#X connect 40 1 48 0;
-#X connect 40 2 3 0;
-#X connect 40 2 39 0;
-#X connect 40 3 35 0;
-#X connect 40 3 4 0;
-#X connect 40 4 38 0;
-#X connect 40 4 14 0;
-#X connect 40 5 47 0;
-#X connect 40 6 0 0;
-#X connect 40 6 19 0;
-#X connect 40 7 16 0;
-#X connect 40 7 20 0;
-#X connect 40 8 17 0;
-#X connect 40 8 21 0;
-#X connect 40 9 18 0;
-#X connect 40 9 22 0;
-#X connect 41 0 27 0;
-#X connect 41 1 28 0;
-#X connect 41 2 44 0;
-#X connect 41 3 45 0;
-#X connect 41 4 30 0;
-#X connect 41 5 29 0;
-#X connect 42 0 24 0;
-#X connect 42 1 26 0;
-#X connect 43 0 23 0;
-#X connect 43 1 25 0;
-#X connect 44 0 42 0;
-#X connect 45 0 43 0;
-#X connect 46 0 1 0;
-#X connect 47 0 15 0;
-#X connect 48 0 2 0;
-#X connect 48 0 36 0;
-#X connect 49 0 10 0;
-#X connect 49 0 50 0;
-#X connect 49 1 51 0;
-#X connect 51 0 7 0;
-#X connect 52 0 51 1;
+#X connect 40 0 24 0;
+#X connect 40 1 26 0;
+#X connect 41 0 23 0;
+#X connect 41 1 25 0;
+#X connect 42 0 40 0;
+#X connect 43 0 41 0;
+#X connect 44 0 1 0;
+#X connect 45 0 15 0;
+#X connect 46 0 2 0;
+#X connect 46 0 36 0;
+#X connect 47 0 10 0;
+#X connect 47 0 48 0;
+#X connect 47 1 49 0;
+#X connect 49 0 7 0;
+#X connect 50 0 49 1;
+#X connect 51 0 44 0;
+#X connect 51 1 46 0;
+#X connect 51 2 3 0;
+#X connect 51 2 39 0;
+#X connect 51 3 35 0;
+#X connect 51 3 4 0;
+#X connect 51 4 38 0;
+#X connect 51 4 14 0;
+#X connect 51 5 45 0;
+#X connect 51 6 0 0;
+#X connect 51 6 19 0;
+#X connect 51 7 16 0;
+#X connect 51 7 20 0;
+#X connect 51 8 17 0;
+#X connect 51 8 21 0;
+#X connect 51 9 18 0;
+#X connect 51 9 22 0;
+#X connect 52 0 27 0;
+#X connect 52 1 28 0;
+#X connect 52 2 42 0;
+#X connect 52 3 43 0;
+#X connect 52 4 30 0;
+#X connect 52 5 29 0;
 #X restore 1 25 pd joystick1 5;
 #N canvas 759 198 698 511 joystick2 0;
-#X obj 463 348 bng 20 250 50 0 6_b_2 empty 6 0 -6 0 10 #fcfcfc #000000
-#000000;
-#X obj 215 315 bng 15 250 50 0 0_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 91 250 bng 15 250 50 0 1_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 91 265 bng 15 250 50 0 2_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 394 245 bng 15 250 50 0 3_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 168 15 tgl 15 0 empty empty empty 1 12 1 9 #fcfcfc #000000 #000000
-0 1;
+#X obj 463 348 bng 20 250 50 0 6_b_2 empty 6 0 -6 0 10 #fcfcfc #000000 #000000;
+#X obj 215 315 bng 15 250 50 0 0_b_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 91 250 bng 15 250 50 0 1_b_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 91 265 bng 15 250 50 0 2_b_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 394 245 bng 15 250 50 0 3_b_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 168 15 tgl 15 0 empty empty empty 1 12 1 9 #fcfcfc #000000 #000000 0 1;
 #X msg 195 34 open \$1;
-#X obj 231 13 hradio 15 1 1 20 \$0-device-number empty choose_a_device
-0 -6 1 9 #00fc04 #000000 #000000 6;
-#X obj 195 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty
-0 -6 0 14 #a0a0a0 #000000 #000000 0 256;
+#X obj 231 13 hradio 15 1 1 20 \$0-device-number empty choose_a_device 0 -6 1 9 #00fc04 #000000 #000000 18;
+#X obj 195 14 nbx 2 14 -1e+37 1e+37 0 0 empty \$0-device-number empty 0 -6 0 14 #a0a0a0 #000000 #000000 0 256;
 #X msg 117 15 print;
 #X obj 134 86 route abs key ff;
 #X obj 587 37 print abs:;
 #X obj 587 58 print key:;
 #X obj 587 81 print ff:;
-#X obj 394 260 bng 15 250 50 0 4_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 302 314 bng 15 250 50 0 5_b_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 491 301 bng 20 250 50 0 7_b_2 empty 7 -12 0 0 10 #fcfcfc #000000
-#000000;
-#X obj 518 411 bng 20 250 50 0 8_b_2 empty 8 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 545 348 bng 20 250 50 0 9_b_2 empty empty 10 0 0 1.65798e+07
-#fcfcfc #000000 #fcfcfc;
-#X obj 169 177 route btn_9 btn_6 btn_4 btn_7 btn_5 btn_8 btn_3 btn_0
-btn_2 btn_1;
-#X obj 437 349 tgl 20 0 6_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 516 301 tgl 20 0 7_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 491 411 tgl 20 0 8_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 571 348 tgl 20 0 9_bt_2 empty 9 20 0 0 10 #fcfcfc #000000 #000000
-0 1;
-#X obj 53 319 bng 20 250 50 0 up_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 13 350 bng 20 250 50 0 left_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 52 385 bng 20 250 50 0 down_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000;
-#X obj 92 351 bng 20 250 50 0 right_2 empty empty 0 -6 0 8 #fcfcfc
-#000000 #000000;
-#X obj 127 353 hsl 128 15 0 255 0 0 left_x_2 empty empty -2 -6 0 8
-#fcfcfc #000000 #000000 0 1;
-#X obj 182 296 vsl 15 128 255 0 0 0 left_y_2 empty empty 0 -8 0 8 #fcfcfc
-#000000 #000000 0 1;
-#X obj 282 353 hsl 128 15 0 255 0 0 right_x_2 empty empty -2 -6 0 8
-#fcfcfc #000000 #000000 0 1;
-#X obj 337 296 vsl 15 128 255 0 0 0 right_y_2 empty empty 0 -8 0 8
-#fcfcfc #000000 #000000 0 1;
+#X obj 394 260 bng 15 250 50 0 4_b_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 302 314 bng 15 250 50 0 5_b_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 491 301 bng 20 250 50 0 7_b_2 empty 7 -12 0 0 10 #fcfcfc #000000 #000000;
+#X obj 518 411 bng 20 250 50 0 8_b_2 empty 8 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 545 348 bng 20 250 50 0 9_b_2 empty empty 10 0 0 1.65798e+07 #fcfcfc #000000 #fcfcfc;
+#X obj 169 177 route btn_9 btn_6 btn_4 btn_7 btn_5 btn_8 btn_3 btn_0 btn_2 btn_1;
+#X obj 437 349 tgl 20 0 6_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 516 301 tgl 20 0 7_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 491 411 tgl 20 0 8_bt_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 571 348 tgl 20 0 9_bt_2 empty 9 20 0 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 53 319 bng 20 250 50 0 up_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 13 350 bng 20 250 50 0 left_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 52 385 bng 20 250 50 0 down_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 92 351 bng 20 250 50 0 right_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 127 353 hsl 128 15 0 255 0 0 left_x_2 empty empty -2 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 182 296 vsl 15 128 255 0 0 0 left_y_2 empty empty 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 282 353 hsl 128 15 0 255 0 0 right_x_2 empty empty -2 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 337 296 vsl 15 128 255 0 0 0 right_y_2 empty empty 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 540 37 spigot;
 #X obj 540 58 spigot;
 #X obj 540 81 spigot;
-#X obj 540 15 tgl 15 0 empty empty debug 20 8 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 374 244 tgl 15 0 3_t_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 110 251 tgl 15 0 1_t_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
+#X obj 540 15 tgl 15 0 empty empty debug 20 8 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 374 244 tgl 15 0 3_t_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 110 251 tgl 15 0 1_t_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 8 -1 inlet;
-#X obj 374 260 tgl 15 0 4_t_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 110 267 tgl 15 0 2_t_2 empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
+#X obj 374 260 tgl 15 0 4_t_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 110 267 tgl 15 0 2_t_2 empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 541 105 spigot;
 #X obj 587 106 print;
 #X obj 134 108 route abs_x abs_y abs_hat0x abs_hat0y abs_z abs_rz;
@@ -346,12 +284,9 @@ btn_2 btn_1;
 #X obj 1 97 outlet;
 #X obj 1 58 prepend send joystick_1;
 #X obj 179 57 prepend send joystick_2;
-#X obj 2 2 cnv 15 92 16 empty empty empty 20 12 0 14 #541010 #404040
-0;
-#X obj 1 2 tgl 15 1 joy_1 empty empty 20 8 0 8 #fc8c10 #000000 #000000
-1 1;
-#X obj 18 2 tgl 15 1 joy_2 empty gamepads 20 8 0 11 #00fc10 #000000
-#ffffff 1 1;
+#X obj 2 2 cnv 15 92 16 empty empty empty 20 12 0 14 #541010 #404040 0;
+#X obj 1 2 tgl 15 1 joy_1 empty empty 20 8 0 8 #fc8c10 #000000 #000000 1 1;
+#X obj 18 2 tgl 15 1 joy_2 empty gamepads 20 8 0 11 #00fc10 #000000 #ffffff 1 1;
 #X msg 93 25 scan;
 #X msg 278 25 scan;
 #X connect 0 0 3 0;
@@ -391,8 +326,7 @@ btn_2 btn_1;
 #X obj 879 304 spigot;
 #X text 912 287 kettle connection;
 #X floatatom 825 378 3 1 2 2 layer layer - 0;
-#X obj 878 343 bng 15 250 50 0 empty empty re-trigger 0 -6 0 8 #fcfcfc
-#000000 #fcfcfc;
+#X obj 878 343 bng 15 250 50 0 empty empty re-trigger 0 -6 0 8 #fcfcfc #000000 #fcfcfc;
 #X obj 825 394 + 1;
 #X text 213 6 knubbelachsen;
 #X text 513 62 [ ];
@@ -401,12 +335,9 @@ btn_2 btn_1;
 #X text 635 62 x;
 #X obj 1226 96 s ms1;
 #X obj 1294 94 s ms2;
-#X obj 1226 75 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 1294 74 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 926 305 tgl 15 0 empty kettle kettle 20 3 0 8 #fcfcfc #000000
-#fcfcfc 0 1;
+#X obj 1226 75 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 1294 74 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 926 305 tgl 15 0 empty kettle kettle 20 3 0 8 #fcfcfc #000000 #fcfcfc 0 1;
 #X floatatom 822 66 3 1 2 2 bank bank_01 - 0;
 #X obj 822 89 - 1;
 #X floatatom 1019 68 3 1 2 2 bank bank_02 - 0;
@@ -468,16 +399,12 @@ btn_2 btn_1;
 #X obj 1226 282 r 2_t_2;
 #X obj 1299 283 r 4_t_2;
 #X obj 213 335 r 3_t;
-#X obj 283 357 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 213 356 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
-#X obj 427 329 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
+#X obj 283 357 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 213 356 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 427 329 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 427 346 sel 1;
 #X obj 350 311 r 0_b;
-#X obj 350 329 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 0 1;
+#X obj 350 329 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 350 346 sel 1;
 #X obj 350 364 s lonoff1;
 #X obj 427 364 s lonoff2;
@@ -676,22 +603,17 @@ btn_2 btn_1;
 #X obj 427 311 r 5_b_2;
 #X obj 213 87 spigot;
 #X msg 131 55 1;
-#X obj 46 34 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
+#X obj 46 34 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 46 6 r midijoy;
 #X obj 61 33 s mjoy;
 #X obj 38 312 r 0_b_2;
 #X obj 47 95 r 5_b;
-#X obj 38 331 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 47 113 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
+#X obj 38 331 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 47 113 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 47 131 sel 1;
 #X obj 38 349 sel 1;
-#X obj 38 366 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
-#X obj 47 148 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000
-0 1;
+#X obj 38 366 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 47 148 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 38 406 sel 0;
 #X obj 47 189 sel 0;
 #X obj 47 209 del 10;
@@ -750,13 +672,13 @@ btn_2 btn_1;
 #X obj 634 208 s coord_effect;
 #X obj 515 99 s scale_env_1;
 #X obj 636 357 s flash;
-#X obj 699 146 counter 1 3;
-#X obj 701 430 counter 1 3;
 #X obj 879 8 r __set_clip_1;
 #X obj 1076 8 r __set_clip_2;
 #X obj 822 170 clipgrid 1;
 #X text 969 115 joy1;
 #X obj 1019 170 clipgrid 2;
+#X obj 701 430 cyclone/counter 1 3;
+#X obj 699 146 cyclone/counter 1 3;
 #X connect 0 0 158 0;
 #X connect 1 0 160 0;
 #X connect 3 0 159 0;
@@ -789,23 +711,23 @@ btn_2 btn_1;
 #X connect 36 0 34 0;
 #X connect 37 0 23 1;
 #X connect 38 0 39 0;
-#X connect 39 0 194 0;
+#X connect 39 0 192 0;
 #X connect 40 0 41 0;
-#X connect 41 0 196 0;
+#X connect 41 0 194 0;
 #X connect 42 0 68 0;
 #X connect 48 0 115 0;
 #X connect 48 0 116 0;
 #X connect 49 0 149 0;
 #X connect 50 0 157 0;
 #X connect 51 0 184 0;
-#X connect 53 0 194 1;
-#X connect 54 0 194 2;
-#X connect 55 0 194 3;
-#X connect 56 0 194 4;
-#X connect 57 0 196 1;
-#X connect 58 0 196 2;
-#X connect 59 0 196 3;
-#X connect 60 0 196 4;
+#X connect 53 0 192 1;
+#X connect 54 0 192 2;
+#X connect 55 0 192 3;
+#X connect 56 0 192 4;
+#X connect 57 0 194 1;
+#X connect 58 0 194 2;
+#X connect 59 0 194 3;
+#X connect 60 0 194 4;
 #X connect 62 0 77 1;
 #X connect 63 0 64 0;
 #X connect 64 0 66 0;
@@ -922,7 +844,7 @@ btn_2 btn_1;
 #X connect 152 0 73 1;
 #X connect 153 0 77 1;
 #X connect 154 0 90 1;
-#X connect 155 0 190 0;
+#X connect 155 0 196 0;
 #X connect 156 0 155 0;
 #X connect 157 0 189 0;
 #X connect 158 0 119 0;
@@ -937,26 +859,24 @@ btn_2 btn_1;
 #X connect 168 0 165 0;
 #X connect 169 0 167 0;
 #X connect 171 0 166 0;
-#X connect 183 0 191 0;
+#X connect 183 0 195 0;
 #X connect 184 0 183 0;
 #X connect 186 0 187 0;
-#X connect 190 0 182 0;
-#X connect 191 0 185 0;
-#X connect 192 0 194 5;
-#X connect 193 0 196 5;
-#X connect 194 0 140 0;
-#X connect 196 0 141 0;
+#X connect 190 0 192 5;
+#X connect 191 0 194 5;
+#X connect 192 0 140 0;
+#X connect 194 0 141 0;
+#X connect 195 0 185 0;
+#X connect 196 0 182 0;
 #X coords 0 -1 1 1 85 16 1 100 100;
 #X restore 57 116 pd joystick_ctrl;
 #X obj 289 38 openpanel;
-#X obj 289 9 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
-#000000;
+#X obj 289 9 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000 #000000;
 #X msg 289 61 putvideo \$1;
 #X obj 734 35 openpanel;
-#X obj 734 6 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
-#000000;
+#X obj 734 6 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000 #000000;
 #X msg 734 58 putvideo \$1;
-#X symbolatom 369 206 55 0 0 0 - - - 0;
+#X symbolatom 369 206 60 0 0 0 - - - 0;
 #N canvas 70 94 837 566 midi_ctrl 0;
 #N canvas 956 550 697 295 video_grid 0;
 #X obj 32 125 & 7;
@@ -1177,6 +1097,7 @@ btn_2 btn_1;
 #X obj 696 484 noteout;
 #X msg 701 430 6 1;
 #X text 130 60 for the Bhoreal;
+#X obj 431 54 declare -path easyflow;
 #X connect 0 0 12 0;
 #X connect 0 0 21 0;
 #X connect 0 1 12 1;
@@ -1214,12 +1135,8 @@ btn_2 btn_1;
 #X connect 31 0 22 0;
 #X connect 34 0 33 0;
 #X restore 57 144 pd midi_ctrl bhoreal;
-#X obj 369 35 videogrid videogrid1 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 /home/ub/visuals/live/scrap/clips/01_start/round01.mov|/home/ub/visuals/live/scrap/clips/01_start/power4.mov|/home/ub/visuals/live/scrap/clips/01_start/mars01.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-1.mov|/home/ub/visuals/live/scrap/clips/01_start/faden_piano.mov|/home/ub/visuals/live/scrap/clips/01_start/blob.mov|/home/ub/visuals/live/scrap/clips/01_start/brazil.mov|/home/ub/visuals/live/scrap/clips/01_start/mars.mov|/home/ub/visuals/live/scrap/clips/01_start/round03.mov|/home/ub/visuals/live/scrap/clips/01_start/mars02.mov|/home/ub/visuals/live/scrap/clips/01_start/round04.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-2.mov|/home/ub/visuals/live/scrap/clips/01_start/polymeer.mov|/home/ub/visuals/live/scrap/clips/01_start/diarahmen.mov|/home/ub/visuals/live/scrap/clips/01_start/lighthouse.mov|
-;
-#X obj 811 34 videogrid videogrid2 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi
-60 40 /home/ub/visuals/live/scrap/clips/01_start/round01.mov|/home/ub/visuals/live/scrap/clips/01_start/mars01.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-1.mov|/home/ub/visuals/live/scrap/clips/01_start/faden_piano.mov|/home/ub/visuals/live/scrap/clips/01_start/blob.mov|/home/ub/visuals/live/scrap/clips/01_start/brazil.mov|/home/ub/visuals/live/scrap/clips/01_start/mars.mov|/home/ub/visuals/live/scrap/clips/01_start/round03.mov|/home/ub/visuals/live/scrap/clips/01_start/mars02.mov|/home/ub/visuals/live/scrap/clips/01_start/round04.mov|/home/ub/visuals/live/scrap/clips/01_start/funken-2.mov|/home/ub/visuals/live/scrap/clips/01_start/polymeer.mov|/home/ub/visuals/live/scrap/clips/01_start/diarahmen.mov|/home/ub/visuals/live/scrap/clips/01_start/lighthouse.mov|/home/ub/visuals/live/scrap/clips/01_start/echo.mov|
-;
+#X obj 369 35 videogrid videogrid5 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi 60 40 /home/ub/visuals/live/mezcal/clips/01_start/echo.mov|/home/ub/visuals/live/mezcal/clips/01_start/round01.mov|/home/ub/visuals/live/mezcal/clips/01_start/faden_piano.mov|/home/ub/visuals/live/mezcal/clips/01_start/power4.mov|/home/ub/visuals/live/mezcal/clips/01_start/funken-2.mov|/home/ub/visuals/live/mezcal/clips/01_start/round02.mov|/home/ub/visuals/live/mezcal/clips/01_start/round05.mov|/home/ub/visuals/live/mezcal/clips/01_start/polymeer.mov|/home/ub/visuals/live/mezcal/clips/01_start/blob.mov|/home/ub/visuals/live/mezcal/clips/01_start/mars02.mov|/home/ub/visuals/live/mezcal/clips/01_start/brazil.mov|/home/ub/visuals/live/mezcal/clips/01_start/round04.mov|/home/ub/visuals/live/mezcal/clips/01_start/round03.mov|/home/ub/visuals/live/mezcal/clips/01_start/lighthouse.mov|/home/ub/visuals/live/mezcal/clips/01_start/funken-3.mov|/home/ub/visuals/live/mezcal/clips/01_start/diarahmen.mov|/home/ub/visuals/live/mezcal/clips/01_start/brazil_3d.mov|/home/ub/visuals/live/mezcal/clips/01_start/mars.mov|/home/ub/visuals/live/mezcal/clips/01_start/mars01.mov|/home/ub/visuals/live/mezcal/clips/01_start/funken-1.mov|;
+#X obj 811 34 videogrid videogrid6 4 5 #F0F0F0 #0F0F0F #F1882B mov:mpg:avi 60 40 /home/ub/visuals/live/mezcal/clips/01_start/diarahmen.mov|/home/ub/visuals/live/mezcal/clips/01_start/brazil_3d.mov|/home/ub/visuals/live/mezcal/clips/01_start/mars.mov|/home/ub/visuals/live/mezcal/clips/01_start/mars01.mov|/home/ub/visuals/live/mezcal/clips/01_start/funken-1.mov|/home/ub/visuals/live/mezcal/clips/01_start/echo.mov|/home/ub/visuals/live/mezcal/clips/01_start/round01.mov|/home/ub/visuals/live/mezcal/clips/01_start/faden_piano.mov|/home/ub/visuals/live/mezcal/clips/01_start/power4.mov|/home/ub/visuals/live/mezcal/clips/01_start/funken-2.mov|/home/ub/visuals/live/mezcal/clips/01_start/round02.mov|/home/ub/visuals/live/mezcal/clips/01_start/round05.mov|/home/ub/visuals/live/mezcal/clips/01_start/polymeer.mov|/home/ub/visuals/live/mezcal/clips/01_start/blob.mov|/home/ub/visuals/live/mezcal/clips/01_start/mars02.mov|/home/ub/visuals/live/mezcal/clips/01_start/brazil.mov|/home/ub/visuals/live/mezcal/clips/01_start/round04.mov|/home/ub/visuals/live/mezcal/clips/01_start/round03.mov|/home/ub/visuals/live/mezcal/clips/01_start/lighthouse.mov|/home/ub/visuals/live/mezcal/clips/01_start/funken-3.mov|;
 #N canvas 0 91 450 300 README 0;
 #X text 23 17 requirements:;
 #X text 23 37 - hcs (folder_list);
@@ -1351,8 +1268,7 @@ btn_2 btn_1;
 #X obj 200 221 outlet;
 #X obj 233 73 > \$2;
 #X obj 254 30 inlet;
-#X obj 233 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 233 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 173 33 t f f;
 #X obj 233 96 sel 1;
 #X msg 233 119 1;
@@ -1371,17 +1287,14 @@ btn_2 btn_1;
 #X connect 11 0 12 0;
 #X connect 12 0 9 0;
 #X restore 312 322 pd short_stop;
-#X obj 312 351 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 312 351 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 312 371 random 19;
 #X obj 312 394 + 1;
 #X obj 312 417 s clip_2;
 #X obj 32 165 outlet;
 #X obj 82 75 route accelerate;
-#X obj 102 102 cnv 15 100 16 empty empty iphone 20 8 0 11 #541010 #dcdcdc
-0;
-#X obj 103 103 tgl 15 0 empty empty empty 17 7 0 11 #00fc04 #000000
-#000000 0 1;
+#X obj 102 102 cnv 15 100 16 empty empty iphone 20 8 0 11 #541010 #dcdcdc 0;
+#X obj 103 103 tgl 15 0 empty empty empty 17 7 0 11 #00fc04 #000000 #000000 0 1;
 #X obj 82 48 spigot;
 #X obj 32 125 prepend send iphone;
 #X obj 82 25 netreceive -u 8888;
@@ -1417,8 +1330,7 @@ btn_2 btn_1;
 #X connect 24 0 21 0;
 #X coords 0 -1 1 1 105 20 1 100 100;
 #X restore 57 85 pd iphone-sensors;
-#X obj 1146 36 cnv 15 100 24 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
+#X obj 1146 36 cnv 15 100 24 empty empty empty 20 12 0 14 #e0e0e0 #404040 0;
 #N canvas 522 441 449 358 init-gui.023 0;
 #X obj 29 25 loadbang;
 #X obj 29 68 s i;
@@ -1429,13 +1341,13 @@ btn_2 btn_1;
 #X msg 86 48 2;
 #X obj 30 98 loadbang;
 #X obj 30 120 t b b;
-#X obj 267 29 inlet;
+#X obj 273 29 inlet;
 #X msg 57 196 \; video_dir \$1 \;;
-#X obj 57 162 symbol /home/ub/visuals/live/scrap/clips;
-#X obj 267 72 openpanel 1;
-#X obj 267 102 t b s;
+#X obj 273 72 openpanel 1;
+#X obj 273 102 t b s;
 #X msg 30 258 \; grid_rows 4 \; grid_cols 5 \;;
 #X msg 84 98 bang;
+#X obj 57 162 symbol /home/ub/visuals/live/mezcal/clips;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 6 0;
@@ -1443,19 +1355,17 @@ btn_2 btn_1;
 #X connect 4 0 2 0;
 #X connect 6 0 5 0;
 #X connect 7 0 8 0;
-#X connect 8 0 14 0;
-#X connect 8 1 11 0;
-#X connect 9 0 12 0;
-#X connect 11 0 10 0;
-#X connect 12 0 13 0;
-#X connect 13 0 8 0;
-#X connect 13 1 11 1;
-#X connect 15 0 8 0;
+#X connect 8 0 13 0;
+#X connect 8 1 15 0;
+#X connect 9 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 8 0;
+#X connect 12 1 15 1;
+#X connect 14 0 8 0;
+#X connect 15 0 10 0;
 #X restore 1149 39 pd init-gui.023;
-#X obj 1148 9 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000
-#000000;
-#X obj 370 12 cnv 15 310 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
+#X obj 1148 9 bng 15 250 50 0 empty empty empty 17 7 0 10 #606060 #000000 #000000;
+#X obj 370 12 cnv 15 310 20 empty empty empty 20 12 0 14 #e0e0e0 #404040 0;
 #X msg 640 13 clear;
 #X symbolatom 412 14 22 0 0 0 - - - 0;
 #X obj 551 9 bankswitch 1;
@@ -1467,10 +1377,8 @@ btn_2 btn_1;
 #X obj 214 187 print bank_1;
 #X obj 28 70 videodir;
 #X obj 73 184 outlet title;
-#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040
-0;
-#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400
-#000000 #000000 0 256;
+#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040 0;
+#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400 #000000 #000000 0 256;
 #X connect 0 0 1 0;
 #X connect 2 0 8 0;
 #X connect 3 0 5 0;
@@ -1480,8 +1388,7 @@ btn_2 btn_1;
 #X connect 8 0 0 0;
 #X coords 0 -1 1 1 40 22 2 148 66;
 #X restore 370 11 pd playlist;
-#X obj 811 11 cnv 15 310 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
+#X obj 811 11 cnv 15 310 20 empty empty empty 20 12 0 14 #e0e0e0 #404040 0;
 #N canvas 552 341 450 300 playlist 0;
 #X msg 153 123 seek \$1;
 #X obj 28 184 outlet;
@@ -1490,10 +1397,8 @@ btn_2 btn_1;
 #X obj 146 185 outlet;
 #X obj 186 158 print bank_2;
 #X obj 28 70 videodir;
-#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040
-0;
-#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400
-#000000 #000000 0 256;
+#X obj 150 68 cnv 15 36 18 empty empty empty 20 12 0 14 #541010 #404040 0;
+#X obj 153 70 nbx 2 14 0 100 0 0 empty empty empty 0 -8 0 10 #fc0400 #000000 #000000 0 256;
 #X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 3 0 8 0;
