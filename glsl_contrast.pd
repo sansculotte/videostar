@@ -14,8 +14,10 @@
 #X obj 93 20 inlet;
 #X obj 424 54 purepd/once;
 #X obj 202 53 cnv 15 146 48 empty empty contrast/color 4 6 0 10 #541010 #fcfcfc 0;
-#X obj 208 82 hsl 128 12 0 2 0 1 empty contrast_02 empty -2 -8 0 9 #fc0400 #000000 #fc8000 6700 0;
-#X obj 208 67 hsl 128 12 0 2 0 1 empty saturation_02 empty -2 -8 0 9 #fc0400 #000000 #fc8000 6800 0;
+#X obj 208 82 hsl 128 12 0 2 0 1 empty contrast_02 empty -2 -8 0 9 #fc0400 #000000 #fc8000 6350 0;
+#X obj 208 67 hsl 128 12 0 2 0 1 empty saturation_02 empty -2 -8 0 9 #fc0400 #000000 #fc8000 6350 0;
+#X obj 327 55 bng 10 250 50 0 empty empty empty 0 -9 0 10 #ff8300 #000000 #000000;
+#X msg 360 32 1;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 2 1 11 0;
@@ -36,4 +38,7 @@
 #X connect 13 0 8 0;
 #X connect 15 0 7 0;
 #X connect 16 0 6 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 18 0 15 0;
 #X coords 0 -1 1 1 150 54 1 200 50;

@@ -60,30 +60,19 @@
 #X obj 637 199 *~ 1;
 #X msg 65 229 open shaders/displace.frag;
 #X msg 56 341 tex0 \$1;
-#X obj 153 23 cnv 15 234 119 empty empty empty 4 8 0 10 #0c4044 #fcfcfc
-0;
-#X obj 156 25 tgl 15 1 empty empty waveshards 17 7 0 10 #00f8fc #000000
-#fcfcfc 1 1;
-#X obj 156 106 tgl 15 0 empty empty autorotate 17 7 0 10 #009090 #dcdcdc
-#9c9c9c 0 1;
-#X obj 322 86 hradio 15 1 0 4 \$0-texture empty texture 0 -8 0 10 #009090
-#c4fcfc #9c9c9c 0;
-#X obj 241 106 tgl 15 0 empty empty XY/Z 17 7 0 10 #009090 #000000
-#9c9c9c 0 1;
-#X obj 159 61 hsl 144 11 1 20000 0 1 empty waveshard_filter filter
-0 6 0 8 #009090 #000000 #541010 11600 1;
-#X obj 159 75 hsl 144 10 0 30 0 1 \$0-gain waveshard_amp gain 0 5 0
-8 #009090 #000000 #541010 9100 1;
-#X obj 156 43 tgl 15 0 empty empty audiosource 17 7 0 10 #009090 #000000
-#9c9c9c 0 1;
+#X obj 153 23 cnv 15 234 119 empty empty empty 4 8 0 10 #0c4044 #fcfcfc 0;
+#X obj 156 25 tgl 15 1 empty empty waveshards 17 7 0 10 #00f8fc #000000 #fcfcfc 1 1;
+#X obj 156 106 tgl 15 0 empty empty autorotate 17 7 0 10 #009090 #dcdcdc #9c9c9c 0 1;
+#X obj 322 86 hradio 15 1 0 4 \$0-texture empty texture 0 -8 0 10 #009090 #c4fcfc #9c9c9c 0;
+#X obj 241 106 tgl 15 0 empty empty XY/Z 17 7 0 10 #009090 #000000 #9c9c9c 0 1;
+#X obj 159 61 hsl 144 11 1 20000 0 1 empty waveshard_filter filter 0 6 0 8 #009090 #000000 #541010 11600 1;
+#X obj 159 75 hsl 144 10 0 30 0 1 \$0-gain waveshard_amp gain 0 5 0 8 #009090 #000000 #541010 9100 1;
+#X obj 156 43 tgl 15 0 empty empty audiosource 17 7 0 10 #009090 #000000 #9c9c9c 0 1;
 #X obj 739 57 t f f;
 #X obj 296 178 t f f f;
-#X obj 307 123 hradio 15 1 0 5 \$0-object empty object 0 -8 0 10 #009090
-#c4fcfc #9c9c9c 0;
-#X obj 156 88 tgl 15 0 empty empty alpha 17 7 0 10 #009090 #000000
-#9c9c9c 0 1;
-#X obj 241 88 tgl 15 0 empty empty boost 17 7 0 10 #009090 #000000
-#9c9c9c 0 1;
+#X obj 307 123 hradio 15 1 0 5 \$0-object empty object 0 -8 0 10 #009090 #c4fcfc #9c9c9c 0;
+#X obj 156 88 tgl 15 0 empty empty alpha 17 7 0 10 #009090 #000000 #9c9c9c 0 1;
+#X obj 241 88 tgl 15 0 empty empty boost 17 7 0 10 #009090 #000000 #9c9c9c 0 1;
 #X obj 51 597 translateXYZ 0 0 0;
 #X msg 203 264 black \$1;
 #X msg 284 601 1.5 \, 1 \$1;
@@ -95,8 +84,7 @@
 #X msg 532 453 1;
 #X obj 576 367 t f f;
 #X obj 51 519 scale 1;
-#X obj 156 125 tgl 15 0 \$0-autoscale empty autoscale 17 7 0 10 #009090
-#000000 #9c9c9c 0 1;
+#X obj 156 125 tgl 15 0 \$0-autoscale empty autoscale 17 7 0 10 #009090 #000000 #9c9c9c 0 1;
 #X obj 570 444 / 128;
 #X msg 65 145 open shaders/displace.vert;
 #X obj 1208 17 declare -lib cyclone;
@@ -105,8 +93,7 @@
 #X obj 56 313 r \$0-texture;
 #X obj 576 340 r \$0-autoscale;
 #X obj 792 61 r \$0-gain;
-#X obj 241 125 tgl 15 0 \$0-bounce empty bounce 17 7 0 10 #009090 #000000
-#9c9c9c 0 1;
+#X obj 241 125 tgl 15 0 \$0-bounce empty bounce 17 7 0 10 #009090 #000000 #9c9c9c 0 1;
 #X obj 648 241 loadbang;
 #X obj 51 495 scale 1;
 #X obj 284 553 spigot;

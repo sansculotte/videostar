@@ -20,6 +20,7 @@
 #X msg 310 54 white;
 #X obj 107 80 *~ 1;
 #X obj 28 64 route f;
+#X obj 119 151 sig~;
 #X connect 0 0 20 0;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
@@ -43,4 +44,7 @@
 #X connect 19 0 4 1;
 #X connect 19 0 4 2;
 #X connect 20 0 3 0;
-#X connect 20 1 4 0;
+#X connect 20 1 21 0;
+#X connect 21 0 4 0;
+#X connect 21 0 4 1;
+#X connect 21 0 4 2;
