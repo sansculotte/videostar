@@ -1,8 +1,7 @@
 #N canvas 354 336 327 582 10;
 #X obj 177 83 r duration;
 #X obj 150 382 random 360;
-#X obj 150 183 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 150 183 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 150 210 random 23;
 #X obj 150 239 * 100;
 #X obj 150 268 t b f;
@@ -18,7 +17,7 @@
 #X msg 68 424 0;
 #X obj 81 372 r 7_bt_2;
 #X obj 68 452 t f f;
-#X obj 66 194 sel 0 1;
+#X obj 66 192 sel 0 1;
 #X msg 66 215 0;
 #X connect 0 0 4 1;
 #X connect 1 0 9 0;
