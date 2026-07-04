@@ -7,7 +7,7 @@ AUDIO_BACKEND=""
 VJ_PATCH="main.pd"
 GUI_PATCH="main_gui.pd"
 USE_JACK=0
-PD="$HOME/build/pure-data/bin/pd"
+PD="/usr/bin/pd"
 
 
 vj_help() {
@@ -24,7 +24,7 @@ vj_start() {
         echo "$GUI_PATCH not found" 2>&1
         exit 2
     fi
-    
+
     # don't blank screen during performance
     xset -dpms
     xset s noblank
